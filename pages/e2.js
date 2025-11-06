@@ -5,22 +5,22 @@ import Footer from '../components/Footer';
 
 export default function E2Hub() {
   return (
-    <div style={{ fontFamily: "'Inter', sans-serif", color: '#111827', paddingTop: '80px' }}>
+    <div style={{ fontFamily: "'Inter', sans-serif", color: '#111827', paddingTop: 'clamp(64px, 10vw, 80px)' }}>
       <Navbar />
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '128px 16px' }}>
+      <div style={{ maxWidth: 1280, margin: '0 auto', padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)' }}>
       {/* Sidebar Navigation */}
       <aside style={{
         position: 'sticky',
-        top: 80,
-        width: 220,
+        top: 'clamp(64px, 10vw, 80px)',
+        width: 'clamp(180px, 25vw, 220px)',
         float: 'left',
-        marginRight: 40,
+        marginRight: 'clamp(24px, 4vw, 40px)',
         height: '100vh',
         borderRight: '1px solid #E5E7EB',
-        paddingRight: 24,
+        paddingRight: 'clamp(16px, 3vw, 24px)',
         display: 'none', // Hide on small screens, implement mobile toggle in production
       }}>
-        <nav style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+        <nav style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(16px, 2.5vw, 20px)' }}>
           <Link href="/e2/eligibility"><a style={{
             background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
             WebkitBackgroundClip: 'text',
@@ -38,18 +38,18 @@ export default function E2Hub() {
       </aside>
 
       {/* Main Content Area */}
-      <main style={{ marginLeft: '260px', minHeight: '80vh' }}>
+      <main style={{ marginLeft: 'clamp(0px, 30vw, 260px)', minHeight: '80vh' }}>
         <h1 style={{
           fontSize: 'clamp(32px, 5vw, 48px)',
           fontWeight: '700',
-          marginBottom: '24px',
+          marginBottom: 'clamp(16px, 3vw, 24px)',
           color: '#111827',
           letterSpacing: '-0.02em',
         }}>E-2 Treaty Investor Visa Hub</h1>
         <p style={{
-          fontSize: '18px',
+          fontSize: 'clamp(16px, 2vw, 18px)',
           color: '#4B5563',
-          marginBottom: '48px',
+          marginBottom: 'clamp(32px, 6vw, 48px)',
           lineHeight: 1.6,
         }}>
           Everything you need to know about the E-2 visa—from eligibility and requirements to business setup and timelines.
@@ -58,9 +58,9 @@ export default function E2Hub() {
         {/* Stats Cards */}
         <section style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-          gap: '24px',
-          marginBottom: '64px',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(160px, 20vw, 180px), 1fr))',
+          gap: 'clamp(16px, 3vw, 24px)',
+          marginBottom: 'clamp(32px, 6vw, 64px)',
         }}>
           {[
             { number: '78', label: 'Treaty Countries' },
@@ -73,10 +73,10 @@ export default function E2Hub() {
               borderRadius: '24px',
               border: '1px solid rgba(0, 0, 0, 0.05)',
               boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
-              padding: '32px',
+              padding: 'clamp(24px, 4vw, 32px)',
               textAlign: 'center',
               fontWeight: '700',
-              fontSize: 32,
+              fontSize: 'clamp(24px, 4vw, 32px)',
               transition: 'all 0.3s',
             }}
             onMouseEnter={(e) => {
@@ -96,23 +96,23 @@ export default function E2Hub() {
               }}>{number}</div>
               <div style={{
                 fontWeight: '400',
-                fontSize: 16,
+                fontSize: 'clamp(14px, 1.8vw, 16px)',
                 color: '#4B5563',
-                marginTop: 8
+                marginTop: 'clamp(6px, 1vw, 8px)'
               }}>{label}</div>
             </div>
           ))}
         </section>
 
         {/* Call to Action */}
-        <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+        <div style={{ textAlign: 'center', marginBottom: 'clamp(32px, 6vw, 64px)' }}>
           <Link href="/e2/eligibility"><a style={{
             display: 'inline-block',
             backgroundColor: '#111827',
             color: '#fff',
-            padding: '12px 32px',
-            borderRadius: '12px',
-            fontSize: '16px',
+            padding: 'clamp(10px, 1.5vw, 12px) clamp(24px, 4vw, 32px)',
+            borderRadius: 'clamp(10px, 1.5vw, 12px)',
+            fontSize: 'clamp(14px, 2vw, 16px)',
             fontWeight: '600',
             textDecoration: 'none',
             boxShadow: '0 6px 20px rgba(0,0,0,0.18)',
@@ -135,9 +135,9 @@ export default function E2Hub() {
         {/* Quick Navigation to Subpages */}
         <section style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))',
-          gap: '24px',
-          marginBottom: '80px',
+          gridTemplateColumns: 'repeat(auto-fit,minmax(clamp(240px, 30vw, 280px),1fr))',
+          gap: 'clamp(16px, 3vw, 24px)',
+          marginBottom: 'clamp(40px, 8vw, 80px)',
         }}>
           {[{
             title: 'Start Here: Am I Eligible?',
@@ -170,9 +170,9 @@ export default function E2Hub() {
               border: '1px solid rgba(0, 0, 0, 0.05)',
               boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
               borderRadius: '24px',
-              padding: '32px',
+              padding: 'clamp(24px, 4vw, 32px)',
               color: '#111827',
-              fontSize: 16,
+              fontSize: 'clamp(14px, 2vw, 16px)',
               textDecoration: 'none',
               fontWeight: '600',
               transition: 'all 0.3s',
@@ -190,8 +190,8 @@ export default function E2Hub() {
                 e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
               }}
             >
-              <h3 style={{ marginBottom: 12, fontSize: 20, fontWeight: 600 }}>{title}</h3>
-              <p style={{ fontWeight: '400', color: '#4B5563', lineHeight: 1.6 }}>{description}</p>
+              <h3 style={{ marginBottom: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(18px, 2.5vw, 20px)', fontWeight: 600 }}>{title}</h3>
+              <p style={{ fontWeight: '400', color: '#4B5563', lineHeight: 1.6, fontSize: 'clamp(14px, 1.8vw, 16px)' }}>{description}</p>
             </a></Link>
           ))}
         </section>
@@ -199,14 +199,14 @@ export default function E2Hub() {
         {/* Authority Links */}
         <section style={{
           textAlign: 'center',
-          fontSize: 14,
+          fontSize: 'clamp(13px, 1.8vw, 14px)',
           color: '#4B5563',
-          marginBottom: 40,
-          paddingTop: 32,
+          marginBottom: 'clamp(24px, 4vw, 40px)',
+          paddingTop: 'clamp(24px, 4vw, 32px)',
           borderTop: '1px solid #E5E7EB',
         }}>
-          <p style={{ marginBottom: 16 }}>Official Resources:</p>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: 24, flexWrap: 'wrap' }}>
+          <p style={{ marginBottom: 'clamp(12px, 2vw, 16px)' }}>Official Resources:</p>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: 'clamp(16px, 3vw, 24px)', flexWrap: 'wrap' }}>
             <a href="https://www.uscis.gov/working-in-the-united-states/temporary-workers/e-2-treaty-investors" target="_blank" rel="nofollow noreferrer" style={{
               background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
               WebkitBackgroundClip: 'text',

@@ -64,29 +64,29 @@ export default function Marketplace() {
   return (
     <div style={{ fontFamily: "'Inter', sans-serif", color: '#1A1A1A' }}>
       <Navbar />
-      <div style={{ maxWidth: 1000, margin: '40px auto', padding: '0 20px' }}>
-      <h1 style={{ fontSize: 38, fontWeight: 700, marginBottom: 24 }}>
+      <div style={{ maxWidth: 1000, margin: 'clamp(32px, 5vw, 40px) auto', padding: '0 clamp(16px, 4vw, 20px)' }}>
+      <h1 style={{ fontSize: 'clamp(32px, 5vw, 38px)', fontWeight: 700, marginBottom: 'clamp(16px, 3vw, 24px)' }}>
         E-2 Business Marketplace
       </h1>
-      <section style={{ marginBottom: 48 }}>
-        <h2 style={{ fontSize: 28, fontWeight: 700, marginBottom: 20 }}>Franchise Opportunities</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: 24 }}>
+      <section style={{ marginBottom: 'clamp(32px, 6vw, 48px)' }}>
+        <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: 700, marginBottom: 'clamp(16px, 2.5vw, 20px)' }}>Franchise Opportunities</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(clamp(260px, 35vw, 280px),1fr))', gap: 'clamp(16px, 3vw, 24px)' }}>
           {franchises.map(({ id, name, description, investmentRange, image, link }) => (
-            <div key={id} style={{ backgroundColor: '#F5F5F5', borderRadius: 12, boxShadow: '0 1px 5px rgba(0,0,0,0.05)', overflow: 'hidden' }}>
-              <img src={image} alt={`${name} Franchise`} style={{ width: '100%', height: '160px', objectFit: 'cover' }} />
-              <div style={{ padding: 16 }}>
-                <h3 style={{ marginBottom: 8 }}>{name}</h3>
-                <p style={{ marginBottom: 4, color: '#444' }}>{description}</p>
-                <p style={{ fontWeight: 600, marginBottom: 12 }}>{investmentRange}</p>
+            <div key={id} style={{ backgroundColor: '#F5F5F5', borderRadius: 'clamp(10px, 1.5vw, 12px)', boxShadow: '0 1px 5px rgba(0,0,0,0.05)', overflow: 'hidden' }}>
+              <img src={image} alt={`${name} Franchise`} style={{ width: '100%', height: 'clamp(140px, 20vw, 160px)', objectFit: 'cover' }} />
+              <div style={{ padding: 'clamp(12px, 2vw, 16px)' }}>
+                <h3 style={{ marginBottom: 'clamp(6px, 1vw, 8px)', fontSize: 'clamp(18px, 2.5vw, 20px)' }}>{name}</h3>
+                <p style={{ marginBottom: 'clamp(4px, 0.5vw, 4px)', color: '#444', fontSize: 'clamp(14px, 1.8vw, 16px)' }}>{description}</p>
+                <p style={{ fontWeight: 600, marginBottom: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 1.8vw, 16px)' }}>{investmentRange}</p>
                 <a href={link} style={{
                   backgroundColor: '#111827',
                   color: '#fff',
-                  padding: '10px 24px',
-                  borderRadius: '12px',
+                  padding: 'clamp(8px, 1.2vw, 10px) clamp(20px, 3vw, 24px)',
+                  borderRadius: 'clamp(10px, 1.5vw, 12px)',
                   fontWeight: '600',
                   textDecoration: 'none',
                   cursor: 'pointer',
-                  fontSize: 14,
+                  fontSize: 'clamp(13px, 1.8vw, 14px)',
                   boxShadow: '0 6px 20px rgba(0,0,0,0.18)',
                   transition: 'all 0.2s',
                 }}
@@ -107,25 +107,25 @@ export default function Marketplace() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 48 }}>
-        <h2 style={{ fontSize: 28, fontWeight: 700, marginBottom: 20 }}>Restaurants & Businesses for Sale</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: 24 }}>
+      <section style={{ marginBottom: 'clamp(32px, 6vw, 48px)' }}>
+        <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: 700, marginBottom: 'clamp(16px, 2.5vw, 20px)' }}>Restaurants & Businesses for Sale</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(clamp(260px, 35vw, 280px),1fr))', gap: 'clamp(16px, 3vw, 24px)' }}>
           {businessesForSale.map(({ id, name, location, price, image, link }) => (
-            <div key={id} style={{ backgroundColor: '#F5F5F5', borderRadius: 12, boxShadow: '0 1px 5px rgba(0,0,0,0.05)', overflow: 'hidden' }}>
-              <img src={image} alt={`${name} Business`} style={{ width: '100%', height: '160px', objectFit: 'cover' }} />
-              <div style={{ padding: 16 }}>
-                <h3 style={{ marginBottom: 8 }}>{name}</h3>
-                <p style={{ marginBottom: 4, color: '#444' }}>{location}</p>
-                <p style={{ fontWeight: 600, marginBottom: 12 }}>{price}</p>
+            <div key={id} style={{ backgroundColor: '#F5F5F5', borderRadius: 'clamp(10px, 1.5vw, 12px)', boxShadow: '0 1px 5px rgba(0,0,0,0.05)', overflow: 'hidden' }}>
+              <img src={image} alt={`${name} Business`} style={{ width: '100%', height: 'clamp(140px, 20vw, 160px)', objectFit: 'cover' }} />
+              <div style={{ padding: 'clamp(12px, 2vw, 16px)' }}>
+                <h3 style={{ marginBottom: 'clamp(6px, 1vw, 8px)', fontSize: 'clamp(18px, 2.5vw, 20px)' }}>{name}</h3>
+                <p style={{ marginBottom: 'clamp(4px, 0.5vw, 4px)', color: '#444', fontSize: 'clamp(14px, 1.8vw, 16px)' }}>{location}</p>
+                <p style={{ fontWeight: 600, marginBottom: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 1.8vw, 16px)' }}>{price}</p>
                 <a href={link} style={{
                   backgroundColor: '#111827',
                   color: '#fff',
-                  padding: '10px 24px',
-                  borderRadius: '12px',
+                  padding: 'clamp(8px, 1.2vw, 10px) clamp(20px, 3vw, 24px)',
+                  borderRadius: 'clamp(10px, 1.5vw, 12px)',
                   fontWeight: '600',
                   textDecoration: 'none',
                   cursor: 'pointer',
-                  fontSize: 14,
+                  fontSize: 'clamp(13px, 1.8vw, 14px)',
                   boxShadow: '0 6px 20px rgba(0,0,0,0.18)',
                   transition: 'all 0.2s',
                 }}
@@ -146,20 +146,20 @@ export default function Marketplace() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 48 }}>
-        <h2 style={{ fontSize: 28, fontWeight: 700, marginBottom: 20 }}>Success Stories</h2>
+      <section style={{ marginBottom: 'clamp(32px, 6vw, 48px)' }}>
+        <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: 700, marginBottom: 'clamp(16px, 2.5vw, 20px)' }}>Success Stories</h2>
         <div style={{
           display: 'flex',
           flexDirection: 'column',
-          gap: 24,
+          gap: 'clamp(16px, 3vw, 24px)',
         }}>
           {caseStudies.map(({ id, name, country, businessType, quote }) => (
             <blockquote key={id} style={{
-              borderLeft: '4px solid #667eea',
-              paddingLeft: 24,
+              borderLeft: 'clamp(3px, 0.5vw, 4px) solid #667eea',
+              paddingLeft: 'clamp(16px, 3vw, 24px)',
               fontStyle: 'italic',
               color: '#111827',
-              fontSize: 18,
+              fontSize: 'clamp(16px, 2.2vw, 18px)',
               lineHeight: 1.6,
               margin: 0,
             }}>
@@ -169,6 +169,7 @@ export default function Marketplace() {
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
+                fontSize: 'clamp(14px, 1.8vw, 16px)',
               }}>- {name}, {country}, {businessType}</strong>
             </blockquote>
           ))}

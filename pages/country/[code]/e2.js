@@ -67,8 +67,8 @@ export default function CountryE2() {
     return (
       <div style={{ fontFamily: "'Inter', sans-serif", color: '#1A1A1A' }}>
         <Navbar />
-        <div style={{ padding: 40, textAlign: 'center' }}>
-          <p>Loading...</p>
+        <div style={{ padding: 'clamp(32px, 5vw, 40px)', textAlign: 'center' }}>
+          <p style={{ fontSize: 'clamp(16px, 2vw, 18px)' }}>Loading...</p>
         </div>
         <Footer />
       </div>
@@ -81,15 +81,16 @@ export default function CountryE2() {
     return (
       <div style={{ fontFamily: "'Inter', sans-serif", color: '#1A1A1A' }}>
         <Navbar />
-        <div style={{ padding: 40 }}>
-          <h1>Country Not Found</h1>
-          <p>Please select a valid country from the <a href="/e2/treaty-countries" style={{
+        <div style={{ padding: 'clamp(32px, 5vw, 40px)' }}>
+          <h1 style={{ fontSize: 'clamp(32px, 5vw, 38px)', fontWeight: 700, marginBottom: 'clamp(16px, 3vw, 24px)' }}>Country Not Found</h1>
+          <p style={{ fontSize: 'clamp(16px, 2vw, 18px)' }}>Please select a valid country from the <a href="/e2/treaty-countries" style={{
             background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
             textDecoration: 'none',
             fontWeight: 600,
+            fontSize: 'clamp(16px, 2vw, 18px)',
           }}>E-2 Treaty Countries</a> page.</p>
         </div>
         <Footer />
@@ -100,47 +101,47 @@ export default function CountryE2() {
   return (
     <div style={{ fontFamily: "'Inter', sans-serif", color: '#1A1A1A' }}>
       <Navbar />
-      <div style={{ maxWidth: 900, margin: '40px auto', padding: '0 20px' }}>
-      <h1 style={{ fontSize: 38, fontWeight: 700, marginBottom: 12 }}>
+      <div style={{ maxWidth: 900, margin: 'clamp(32px, 5vw, 40px) auto', padding: '0 clamp(16px, 4vw, 20px)' }}>
+      <h1 style={{ fontSize: 'clamp(32px, 5vw, 38px)', fontWeight: 700, marginBottom: 'clamp(10px, 1.5vw, 12px)' }}>
         {country.flag} E-2 Visa for {country.name} Citizens
       </h1>
-      <p style={{ fontSize: 18, color: '#555', marginBottom: 40 }}>
+      <p style={{ fontSize: 'clamp(16px, 2vw, 18px)', color: '#555', marginBottom: 'clamp(24px, 4vw, 40px)' }}>
         Learn about {country.name}-specific E-2 visa requirements, average processing times, visa interview tips, and common business types.
       </p>
 
-      <section style={{ marginBottom: 40 }}>
-        <h2 style={{ fontSize: 28, fontWeight: 700, marginBottom: 12 }}>Average Processing Time</h2>
-        <p style={{ fontSize: 16, color: '#444' }}>
+      <section style={{ marginBottom: 'clamp(24px, 4vw, 40px)' }}>
+        <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: 700, marginBottom: 'clamp(10px, 1.5vw, 12px)' }}>Average Processing Time</h2>
+        <p style={{ fontSize: 'clamp(14px, 2vw, 16px)', color: '#444' }}>
           {country.averageProcessingTime} at main consulates.
         </p>
       </section>
 
-      <section style={{ marginBottom: 40 }}>
-        <h2 style={{ fontSize: 28, fontWeight: 700, marginBottom: 12 }}>Common Business Types</h2>
-        <ul style={{ fontSize: 16, color: '#444', paddingLeft: 20 }}>
+      <section style={{ marginBottom: 'clamp(24px, 4vw, 40px)' }}>
+        <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: 700, marginBottom: 'clamp(10px, 1.5vw, 12px)' }}>Common Business Types</h2>
+        <ul style={{ fontSize: 'clamp(14px, 2vw, 16px)', color: '#444', paddingLeft: 'clamp(16px, 2.5vw, 20px)', lineHeight: 1.8 }}>
           {country.commonBusinessTypes.map((type, idx) => (<li key={idx}>{type}</li>))}
         </ul>
       </section>
 
-      <section style={{ marginBottom: 40 }}>
-        <h2 style={{ fontSize: 28, fontWeight: 700, marginBottom: 12 }}>Consulate Contact Info</h2>
+      <section style={{ marginBottom: 'clamp(24px, 4vw, 40px)' }}>
+        <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: 700, marginBottom: 'clamp(10px, 1.5vw, 12px)' }}>Consulate Contact Info</h2>
         {country.consulateInfo.map(({ city, address, phone }, idx) => (
-          <div key={idx} style={{ marginBottom: 16 }}>
-            <strong>{city}:</strong>
-            <p style={{ margin: 0 }}>{address}</p>
-            <p style={{ margin: 0 }}>{phone}</p>
+          <div key={idx} style={{ marginBottom: 'clamp(12px, 2vw, 16px)' }}>
+            <strong style={{ fontSize: 'clamp(16px, 2.2vw, 18px)' }}>{city}:</strong>
+            <p style={{ margin: 0, fontSize: 'clamp(14px, 2vw, 16px)' }}>{address}</p>
+            <p style={{ margin: 0, fontSize: 'clamp(14px, 2vw, 16px)' }}>{phone}</p>
           </div>
         ))}
       </section>
 
-      <section style={{ marginBottom: 40, textAlign: 'center' }}>
+      <section style={{ marginBottom: 'clamp(24px, 4vw, 40px)', textAlign: 'center' }}>
         <a href={country.checklistPdf} download style={{
           backgroundColor: '#111827',
           color: '#fff',
           fontWeight: '600',
-          padding: '12px 32px',
-          fontSize: 16,
-          borderRadius: '12px',
+          padding: 'clamp(10px, 1.5vw, 12px) clamp(24px, 4vw, 32px)',
+          fontSize: 'clamp(14px, 2vw, 16px)',
+          borderRadius: 'clamp(10px, 1.5vw, 12px)',
           textDecoration: 'none',
           boxShadow: '0 6px 20px rgba(0,0,0,0.18)',
           cursor: 'pointer',
@@ -160,20 +161,20 @@ export default function CountryE2() {
         </a>
       </section>
 
-      <section style={{ marginBottom: 80 }}>
-        <h2 style={{ fontSize: 28, fontWeight: 700, marginBottom: 12 }}>Book Your Free Consultation</h2>
-        <form action="/api/contact" method="POST" style={{ maxWidth: 400, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 16 }}>
-          <input type="text" name="name" placeholder="Full Name" required style={{ padding: 12, fontSize: 16, borderRadius: 8, border: '1px solid #ccc' }} />
-          <input type="email" name="email" placeholder="Email Address" required style={{ padding: 12, fontSize: 16, borderRadius: 8, border: '1px solid #ccc' }} />
+      <section style={{ marginBottom: 'clamp(40px, 8vw, 80px)' }}>
+        <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: 700, marginBottom: 'clamp(10px, 1.5vw, 12px)' }}>Book Your Free Consultation</h2>
+        <form action="/api/contact" method="POST" style={{ maxWidth: 400, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 'clamp(12px, 2vw, 16px)' }}>
+          <input type="text" name="name" placeholder="Full Name" required style={{ padding: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 2vw, 16px)', borderRadius: 'clamp(6px, 1vw, 8px)', border: '1px solid #ccc' }} />
+          <input type="email" name="email" placeholder="Email Address" required style={{ padding: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 2vw, 16px)', borderRadius: 'clamp(6px, 1vw, 8px)', border: '1px solid #ccc' }} />
           <input type="hidden" name="country" value={country.name} />
-          <select name="timeline" required style={{ padding: 12, fontSize: 16, borderRadius: 8, border: '1px solid #ccc' }}>
+          <select name="timeline" required style={{ padding: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 2vw, 16px)', borderRadius: 'clamp(6px, 1vw, 8px)', border: '1px solid #ccc' }}>
             <option value="" disabled>When do you plan to start?</option>
             <option value="1-3 months">1-3 months</option>
             <option value="3-6 months">3-6 months</option>
             <option value="6-12 months">6-12 months</option>
             <option value="Not sure">Not sure</option>
           </select>
-          <select name="businessType" required style={{ padding: 12, fontSize: 16, borderRadius: 8, border: '1px solid #ccc' }}>
+          <select name="businessType" required style={{ padding: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 2vw, 16px)', borderRadius: 'clamp(6px, 1vw, 8px)', border: '1px solid #ccc' }}>
             <option value="" disabled>What business type are you interested in?</option>
             <option value="Franchise">Franchise</option>
             <option value="Existing Business">Existing Business</option>
@@ -186,9 +187,9 @@ export default function CountryE2() {
             backgroundColor: '#111827',
             color: '#fff',
             fontWeight: '600',
-            padding: '12px 32px',
-            fontSize: 16,
-            borderRadius: '12px',
+            padding: 'clamp(10px, 1.5vw, 12px) clamp(24px, 4vw, 32px)',
+            fontSize: 'clamp(14px, 2vw, 16px)',
+            borderRadius: 'clamp(10px, 1.5vw, 12px)',
             border: 'none',
             cursor: 'pointer',
             boxShadow: '0 6px 20px rgba(0,0,0,0.18)',

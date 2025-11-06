@@ -21,33 +21,33 @@ export default function Footer() {
         }}>
           {/* Brand */}
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 'clamp(8px, 1.5vw, 12px)', marginBottom: 'clamp(12px, 2vw, 16px)' }}>
               <span style={{
                 fontWeight: '600',
-                fontSize: '20px',
+                fontSize: 'clamp(18px, 2.5vw, 20px)',
                 letterSpacing: '-0.02em',
                 color: '#111827',
               }}>Infin8</span>
             </div>
             <p style={{
               color: '#4B5563',
-              fontSize: '14px',
+              fontSize: 'clamp(13px, 1.8vw, 14px)',
               lineHeight: '1.6',
-              marginBottom: '24px',
+              marginBottom: 'clamp(20px, 3vw, 24px)',
             }}>
               Your bridge to E-2 visa success. From eligibility to business setup, we guide you every step of the way.
             </p>
-            <div style={{ display: 'flex', gap: '16px' }}>
+            <div style={{ display: 'flex', gap: 'clamp(12px, 2vw, 16px)' }}>
               <a href="https://linkedin.com" target="_blank" rel="noreferrer" style={{
-                width: '40px',
-                height: '40px',
+                width: 'clamp(36px, 5vw, 40px)',
+                height: 'clamp(36px, 5vw, 40px)',
                 backgroundColor: '#F3F4F6',
-                borderRadius: '8px',
+                borderRadius: 'clamp(6px, 1vw, 8px)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 color: '#4B5563',
-                fontSize: '20px',
+                fontSize: 'clamp(18px, 2.5vw, 20px)',
                 textDecoration: 'none',
                 transition: 'all 0.2s',
               }}
@@ -61,15 +61,15 @@ export default function Footer() {
               }}
               >🔗</a>
               <a href="https://youtube.com" target="_blank" rel="noreferrer" style={{
-                width: '40px',
-                height: '40px',
+                width: 'clamp(36px, 5vw, 40px)',
+                height: 'clamp(36px, 5vw, 40px)',
                 backgroundColor: '#F3F4F6',
-                borderRadius: '8px',
+                borderRadius: 'clamp(6px, 1vw, 8px)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 color: '#4B5563',
-                fontSize: '20px',
+                fontSize: 'clamp(18px, 2.5vw, 20px)',
                 textDecoration: 'none',
                 transition: 'all 0.2s',
               }}
@@ -83,15 +83,15 @@ export default function Footer() {
               }}
               >▶️</a>
               <a href="https://twitter.com" target="_blank" rel="noreferrer" style={{
-                width: '40px',
-                height: '40px',
+                width: 'clamp(36px, 5vw, 40px)',
+                height: 'clamp(36px, 5vw, 40px)',
                 backgroundColor: '#F3F4F6',
-                borderRadius: '8px',
+                borderRadius: 'clamp(6px, 1vw, 8px)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 color: '#4B5563',
-                fontSize: '20px',
+                fontSize: 'clamp(18px, 2.5vw, 20px)',
                 textDecoration: 'none',
                 transition: 'all 0.2s',
               }}
@@ -111,15 +111,15 @@ export default function Footer() {
           <div>
             <h3 style={{
               fontWeight: '600',
-              fontSize: '14px',
+              fontSize: 'clamp(13px, 1.8vw, 14px)',
               color: '#111827',
-              marginBottom: '16px',
+              marginBottom: 'clamp(12px, 2vw, 16px)',
             }}>Product</h3>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: '12px' }}>
+              <li style={{ marginBottom: 'clamp(10px, 1.5vw, 12px)' }}>
                 <Link href="/e2"><a style={{
                   color: '#4B5563',
-                  fontSize: '14px',
+                  fontSize: 'clamp(13px, 1.8vw, 14px)',
                   textDecoration: 'none',
                   transition: 'color 0.2s',
                 }}
@@ -127,10 +127,10 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = '#4B5563'}
                 >E-2 Basics</a></Link>
               </li>
-              <li style={{ marginBottom: '12px' }}>
+              <li style={{ marginBottom: 'clamp(10px, 1.5vw, 12px)' }}>
                 <Link href="/e2/business-setup"><a style={{
                   color: '#4B5563',
-                  fontSize: '14px',
+                  fontSize: 'clamp(13px, 1.8vw, 14px)',
                   textDecoration: 'none',
                   transition: 'color 0.2s',
                 }}
@@ -138,10 +138,10 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = '#4B5563'}
                 >Business Setup</a></Link>
               </li>
-              <li style={{ marginBottom: '12px' }}>
+              <li style={{ marginBottom: 'clamp(10px, 1.5vw, 12px)' }}>
                 <Link href="/resources"><a style={{
                   color: '#4B5563',
-                  fontSize: '14px',
+                  fontSize: 'clamp(13px, 1.8vw, 14px)',
                   textDecoration: 'none',
                   transition: 'color 0.2s',
                 }}
@@ -149,10 +149,10 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = '#4B5563'}
                 >Resources</a></Link>
               </li>
-              <li style={{ marginBottom: '12px' }}>
+              <li style={{ marginBottom: 'clamp(10px, 1.5vw, 12px)' }}>
                 <Link href="/faq"><a style={{
                   color: '#4B5563',
-                  fontSize: '14px',
+                  fontSize: 'clamp(13px, 1.8vw, 14px)',
                   textDecoration: 'none',
                   transition: 'color 0.2s',
                 }}
@@ -167,15 +167,15 @@ export default function Footer() {
           <div>
             <h3 style={{
               fontWeight: '600',
-              fontSize: '14px',
+              fontSize: 'clamp(13px, 1.8vw, 14px)',
               color: '#111827',
-              marginBottom: '16px',
+              marginBottom: 'clamp(12px, 2vw, 16px)',
             }}>Resources</h3>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: '12px' }}>
+              <li style={{ marginBottom: 'clamp(10px, 1.5vw, 12px)' }}>
                 <Link href="/resources"><a style={{
                   color: '#4B5563',
-                  fontSize: '14px',
+                  fontSize: 'clamp(13px, 1.8vw, 14px)',
                   textDecoration: 'none',
                   transition: 'color 0.2s',
                 }}
@@ -183,10 +183,10 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = '#4B5563'}
                 >Tools & Guides</a></Link>
               </li>
-              <li style={{ marginBottom: '12px' }}>
+              <li style={{ marginBottom: 'clamp(10px, 1.5vw, 12px)' }}>
                 <a href="/blog" style={{
                   color: '#4B5563',
-                  fontSize: '14px',
+                  fontSize: 'clamp(13px, 1.8vw, 14px)',
                   textDecoration: 'none',
                   transition: 'color 0.2s',
                 }}
@@ -194,10 +194,10 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = '#4B5563'}
                 >Blog</a>
               </li>
-              <li style={{ marginBottom: '12px' }}>
+              <li style={{ marginBottom: 'clamp(10px, 1.5vw, 12px)' }}>
                 <Link href="/marketplace"><a style={{
                   color: '#4B5563',
-                  fontSize: '14px',
+                  fontSize: 'clamp(13px, 1.8vw, 14px)',
                   textDecoration: 'none',
                   transition: 'color 0.2s',
                 }}
@@ -212,15 +212,15 @@ export default function Footer() {
           <div>
             <h3 style={{
               fontWeight: '600',
-              fontSize: '14px',
+              fontSize: 'clamp(13px, 1.8vw, 14px)',
               color: '#111827',
-              marginBottom: '16px',
+              marginBottom: 'clamp(12px, 2vw, 16px)',
             }}>Company</h3>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: '12px' }}>
+              <li style={{ marginBottom: 'clamp(10px, 1.5vw, 12px)' }}>
                 <Link href="/about"><a style={{
                   color: '#4B5563',
-                  fontSize: '14px',
+                  fontSize: 'clamp(13px, 1.8vw, 14px)',
                   textDecoration: 'none',
                   transition: 'color 0.2s',
                 }}
@@ -228,10 +228,10 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = '#4B5563'}
                 >About Us</a></Link>
               </li>
-              <li style={{ marginBottom: '12px' }}>
+              <li style={{ marginBottom: 'clamp(10px, 1.5vw, 12px)' }}>
                 <Link href="/partners"><a style={{
                   color: '#4B5563',
-                  fontSize: '14px',
+                  fontSize: 'clamp(13px, 1.8vw, 14px)',
                   textDecoration: 'none',
                   transition: 'color 0.2s',
                 }}
@@ -239,10 +239,10 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = '#4B5563'}
                 >Partners</a></Link>
               </li>
-              <li style={{ marginBottom: '12px' }}>
+              <li style={{ marginBottom: 'clamp(10px, 1.5vw, 12px)' }}>
                 <Link href="/contact"><a style={{
                   color: '#4B5563',
-                  fontSize: '14px',
+                  fontSize: 'clamp(13px, 1.8vw, 14px)',
                   textDecoration: 'none',
                   transition: 'color 0.2s',
                 }}
@@ -257,15 +257,15 @@ export default function Footer() {
           <div>
             <h3 style={{
               fontWeight: '600',
-              fontSize: '14px',
+              fontSize: 'clamp(13px, 1.8vw, 14px)',
               color: '#111827',
-              marginBottom: '16px',
+              marginBottom: 'clamp(12px, 2vw, 16px)',
             }}>Legal</h3>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: '12px' }}>
+              <li style={{ marginBottom: 'clamp(10px, 1.5vw, 12px)' }}>
                 <Link href="/privacy"><a style={{
                   color: '#4B5563',
-                  fontSize: '14px',
+                  fontSize: 'clamp(13px, 1.8vw, 14px)',
                   textDecoration: 'none',
                   transition: 'color 0.2s',
                 }}
@@ -273,10 +273,10 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = '#4B5563'}
                 >Privacy Policy</a></Link>
               </li>
-              <li style={{ marginBottom: '12px' }}>
+              <li style={{ marginBottom: 'clamp(10px, 1.5vw, 12px)' }}>
                 <Link href="/terms"><a style={{
                   color: '#4B5563',
-                  fontSize: '14px',
+                  fontSize: 'clamp(13px, 1.8vw, 14px)',
                   textDecoration: 'none',
                   transition: 'color 0.2s',
                 }}
@@ -291,23 +291,23 @@ export default function Footer() {
         {/* Newsletter */}
         <div style={{
           borderTop: '1px solid #E5E7EB',
-          paddingTop: '32px',
-          marginTop: '32px',
+          paddingTop: 'clamp(24px, 4vw, 32px)',
+          marginTop: 'clamp(24px, 4vw, 32px)',
         }}>
           <div style={{
             display: 'flex',
             flexDirection: 'column',
-            gap: '12px',
+            gap: 'clamp(10px, 1.5vw, 12px)',
             maxWidth: '400px',
           }}>
             <label htmlFor="email" style={{
               color: '#6B7280',
-              fontSize: '14px',
+              fontSize: 'clamp(13px, 1.8vw, 14px)',
               fontWeight: '500',
             }}>Get E-2 updates</label>
             <form action="/api/subscribe" method="POST" style={{
               display: 'flex',
-              gap: '8px',
+              gap: 'clamp(6px, 1vw, 8px)',
             }}>
               <input
                 type="email"
@@ -317,10 +317,10 @@ export default function Footer() {
                 required
                 style={{
                   flex: 1,
-                  padding: '10px 16px',
-                  borderRadius: '8px',
+                  padding: 'clamp(8px, 1.2vw, 10px) clamp(12px, 2vw, 16px)',
+                  borderRadius: 'clamp(6px, 1vw, 8px)',
                   border: '1px solid rgba(0, 0, 0, 0.05)',
-                  fontSize: '14px',
+                  fontSize: 'clamp(13px, 1.8vw, 14px)',
                   fontWeight: '400',
                   outline: 'none',
                   backgroundColor: '#fff',
@@ -331,11 +331,11 @@ export default function Footer() {
                 backgroundColor: '#111827',
                 color: '#fff',
                 fontWeight: '500',
-                padding: '10px 24px',
+                padding: 'clamp(8px, 1.2vw, 10px) clamp(20px, 3vw, 24px)',
                 border: 'none',
-                borderRadius: '8px',
+                borderRadius: 'clamp(6px, 1vw, 8px)',
                 cursor: 'pointer',
-                fontSize: '14px',
+                fontSize: 'clamp(13px, 1.8vw, 14px)',
                 transition: 'all 0.2s',
               }}
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#1F2937'}
@@ -350,15 +350,15 @@ export default function Footer() {
         {/* Copyright */}
         <div style={{
           borderTop: '1px solid #E5E7EB',
-          paddingTop: '24px',
-          marginTop: '32px',
+          paddingTop: 'clamp(20px, 3vw, 24px)',
+          marginTop: 'clamp(24px, 4vw, 32px)',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: '8px',
+          gap: 'clamp(6px, 1vw, 8px)',
         }}>
           <p style={{
-            fontSize: '14px',
+            fontSize: 'clamp(13px, 1.8vw, 14px)',
             color: '#6B7280',
             margin: 0,
           }}>

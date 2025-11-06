@@ -27,40 +27,40 @@ export default function Resources() {
   return (
     <div style={{ fontFamily: "'Inter', sans-serif", color: '#1A1A1A' }}>
       <Navbar />
-      <div style={{ maxWidth: 1000, margin: '40px auto', padding: '0 20px' }}>
-      <h1 style={{ fontSize: 38, fontWeight: 700, marginBottom: 24 }}>Resources & Tools</h1>
+      <div style={{ maxWidth: 1000, margin: 'clamp(32px, 5vw, 40px) auto', padding: '0 clamp(16px, 4vw, 20px)' }}>
+      <h1 style={{ fontSize: 'clamp(32px, 5vw, 38px)', fontWeight: 700, marginBottom: 'clamp(16px, 3vw, 24px)' }}>Resources & Tools</h1>
 
       {/* Blog Section */}
-      <section style={{ marginBottom: 48 }}>
-        <h2 style={{ fontSize: 28, fontWeight: 700, marginBottom: 20 }}>Recent Blog Posts</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 24 }}>
+      <section style={{ marginBottom: 'clamp(32px, 6vw, 48px)' }}>
+        <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: 700, marginBottom: 'clamp(16px, 2.5vw, 20px)' }}>Recent Blog Posts</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 'clamp(16px, 3vw, 24px)' }}>
           {blogPosts.map(({ id, title, slug, excerpt }) => (
             <a href={slug} key={id} style={{
-              padding: 20,
+              padding: 'clamp(16px, 2.5vw, 20px)',
               backgroundColor: '#F5F5F5',
-              borderRadius: 12,
+              borderRadius: 'clamp(10px, 1.5vw, 12px)',
               textDecoration: 'none',
               color: '#1A1A1A',
               boxShadow: '0 1px 5px rgba(0,0,0,0.05)',
               display: 'block'
             }}>
-              <h3 style={{ fontWeight: 700, fontSize: 22 }}>{title}</h3>
-              <p style={{ fontSize: 16 }}>{excerpt}</p>
+              <h3 style={{ fontWeight: 700, fontSize: 'clamp(20px, 2.8vw, 22px)' }}>{title}</h3>
+              <p style={{ fontSize: 'clamp(14px, 2vw, 16px)' }}>{excerpt}</p>
             </a>
           ))}
         </div>
       </section>
 
       {/* Tools Section */}
-      <section style={{ marginBottom: 48 }}>
-        <h2 style={{ fontSize: 28, fontWeight: 700, marginBottom: 20 }}>Interactive Tools</h2>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16 }}>
+      <section style={{ marginBottom: 'clamp(32px, 6vw, 48px)' }}>
+        <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: 700, marginBottom: 'clamp(16px, 2.5vw, 20px)' }}>Interactive Tools</h2>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'clamp(12px, 2vw, 16px)' }}>
           {tools.map(({ id, name, description, link }) => (
             <a href={link} key={id} style={{
-              flex: '1 1 280px',
-              padding: 20,
+              flex: '1 1 clamp(260px, 35vw, 280px)',
+              padding: 'clamp(16px, 2.5vw, 20px)',
               backgroundColor: '#E6F4EA',
-              borderRadius: 12,
+              borderRadius: 'clamp(10px, 1.5vw, 12px)',
               textDecoration: 'none',
               background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
               WebkitBackgroundClip: 'text',
@@ -68,26 +68,26 @@ export default function Resources() {
               backgroundClip: 'text',
               boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
               fontWeight: 600,
-              fontSize: 18,
+              fontSize: 'clamp(16px, 2.2vw, 18px)',
               display: 'block',
             }}>
-              <h3 style={{ marginBottom: 8 }}>{name}</h3>
-              <p style={{ fontWeight: 400 }}>{description}</p>
+              <h3 style={{ marginBottom: 'clamp(6px, 1vw, 8px)' }}>{name}</h3>
+              <p style={{ fontWeight: 400, fontSize: 'clamp(14px, 1.8vw, 16px)' }}>{description}</p>
             </a>
           ))}
         </div>
       </section>
 
       {/* Gated Resources Section */}
-      <section style={{ marginBottom: 48 }}>
-        <h2 style={{ fontSize: 28, fontWeight: 700, marginBottom: 20 }}>Premium Guides & Checklists</h2>
+      <section style={{ marginBottom: 'clamp(32px, 6vw, 48px)' }}>
+        <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: 700, marginBottom: 'clamp(16px, 2.5vw, 20px)' }}>Premium Guides & Checklists</h2>
         <ul style={{ listStyleType: 'none', paddingLeft: 0 }}>
           {gatedResources.map(({ id, title, link }) => (
             <li key={id} style={{
-              marginBottom: 20,
+              marginBottom: 'clamp(16px, 2.5vw, 20px)',
               backgroundColor: '#F5F5F5',
-              padding: 16,
-              borderRadius: 12,
+              padding: 'clamp(12px, 2vw, 16px)',
+              borderRadius: 'clamp(10px, 1.5vw, 12px)',
               boxShadow: '0 1px 5px rgba(0,0,0,0.05)',
             }}>
               <a
@@ -103,7 +103,7 @@ export default function Resources() {
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
                   fontWeight: 600,
-                  fontSize: 18,
+                  fontSize: 'clamp(16px, 2.2vw, 18px)',
                 }}
               >
                 {title}
@@ -114,14 +114,14 @@ export default function Resources() {
       </section>
 
       {/* FAQ Archive Link */}
-      <section style={{ textAlign: 'center', marginBottom: 40 }}>
+      <section style={{ textAlign: 'center', marginBottom: 'clamp(24px, 4vw, 40px)' }}>
         <a href="/faq" style={{
           fontWeight: 600,
           background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',
-          fontSize: 18,
+          fontSize: 'clamp(16px, 2.2vw, 18px)',
           textDecoration: 'none',
           cursor: 'pointer',
           transition: 'opacity 0.2s',

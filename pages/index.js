@@ -229,12 +229,12 @@ export default function Home() {
               {/* CTAs */}
               <div style={{
                 display: 'flex',
-                flexDirection: 'column',
+                flexDirection: 'row',
                 gap: '12px',
                 marginTop: 'clamp(16px, 3vw, 24px)',
                 alignItems: 'center',
-                width: '100%',
-                maxWidth: '500px',
+                justifyContent: 'center',
+                flexWrap: 'wrap',
               }}>
                 <a
                   href="/e2/eligibility"
@@ -259,7 +259,6 @@ export default function Home() {
                       : '0 0 0 1px rgba(56,189,248,0.25), inset 0 0 0 1px rgba(255,255,255,0.08), 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12)',
                     textDecoration: 'none',
                     zIndex: 2,
-                    width: '100%',
                   }}
                   onMouseEnter={() => setPrimaryButtonHovered(true)}
                   onMouseLeave={() => setPrimaryButtonHovered(false)}
@@ -324,11 +323,10 @@ export default function Home() {
                   href="/contact"
                   style={{
                     position: 'relative',
-                    width: '100%',
-                    maxWidth: '14em',
-                    height: 'clamp(2.5em, 5vw, 3em)',
+                    width: '14em',
+                    height: '3em',
                     borderRadius: '30em',
-                    fontSize: 'clamp(13px, 2vw, 15px)',
+                    fontSize: '15px',
                     fontFamily: 'inherit',
                     border: 'none',
                     overflow: 'hidden',
@@ -380,6 +378,687 @@ export default function Home() {
           </div>
         </div>
 
+      </section>
+
+      {/* Features Section - Prism Studio Style */}
+      <section style={{
+        backgroundColor: '#F3F4F6',
+        padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)',
+      }}>
+        <div style={{
+          maxWidth: '1280px',
+          margin: '0 auto',
+          padding: '0 clamp(16px, 4vw, 16px)',
+        }}>
+          <div style={{ textAlign: 'center' }}>
+            <p style={{
+              fontSize: 'clamp(36px, 5vw, 72px)',
+              lineHeight: 1,
+              fontWeight: 500,
+              color: '#6B7280',
+              letterSpacing: '-0.02em',
+            }}>
+              <span 
+                className="lyric-line"
+                style={{
+                  opacity: 0,
+                  display: 'inline-block',
+                  animation: 'lyricFadeIn 0.8s ease-in-out forwards',
+                  animationDelay: '0s',
+                }}
+              >"We assess</span>
+              <span 
+                className="lyric-line"
+                style={{
+                  opacity: 0,
+                  display: 'inline-block',
+                  animation: 'lyricFadeIn 0.8s ease-in-out forwards',
+                  animationDelay: '0.8s',
+                  marginLeft: '0.5rem',
+                  color: '#111827',
+                  fontWeight: 600,
+                }}
+              >your visa profile</span>
+              <span 
+                className="lyric-line"
+                style={{
+                  opacity: 0,
+                  display: 'inline-block',
+                  animation: 'lyricFadeIn 0.8s ease-in-out forwards',
+                  animationDelay: '1.6s',
+                }}
+              >, map your goals,</span>
+              <span 
+                className="lyric-line"
+                style={{
+                  opacity: 0,
+                  display: 'inline-block',
+                  animation: 'lyricFadeIn 0.8s ease-in-out forwards',
+                  animationDelay: '2.4s',
+                }}
+              >and</span>
+              <span 
+                className="lyric-line"
+                style={{
+                  opacity: 0,
+                  display: 'inline-block',
+                  animation: 'lyricFadeIn 0.8s ease-in-out forwards',
+                  animationDelay: '3.2s',
+                  marginLeft: '0.5rem',
+                  color: '#111827',
+                  fontWeight: 600,
+                }}
+              >use expert guidance</span>
+              <span 
+                className="lyric-line"
+                style={{
+                  opacity: 0,
+                  display: 'inline-block',
+                  animation: 'lyricFadeIn 0.8s ease-in-out forwards',
+                  animationDelay: '4s',
+                  marginLeft: '0.5rem',
+                }}
+              >to help your journey break through the barriers.</span>
+              <span 
+                className="lyric-line"
+                style={{
+                  opacity: 0,
+                  display: 'inline-block',
+                  animation: 'lyricFadeIn 0.8s ease-in-out forwards',
+                  animationDelay: '4.8s',
+                }}
+              >The best part?</span>
+              <span 
+                className="lyric-line"
+                style={{
+                  opacity: 0,
+                  display: 'inline-block',
+                  animation: 'lyricFadeIn 0.8s ease-in-out forwards',
+                  animationDelay: '5.6s',
+                  marginLeft: '0.5rem',
+                  color: '#111827',
+                  fontWeight: 600,
+                }}
+              >We act</span>
+              <span 
+                className="lyric-line"
+                style={{
+                  opacity: 0,
+                  display: 'inline-block',
+                  animation: 'lyricFadeIn 0.8s ease-in-out forwards',
+                  animationDelay: '6.4s',
+                }}
+              >, too."</span>
+            </p>
+
+            <div style={{
+              marginTop: '48px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '12px',
+              opacity: 0,
+              animation: 'lyricFadeIn 0.8s ease-in-out forwards',
+              animationDelay: '7.2s',
+            }}>
+              <div style={{ position: 'relative' }}>
+                <div style={{
+                  position: 'absolute',
+                  inset: 0,
+                  zIndex: -1,
+                  filter: 'blur(64px)',
+                  borderRadius: '50%',
+                  background: 'radial-gradient(40% 40% at 50% 50%, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.06) 45%, rgba(0,0,0,0) 70%)',
+                  transform: 'translateY(10px)',
+                }}></div>
+                <img 
+                  src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/b5fa796b-5a4e-4746-8463-8e491f896f5c_320w.jpg" 
+                  alt="Founder avatar" 
+                  style={{
+                    width: '48px',
+                    height: '48px',
+                    objectFit: 'cover',
+                    borderRadius: '50%',
+                    border: '1px solid rgba(0,0,0,0.05)',
+                    boxShadow: '0 6px 20px rgba(0,0,0,0.18)',
+                  }}
+                />
+              </div>
+              <span style={{
+                fontSize: '16px',
+                color: '#374151',
+              }}>Founder of Infin8</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section style={{
+        display: 'flex',
+        backgroundColor: '#ffffff',
+        padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 32px)',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}>
+        <div style={{
+          maxWidth: '1280px',
+          margin: '0 auto',
+          padding: '0 clamp(16px, 4vw, 24px)',
+          width: '100%',
+        }}>
+          {/* Header */}
+          <div style={{
+            textAlign: 'center',
+            marginBottom: 'clamp(32px, 6vw, 64px)',
+          }}>
+            <span style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 'clamp(6px, 1vw, 8px)',
+              padding: 'clamp(4px, 1vw, 6px) clamp(10px, 2vw, 12px)',
+              borderRadius: '9999px',
+              backgroundColor: '#fff',
+              boxShadow: '0 1px 2px rgba(0,0,0,0.05)',
+              border: '1px solid rgba(0,0,0,0.05)',
+              fontSize: 'clamp(11px, 1.5vw, 12px)',
+              fontWeight: 500,
+              color: '#374151',
+              textTransform: 'uppercase',
+              letterSpacing: '0.05em',
+            }}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#1F2937', width: 'clamp(12px, 2vw, 14px)', height: 'clamp(12px, 2vw, 14px)' }}>
+                <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path>
+                <path d="M20 2v4"></path>
+                <path d="M22 4h-4"></path>
+                <circle cx="4" cy="20" r="2"></circle>
+              </svg>
+              Benefits
+            </span>
+            <h2 style={{
+              fontSize: 'clamp(32px, 5vw, 48px)',
+              fontWeight: 600,
+              letterSpacing: '-0.02em',
+              marginTop: 'clamp(16px, 3vw, 24px)',
+              color: '#111827',
+            }}>
+              Why Choose Us
+            </h2>
+            <p style={{
+              fontSize: 'clamp(16px, 2vw, 20px)',
+              color: '#4B5563',
+              maxWidth: '672px',
+              margin: 'clamp(8px, 1.5vw, 12px) auto 0',
+              lineHeight: 1.6,
+            }}>
+              Partner with an E-2 visa agency delivering expert solutions.
+            </p>
+          </div>
+
+          {/* Cards */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(280px, 30vw, 360px), 1fr))',
+            gap: 'clamp(24px, 4vw, 32px)',
+            marginBottom: '40px',
+          }}>
+            {/* Card 1 - Real-Time Tracking */}
+            <div style={{
+              position: 'relative',
+              backgroundColor: '#fff',
+              borderRadius: '24px',
+              padding: 'clamp(24px, 4vw, 32px)',
+              border: '1px solid rgba(0,0,0,0.05)',
+              boxShadow: '0 6px 24px rgba(0,0,0,0.08)',
+            }}>
+              <div style={{
+                marginBottom: 'clamp(24px, 4vw, 32px)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+                <div style={{
+                  position: 'relative',
+                  width: 'clamp(80px, 15vw, 112px)',
+                  height: 'clamp(80px, 15vw, 112px)',
+                  borderRadius: '50%',
+                  backgroundColor: '#fff',
+                  border: '1px solid rgba(0,0,0,0.05)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  boxShadow: 'inset 0 2px 0 rgba(255,255,255,0.9), 0 10px 24px rgba(0,0,0,0.06)',
+                  animation: 'pulse-soft 3s ease-in-out infinite',
+                }}>
+                  <div style={{
+                    position: 'absolute',
+                    width: 'clamp(6px, 1.2vw, 8px)',
+                    height: 'clamp(6px, 1.2vw, 8px)',
+                    backgroundColor: '#D1D5DB',
+                    borderRadius: '50%',
+                    top: 'clamp(8px, 1.5vw, 12px)',
+                    right: 'clamp(12px, 2vw, 16px)',
+                    animation: 'bounce-gentle 2s ease-in-out infinite 0.5s',
+                  }}></div>
+                  <div style={{
+                    width: 'clamp(3px, 0.6vw, 4px)',
+                    height: 'clamp(28px, 6vw, 40px)',
+                    backgroundColor: '#1F2937',
+                    borderRadius: '9999px',
+                    transformOrigin: 'bottom center',
+                    transform: 'rotate(18deg)',
+                    animation: 'rotate-slow 6s ease-in-out infinite',
+                  }}></div>
+                  <div style={{
+                    position: 'absolute',
+                    width: 'clamp(6px, 1.2vw, 8px)',
+                    height: 'clamp(6px, 1.2vw, 8px)',
+                    backgroundColor: '#1F2937',
+                    borderRadius: '50%',
+                    bottom: 'clamp(4px, 0.8vw, 6px)',
+                  }}></div>
+                </div>
+              </div>
+              <h3 style={{
+                fontSize: 'clamp(18px, 2.5vw, 20px)',
+                fontWeight: 500,
+                letterSpacing: '-0.01em',
+                color: '#111827',
+                marginBottom: 'clamp(6px, 1vw, 8px)',
+              }}>
+                Real‑Time Tracking
+              </h3>
+              <p style={{
+                color: '#4B5563',
+                lineHeight: 1.6,
+                fontSize: 'clamp(14px, 1.8vw, 16px)',
+              }}>
+                Stay ahead with accurate, real‑time visa status tracking.
+              </p>
+            </div>
+
+            {/* Card 2 - Expert Guidance */}
+            <div style={{
+              position: 'relative',
+              backgroundColor: '#fff',
+              border: '1px solid rgba(0,0,0,0.05)',
+              borderRadius: '24px',
+              padding: 'clamp(24px, 4vw, 32px)',
+              boxShadow: '0 6px 24px rgba(0,0,0,0.08)',
+            }}>
+              <div style={{
+                marginBottom: 'clamp(24px, 4vw, 32px)',
+              }}>
+                <div style={{
+                  position: 'relative',
+                  overflow: 'visible',
+                  animation: 'pulse-soft 3s ease-in-out infinite 1s',
+                  backgroundColor: '#F9FAFB',
+                  width: '100%',
+                  height: 'clamp(80px, 15vw, 112px)',
+                  border: '1px solid rgba(0,0,0,0.05)',
+                  borderRadius: 'clamp(12px, 2vw, 16px)',
+                  boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.7)',
+                }}>
+                  <span style={{
+                    position: 'absolute',
+                    left: 'clamp(32px, 6vw, 48px)',
+                    top: 'clamp(-6px, -1vw, -8px)',
+                    fontSize: 'clamp(9px, 1.2vw, 10px)',
+                    fontWeight: 500,
+                    color: '#374151',
+                    backgroundColor: '#fff',
+                    borderRadius: '9999px',
+                    padding: 'clamp(2px, 0.3vw, 2px) clamp(6px, 1vw, 8px)',
+                    border: '1px solid rgba(0,0,0,0.05)',
+                    animation: 'float 3s ease-in-out infinite 0.3s',
+                    boxShadow: '0 8px 18px rgba(0,0,0,0.06)',
+                  }}>20% Faster</span>
+                  <span style={{
+                    position: 'absolute',
+                    right: 'clamp(12px, 2vw, 16px)',
+                    top: 'clamp(-6px, -1vw, -8px)',
+                    fontSize: 'clamp(9px, 1.2vw, 10px)',
+                    fontWeight: 500,
+                    color: '#374151',
+                    backgroundColor: '#fff',
+                    borderRadius: '9999px',
+                    padding: 'clamp(2px, 0.3vw, 2px) clamp(6px, 1vw, 8px)',
+                    border: '1px solid rgba(0,0,0,0.05)',
+                    animation: 'float 3s ease-in-out infinite 0.7s',
+                    boxShadow: '0 8px 18px rgba(0,0,0,0.06)',
+                  }}>60% Success</span>
+                  <div style={{
+                    position: 'absolute',
+                    left: 'clamp(24px, 4vw, 32px)',
+                    right: 'clamp(24px, 4vw, 32px)',
+                    bottom: 'clamp(12px, 2vw, 16px)',
+                    display: 'flex',
+                    gap: 'clamp(6px, 1vw, 8px)',
+                    alignItems: 'flex-end',
+                    justifyContent: 'center',
+                  }}>
+                    <div style={{
+                      width: 'clamp(18px, 3vw, 24px)',
+                      height: 'clamp(18px, 3vw, 24px)',
+                      backgroundColor: '#fff',
+                      border: '1px solid rgba(0,0,0,0.05)',
+                      borderRadius: 'clamp(4px, 0.8vw, 6px)',
+                      animation: 'bounce-gentle 2s ease-in-out infinite 0.1s',
+                      boxShadow: '0 6px 14px rgba(0,0,0,0.06)',
+                    }}></div>
+                    <div style={{
+                      width: 'clamp(18px, 3vw, 24px)',
+                      height: 'clamp(28px, 5vw, 40px)',
+                      backgroundColor: '#fff',
+                      border: '1px solid rgba(0,0,0,0.05)',
+                      borderRadius: 'clamp(4px, 0.8vw, 6px)',
+                      animation: 'bounce-gentle 2s ease-in-out infinite 0.2s',
+                      boxShadow: '0 6px 14px rgba(0,0,0,0.06)',
+                    }}></div>
+                    <div style={{
+                      width: 'clamp(18px, 3vw, 24px)',
+                      height: 'clamp(40px, 7vw, 56px)',
+                      backgroundColor: '#fff',
+                      border: '1px solid rgba(0,0,0,0.05)',
+                      borderRadius: 'clamp(4px, 0.8vw, 6px)',
+                      animation: 'bounce-gentle 2s ease-in-out infinite 0.3s',
+                      boxShadow: '0 6px 14px rgba(0,0,0,0.06)',
+                    }}></div>
+                    <div style={{
+                      width: 'clamp(18px, 3vw, 24px)',
+                      height: 'clamp(56px, 10vw, 80px)',
+                      backgroundColor: '#fff',
+                      border: '1px solid rgba(0,0,0,0.05)',
+                      borderRadius: 'clamp(4px, 0.8vw, 6px)',
+                      animation: 'bounce-gentle 2s ease-in-out infinite 0.4s',
+                      boxShadow: '0 6px 14px rgba(0,0,0,0.06)',
+                    }}></div>
+                    <div style={{
+                      width: 'clamp(18px, 3vw, 24px)',
+                      height: 'clamp(68px, 12vw, 96px)',
+                      backgroundColor: '#fff',
+                      border: '1px solid rgba(0,0,0,0.05)',
+                      borderRadius: 'clamp(4px, 0.8vw, 6px)',
+                      animation: 'bounce-gentle 2s ease-in-out infinite 0.5s',
+                      boxShadow: '0 6px 14px rgba(0,0,0,0.06)',
+                    }}></div>
+                  </div>
+                </div>
+              </div>
+              <h3 style={{
+                fontSize: 'clamp(18px, 2.5vw, 20px)',
+                fontWeight: 500,
+                letterSpacing: '-0.01em',
+                color: '#111827',
+                marginBottom: 'clamp(6px, 1vw, 8px)',
+              }}>
+                Expert Guidance
+              </h3>
+              <p style={{
+                color: '#4B5563',
+                lineHeight: 1.6,
+                fontSize: 'clamp(14px, 1.8vw, 16px)',
+              }}>
+                Make smarter moves with accurate, real‑time visa insights.
+              </p>
+            </div>
+
+            {/* Card 3 - Real-Time Updates */}
+            <div style={{
+              position: 'relative',
+              backgroundColor: '#fff',
+              border: '1px solid rgba(0,0,0,0.05)',
+              borderRadius: '24px',
+              padding: 'clamp(24px, 4vw, 32px)',
+              boxShadow: '0 6px 24px rgba(0,0,0,0.08)',
+            }}>
+              <div style={{
+                display: 'flex',
+                overflow: 'hidden',
+                position: 'relative',
+                backgroundColor: '#F9FAFB',
+                borderRadius: 'clamp(10px, 1.5vw, 12px)',
+                marginBottom: 'clamp(24px, 4vw, 32px)',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: 'clamp(80px, 15vw, 112px)',
+              }}>
+                <video
+                  src="https://cdn.midjourney.com/video/d9a88b9e-7ed5-464b-a036-0518cdd85eae/0.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                  }}
+                />
+                <div style={{
+                  position: 'relative',
+                  display: 'flex',
+                  border: 'none',
+                  backgroundColor: 'rgba(255,255,255,0)',
+                  opacity: 0.25,
+                  width: 'clamp(80px, 15vw, 112px)',
+                  height: 'clamp(80px, 15vw, 112px)',
+                  borderRadius: '50%',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  boxShadow: 'inset 0 2px 0 rgba(255,255,255,0.9), 0 10px 24px rgba(0,0,0,0.06)',
+                }}></div>
+              </div>
+              <h3 style={{
+                fontSize: 'clamp(18px, 2.5vw, 20px)',
+                fontWeight: 500,
+                letterSpacing: '-0.01em',
+                color: '#111827',
+                marginBottom: 'clamp(6px, 1vw, 8px)',
+              }}>
+                Real-Time Updates
+              </h3>
+              <p style={{
+                color: '#4B5563',
+                lineHeight: 1.6,
+                fontSize: 'clamp(14px, 1.8vw, 16px)',
+              }}>
+                Connect with your team instantly to track progress and updates.
+              </p>
+            </div>
+          </div>
+
+          {/* Feature pills */}
+          <div style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: 'clamp(8px, 1.5vw, 12px)',
+            position: 'relative',
+            overflow: 'hidden',
+            width: '100%',
+            marginTop: 'clamp(24px, 4vw, 40px)',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+            {/* Marquee Track */}
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 'clamp(8px, 1.5vw, 12px)',
+              whiteSpace: 'nowrap',
+              animation: 'aura-marquee-rtl 28s linear infinite',
+              willChange: 'transform',
+            }}>
+              {/* Track Copy 1 */}
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 'clamp(8px, 1.5vw, 12px)',
+                flexShrink: 0,
+              }}>
+                {[
+                  { icon: 'coins', text: 'Cost Effective' },
+                  { icon: 'activity', text: 'Real‑Time Insights' },
+                  { icon: 'workflow', text: 'Expert Support' },
+                  { icon: 'brain-circuit', text: 'Strategic Planning' },
+                  { icon: 'zap', text: 'Faster Processing' },
+                ].map((item, idx) => (
+                  <span key={idx} style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 'clamp(6px, 1vw, 8px)',
+                    padding: 'clamp(6px, 1vw, 8px) clamp(10px, 1.5vw, 12px)',
+                    borderRadius: '9999px',
+                    backgroundColor: '#fff',
+                    color: '#1F2937',
+                    fontSize: 'clamp(12px, 1.8vw, 14px)',
+                    fontWeight: 500,
+                    border: '1px solid rgba(0,0,0,0.05)',
+                    boxShadow: '0 1px 2px rgba(0,0,0,0.05)',
+                  }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: 'clamp(14px, 2vw, 16px)', height: 'clamp(14px, 2vw, 16px)' }}>
+                      {item.icon === 'coins' && (
+                        <>
+                          <circle cx="8" cy="8" r="6"></circle>
+                          <path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path>
+                          <path d="M7 6h1v4"></path>
+                          <path d="m16.71 13.88.7.71-2.82 2.82"></path>
+                        </>
+                      )}
+                      {item.icon === 'activity' && (
+                        <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path>
+                      )}
+                      {item.icon === 'workflow' && (
+                        <>
+                          <rect width="8" height="8" x="3" y="3" rx="2"></rect>
+                          <path d="M7 11v4a2 2 0 0 0 2 2h4"></path>
+                          <rect width="8" height="8" x="13" y="13" rx="2"></rect>
+                        </>
+                      )}
+                      {item.icon === 'brain-circuit' && (
+                        <>
+                          <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path>
+                          <path d="M9 13a4.5 4.5 0 0 0 3-4"></path>
+                          <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path>
+                          <path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path>
+                          <path d="M6 18a4 4 0 0 1-1.967-.516"></path>
+                          <path d="M12 13h4"></path>
+                          <path d="M12 18h6a2 2 0 0 1 2 2v1"></path>
+                          <path d="M12 8h8"></path>
+                          <path d="M16 8V5a2 2 0 0 1 2-2"></path>
+                          <circle cx="16" cy="13" r=".5"></circle>
+                          <circle cx="18" cy="3" r=".5"></circle>
+                          <circle cx="20" cy="21" r=".5"></circle>
+                          <circle cx="20" cy="8" r=".5"></circle>
+                        </>
+                      )}
+                      {item.icon === 'zap' && (
+                        <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
+                      )}
+                    </svg>
+                    {item.text}
+                  </span>
+                ))}
+              </div>
+              {/* Track Copy 2 (for seamless loop) */}
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 'clamp(8px, 1.5vw, 12px)',
+                flexShrink: 0,
+              }} aria-hidden="true">
+                {[
+                  { icon: 'coins', text: 'Cost Effective' },
+                  { icon: 'activity', text: 'Real‑Time Insights' },
+                  { icon: 'workflow', text: 'Expert Support' },
+                  { icon: 'brain-circuit', text: 'Strategic Planning' },
+                  { icon: 'zap', text: 'Faster Processing' },
+                ].map((item, idx) => (
+                  <span key={idx} style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 'clamp(6px, 1vw, 8px)',
+                    padding: 'clamp(6px, 1vw, 8px) clamp(10px, 1.5vw, 12px)',
+                    borderRadius: '9999px',
+                    backgroundColor: '#fff',
+                    color: '#1F2937',
+                    fontSize: 'clamp(12px, 1.8vw, 14px)',
+                    fontWeight: 500,
+                    border: '1px solid rgba(0,0,0,0.05)',
+                    boxShadow: '0 1px 2px rgba(0,0,0,0.05)',
+                  }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: 'clamp(14px, 2vw, 16px)', height: 'clamp(14px, 2vw, 16px)' }}>
+                      {item.icon === 'coins' && (
+                        <>
+                          <circle cx="8" cy="8" r="6"></circle>
+                          <path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path>
+                          <path d="M7 6h1v4"></path>
+                          <path d="m16.71 13.88.7.71-2.82 2.82"></path>
+                        </>
+                      )}
+                      {item.icon === 'activity' && (
+                        <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path>
+                      )}
+                      {item.icon === 'workflow' && (
+                        <>
+                          <rect width="8" height="8" x="3" y="3" rx="2"></rect>
+                          <path d="M7 11v4a2 2 0 0 0 2 2h4"></path>
+                          <rect width="8" height="8" x="13" y="13" rx="2"></rect>
+                        </>
+                      )}
+                      {item.icon === 'brain-circuit' && (
+                        <>
+                          <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path>
+                          <path d="M9 13a4.5 4.5 0 0 0 3-4"></path>
+                          <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path>
+                          <path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path>
+                          <path d="M6 18a4 4 0 0 1-1.967-.516"></path>
+                          <path d="M12 13h4"></path>
+                          <path d="M12 18h6a2 2 0 0 1 2 2v1"></path>
+                          <path d="M12 8h8"></path>
+                          <path d="M16 8V5a2 2 0 0 1 2-2"></path>
+                          <circle cx="16" cy="13" r=".5"></circle>
+                          <circle cx="18" cy="3" r=".5"></circle>
+                          <circle cx="20" cy="21" r=".5"></circle>
+                          <circle cx="20" cy="8" r=".5"></circle>
+                        </>
+                      )}
+                      {item.icon === 'zap' && (
+                        <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
+                      )}
+                    </svg>
+                    {item.text}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Edge gradients */}
+            <div aria-hidden="true" style={{
+              pointerEvents: 'none',
+              position: 'absolute',
+              left: 0,
+              top: 0,
+              height: '100%',
+              width: 'clamp(48px, 10vw, 96px)',
+              zIndex: 10,
+              background: 'linear-gradient(to right, rgba(255,255,255,0.85), rgba(255,255,255,0))',
+            }}></div>
+            <div aria-hidden="true" style={{
+              pointerEvents: 'none',
+              position: 'absolute',
+              right: 0,
+              top: 0,
+              height: '100%',
+              width: 'clamp(48px, 10vw, 96px)',
+              zIndex: 10,
+              background: 'linear-gradient(to left, rgba(255,255,255,0.85), rgba(255,255,255,0))',
+            }}></div>
+          </div>
+        </div>
       </section>
 
       {/* Value Proposition Section */}

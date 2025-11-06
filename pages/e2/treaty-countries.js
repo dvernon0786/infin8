@@ -40,43 +40,43 @@ export default function TreatyCountries() {
   const filteredCountries = filter === 'All' ? treatyCountriesList : treatyCountriesList.filter(c => c.continent === filter);
 
   return (
-    <div style={{ fontFamily: "'Inter', sans-serif", color: '#111827', paddingTop: '80px' }}>
+    <div style={{ fontFamily: "'Inter', sans-serif", color: '#111827', paddingTop: 'clamp(64px, 10vw, 80px)' }}>
       <Navbar />
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '128px 16px' }}>
+      <div style={{ maxWidth: 1280, margin: '0 auto', padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)' }}>
       <h1 style={{
         fontSize: 'clamp(32px, 5vw, 48px)',
         fontWeight: 700,
-        marginBottom: 24,
+        marginBottom: 'clamp(16px, 3vw, 24px)',
         color: '#111827',
         letterSpacing: '-0.02em',
       }}>
         E-2 Treaty Countries
       </h1>
       <p style={{
-        fontSize: 18,
+        fontSize: 'clamp(16px, 2vw, 18px)',
         color: '#4B5563',
-        marginBottom: 32,
+        marginBottom: 'clamp(24px, 4vw, 32px)',
         lineHeight: 1.6,
       }}>
         Select a continent to filter the list of countries with which the U.S. has an E-2 treaty.
       </p>
 
-      <div style={{ marginBottom: 40 }}>
+      <div style={{ marginBottom: 'clamp(24px, 4vw, 40px)' }}>
         {continents.map(cont => (
           <button
             key={cont}
             onClick={() => setFilter(cont)}
             style={{
-              padding: '10px 24px',
-              marginRight: 8,
-              marginBottom: 8,
-              borderRadius: '12px',
+              padding: 'clamp(8px, 1.2vw, 10px) clamp(20px, 3vw, 24px)',
+              marginRight: 'clamp(6px, 1vw, 8px)',
+              marginBottom: 'clamp(6px, 1vw, 8px)',
+              borderRadius: 'clamp(10px, 1.5vw, 12px)',
               border: 'none',
               cursor: 'pointer',
               backgroundColor: filter === cont ? '#111827' : '#F3F4F6',
               color: filter === cont ? 'white' : '#4B5563',
               fontWeight: filter === cont ? '600' : '500',
-              fontSize: 14,
+              fontSize: 'clamp(13px, 1.8vw, 14px)',
               transition: 'all 0.2s',
             }}
             onMouseEnter={(e) => {
@@ -98,22 +98,22 @@ export default function TreatyCountries() {
       {/* Country Grid */}
       <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))',
-        gap: '24px',
-        marginBottom: 40,
+        gridTemplateColumns: 'repeat(auto-fill,minmax(clamp(120px, 18vw, 140px),1fr))',
+        gap: 'clamp(16px, 3vw, 24px)',
+        marginBottom: 'clamp(24px, 4vw, 40px)',
       }}>
         {filteredCountries.map(({ name, code }) => (
           <a
             href={`/country/${code}/e2`}
             key={code}
             style={{
-              padding: '20px 16px',
+              padding: 'clamp(16px, 2.5vw, 20px) clamp(12px, 2vw, 16px)',
               borderRadius: '24px',
               backgroundColor: '#fff',
               color: '#111827',
               textDecoration: 'none',
               fontWeight: 600,
-              fontSize: 16,
+              fontSize: 'clamp(14px, 2vw, 16px)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -136,7 +136,7 @@ export default function TreatyCountries() {
       </div>
 
       {/* Not Listed Clause and Lead Capture */}
-      <div style={{ textAlign: 'center', marginBottom: 80, fontSize: 16, color: '#444' }}>
+      <div style={{ textAlign: 'center', marginBottom: 'clamp(40px, 8vw, 80px)', fontSize: 'clamp(14px, 2vw, 16px)', color: '#444' }}>
         <p>
           Don't see your country? You might still qualify for an L-1 visa instead. 
           <button
@@ -151,7 +151,8 @@ export default function TreatyCountries() {
               cursor: 'pointer',
               textDecoration: 'underline',
               fontWeight: '600',
-              marginLeft: 4,
+              marginLeft: 'clamp(4px, 0.5vw, 4px)',
+              fontSize: 'clamp(14px, 2vw, 16px)',
             }}
           >
             Contact us to learn more.
@@ -172,9 +173,9 @@ export default function TreatyCountries() {
         }}>
           <div style={{
             backgroundColor: '#fff',
-            padding: 32,
-            borderRadius: 12,
-            width: 400,
+            padding: 'clamp(24px, 4vw, 32px)',
+            borderRadius: 'clamp(10px, 1.5vw, 12px)',
+            width: 'clamp(320px, 50vw, 400px)',
             maxWidth: '90%',
             boxShadow: '0 8px 20px rgba(0,0,0,0.3)',
             position: 'relative',
@@ -183,37 +184,37 @@ export default function TreatyCountries() {
               onClick={() => setShowLeadForm(false)}
               style={{
                 position: 'absolute',
-                top: 12,
-                right: 12,
+                top: 'clamp(10px, 1.5vw, 12px)',
+                right: 'clamp(10px, 1.5vw, 12px)',
                 background: 'none',
                 border: 'none',
-                fontSize: 24,
+                fontSize: 'clamp(20px, 3vw, 24px)',
                 cursor: 'pointer',
                 color: '#666',
               }}
             >
               &times;
             </button>
-            <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 16 }}>Contact Us</h2>
+            <h2 style={{ fontSize: 'clamp(20px, 3vw, 24px)', fontWeight: 700, marginBottom: 'clamp(12px, 2vw, 16px)' }}>Contact Us</h2>
             <form action="/api/contact" method="POST">
-              <label htmlFor="name" style={{ display: 'block', marginBottom: 4 }}>Full Name</label>
-              <input type="text" id="name" name="name" required style={{ width: '100%', marginBottom: 16, padding: '8px' }}/>
+              <label htmlFor="name" style={{ display: 'block', marginBottom: 'clamp(4px, 0.5vw, 4px)', fontSize: 'clamp(14px, 1.8vw, 16px)' }}>Full Name</label>
+              <input type="text" id="name" name="name" required style={{ width: '100%', marginBottom: 'clamp(12px, 2vw, 16px)', padding: 'clamp(6px, 1vw, 8px)', fontSize: 'clamp(14px, 2vw, 16px)', borderRadius: 'clamp(6px, 1vw, 8px)', border: '1px solid #ccc' }}/>
 
-              <label htmlFor="email" style={{ display: 'block', marginBottom: 4 }}>Email</label>
-              <input type="email" id="email" name="email" required style={{ width: '100%', marginBottom: 16, padding: '8px' }}/>
+              <label htmlFor="email" style={{ display: 'block', marginBottom: 'clamp(4px, 0.5vw, 4px)', fontSize: 'clamp(14px, 1.8vw, 16px)' }}>Email</label>
+              <input type="email" id="email" name="email" required style={{ width: '100%', marginBottom: 'clamp(12px, 2vw, 16px)', padding: 'clamp(6px, 1vw, 8px)', fontSize: 'clamp(14px, 2vw, 16px)', borderRadius: 'clamp(6px, 1vw, 8px)', border: '1px solid #ccc' }}/>
 
-              <label htmlFor="message" style={{ display: 'block', marginBottom: 4 }}>Message</label>
-              <textarea id="message" name="message" rows="3" required style={{ width: '100%', marginBottom: 16, padding: '8px' }}/>
+              <label htmlFor="message" style={{ display: 'block', marginBottom: 'clamp(4px, 0.5vw, 4px)', fontSize: 'clamp(14px, 1.8vw, 16px)' }}>Message</label>
+              <textarea id="message" name="message" rows="3" required style={{ width: '100%', marginBottom: 'clamp(12px, 2vw, 16px)', padding: 'clamp(6px, 1vw, 8px)', fontSize: 'clamp(14px, 2vw, 16px)', borderRadius: 'clamp(6px, 1vw, 8px)', border: '1px solid #ccc' }}/>
 
               <button type="submit" style={{
                 backgroundColor: '#111827',
                 border: 'none',
                 color: 'white',
-                padding: '12px 32px',
-                borderRadius: '12px',
+                padding: 'clamp(10px, 1.5vw, 12px) clamp(24px, 4vw, 32px)',
+                borderRadius: 'clamp(10px, 1.5vw, 12px)',
                 cursor: 'pointer',
                 fontWeight: '600',
-                fontSize: 16,
+                fontSize: 'clamp(14px, 2vw, 16px)',
                 boxShadow: '0 6px 20px rgba(0,0,0,0.18)',
                 transition: 'all 0.2s',
               }}

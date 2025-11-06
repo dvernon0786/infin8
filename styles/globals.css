@@ -161,6 +161,26 @@ a {
   }
 }
 
+@keyframes lyricFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes aura-marquee-rtl {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* Hero Section Crystal Glow Animations */
 @keyframes crystalGlow {
   0% {
@@ -315,5 +335,14 @@ a {
 
 .card-glow:hover {
   box-shadow: 0 0 40px rgba(99, 102, 241, 0.15);
+}
+
+.lyric-line {
+  transition: all 0.3s ease;
+}
+
+.lyric-line:hover {
+  transform: scale(1.05);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 

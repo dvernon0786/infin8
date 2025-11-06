@@ -24,7 +24,7 @@ export default function Navbar() {
         height: 'clamp(56px, 8vw, 64px)',
       }}>
         {/* Logo */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 'clamp(8px, 1.5vw, 12px)' }}>
           <Link href="/"><a style={{
             fontWeight: '600',
             fontSize: 'clamp(18px, 2.5vw, 20px)',
@@ -40,12 +40,12 @@ export default function Navbar() {
         <div style={{
           display: 'none',
           alignItems: 'center',
-          gap: '32px',
+          gap: 'clamp(24px, 4vw, 32px)',
         }}
         className="desktop-menu"
         >
           <Link href="/e2"><a style={{
-            fontSize: '14px',
+            fontSize: 'clamp(13px, 1.8vw, 14px)',
             fontWeight: '500',
             color: '#374151',
             textDecoration: 'none',
@@ -55,7 +55,7 @@ export default function Navbar() {
           onMouseLeave={(e) => e.currentTarget.style.color = '#374151'}
           >E-2 Basics</a></Link>
           <Link href="/e2/business-setup"><a style={{
-            fontSize: '14px',
+            fontSize: 'clamp(13px, 1.8vw, 14px)',
             fontWeight: '500',
             color: '#374151',
             textDecoration: 'none',
@@ -65,7 +65,7 @@ export default function Navbar() {
           onMouseLeave={(e) => e.currentTarget.style.color = '#374151'}
           >Business Setup</a></Link>
           <Link href="/resources"><a style={{
-            fontSize: '14px',
+            fontSize: 'clamp(13px, 1.8vw, 14px)',
             fontWeight: '500',
             color: '#374151',
             textDecoration: 'none',
@@ -75,7 +75,7 @@ export default function Navbar() {
           onMouseLeave={(e) => e.currentTarget.style.color = '#374151'}
           >Resources</a></Link>
           <Link href="/faq"><a style={{
-            fontSize: '14px',
+            fontSize: 'clamp(13px, 1.8vw, 14px)',
             fontWeight: '500',
             color: '#374151',
             textDecoration: 'none',
@@ -87,10 +87,10 @@ export default function Navbar() {
         </div>
         
         {/* CTA */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 'clamp(8px, 1.5vw, 12px)' }}>
           <button style={{
             display: 'none',
-            fontSize: '14px',
+            fontSize: 'clamp(13px, 1.8vw, 14px)',
             fontWeight: '500',
             color: '#374151',
             background: 'none',

@@ -54,9 +54,9 @@ export default function Partners() {
     return (
       <div style={{ fontFamily: "'Inter', sans-serif", color: '#1A1A1A' }}>
         <Navbar />
-        <div style={{ maxWidth: 600, margin: '60px auto', padding: '0 20px', textAlign: 'center' }}>
-          <h1 style={{ fontSize: 38, fontWeight: '700', marginBottom: 24 }}>Thank You for Your Interest!</h1>
-          <p>We have received your application to join the Infin8 Partner Network. Our team will review and contact you within 48 hours.</p>
+        <div style={{ maxWidth: 600, margin: 'clamp(40px, 6vw, 60px) auto', padding: '0 clamp(16px, 4vw, 20px)', textAlign: 'center' }}>
+          <h1 style={{ fontSize: 'clamp(32px, 5vw, 38px)', fontWeight: '700', marginBottom: 'clamp(16px, 3vw, 24px)' }}>Thank You for Your Interest!</h1>
+          <p style={{ fontSize: 'clamp(16px, 2vw, 18px)' }}>We have received your application to join the Infin8 Partner Network. Our team will review and contact you within 48 hours.</p>
         </div>
         <Footer />
       </div>
@@ -66,31 +66,31 @@ export default function Partners() {
   return (
     <div style={{ fontFamily: "'Inter', sans-serif", color: '#1A1A1A' }}>
       <Navbar />
-      <div style={{ maxWidth: 700, margin: '40px auto', padding: '0 20px' }}>
-      <h1 style={{ fontSize: 38, fontWeight: '700', marginBottom: 24 }}>
+      <div style={{ maxWidth: 700, margin: 'clamp(32px, 5vw, 40px) auto', padding: '0 clamp(16px, 4vw, 20px)' }}>
+      <h1 style={{ fontSize: 'clamp(32px, 5vw, 38px)', fontWeight: '700', marginBottom: 'clamp(16px, 3vw, 24px)' }}>
         Join Our Partner Network
       </h1>
-      <p style={{ fontSize: 18, marginBottom: 32 }}>
+      <p style={{ fontSize: 'clamp(16px, 2vw, 18px)', marginBottom: 'clamp(24px, 4vw, 32px)' }}>
         We work with immigration attorneys, business formation services, franchise consultants, and brokers to refer high-quality E-2 visa leads. Complete the application below to join.
       </p>
-      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-        <label htmlFor="name" style={{ fontWeight: 600 }}>Full Name</label>
-        <input id="name" name="name" required value={formData.name} onChange={handleChange} style={{ padding: 12, fontSize: 16, borderRadius: 6, border: '1px solid #ccc' }} />
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(16px, 2.5vw, 20px)' }}>
+        <label htmlFor="name" style={{ fontWeight: 600, fontSize: 'clamp(14px, 1.8vw, 16px)' }}>Full Name</label>
+        <input id="name" name="name" required value={formData.name} onChange={handleChange} style={{ padding: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 2vw, 16px)', borderRadius: 'clamp(6px, 1vw, 8px)', border: '1px solid #ccc' }} />
 
-        <label htmlFor="email" style={{ fontWeight: 600 }}>Email Address</label>
-        <input type="email" id="email" name="email" required value={formData.email} onChange={handleChange} style={{ padding: 12, fontSize: 16, borderRadius: 6, border: '1px solid #ccc' }} />
+        <label htmlFor="email" style={{ fontWeight: 600, fontSize: 'clamp(14px, 1.8vw, 16px)' }}>Email Address</label>
+        <input type="email" id="email" name="email" required value={formData.email} onChange={handleChange} style={{ padding: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 2vw, 16px)', borderRadius: 'clamp(6px, 1vw, 8px)', border: '1px solid #ccc' }} />
 
-        <label htmlFor="company" style={{ fontWeight: 600 }}>Company Name</label>
-        <input id="company" name="company" required value={formData.company} onChange={handleChange} style={{ padding: 12, fontSize: 16, borderRadius: 6, border: '1px solid #ccc' }} />
+        <label htmlFor="company" style={{ fontWeight: 600, fontSize: 'clamp(14px, 1.8vw, 16px)' }}>Company Name</label>
+        <input id="company" name="company" required value={formData.company} onChange={handleChange} style={{ padding: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 2vw, 16px)', borderRadius: 'clamp(6px, 1vw, 8px)', border: '1px solid #ccc' }} />
 
-        <label htmlFor="role" style={{ fontWeight: 600 }}>Your Role</label>
-        <input id="role" name="role" required value={formData.role} onChange={handleChange} style={{ padding: 12, fontSize: 16, borderRadius: 6, border: '1px solid #ccc' }} />
+        <label htmlFor="role" style={{ fontWeight: 600, fontSize: 'clamp(14px, 1.8vw, 16px)' }}>Your Role</label>
+        <input id="role" name="role" required value={formData.role} onChange={handleChange} style={{ padding: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 2vw, 16px)', borderRadius: 'clamp(6px, 1vw, 8px)', border: '1px solid #ccc' }} />
         
         <fieldset style={{ border: 'none', margin: 0, padding: 0 }}>
-          <legend style={{ fontWeight: 600, marginBottom: 6 }}>Services Offered (check all that apply)</legend>
+          <legend style={{ fontWeight: 600, marginBottom: 'clamp(6px, 1vw, 8px)', fontSize: 'clamp(14px, 1.8vw, 16px)' }}>Services Offered (check all that apply)</legend>
           {servicesOptions.map(service => (
-            <div key={service} style={{ marginBottom: 8 }}>
-              <label>
+            <div key={service} style={{ marginBottom: 'clamp(6px, 1vw, 8px)' }}>
+              <label style={{ fontSize: 'clamp(14px, 1.8vw, 16px)' }}>
                 <input
                   type="checkbox"
                   name="services"
@@ -104,14 +104,14 @@ export default function Partners() {
           ))}
         </fieldset>
 
-        <label htmlFor="territory" style={{ fontWeight: 600 }}>Territory / Focus Area</label>
-        <input id="territory" name="territory" value={formData.territory} onChange={handleChange} placeholder="City, State, or Region" style={{ padding: 12, fontSize: 16, borderRadius: 6, border: '1px solid #ccc' }} />
+        <label htmlFor="territory" style={{ fontWeight: 600, fontSize: 'clamp(14px, 1.8vw, 16px)' }}>Territory / Focus Area</label>
+        <input id="territory" name="territory" value={formData.territory} onChange={handleChange} placeholder="City, State, or Region" style={{ padding: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 2vw, 16px)', borderRadius: 'clamp(6px, 1vw, 8px)', border: '1px solid #ccc' }} />
 
-        <label htmlFor="website" style={{ fontWeight: 600 }}>Website or Professional Profile URL</label>
-        <input id="website" name="website" type="url" value={formData.website} onChange={handleChange} placeholder="https://example.com" style={{ padding: 12, fontSize: 16, borderRadius: 6, border: '1px solid #ccc' }} />
+        <label htmlFor="website" style={{ fontWeight: 600, fontSize: 'clamp(14px, 1.8vw, 16px)' }}>Website or Professional Profile URL</label>
+        <input id="website" name="website" type="url" value={formData.website} onChange={handleChange} placeholder="https://example.com" style={{ padding: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 2vw, 16px)', borderRadius: 'clamp(6px, 1vw, 8px)', border: '1px solid #ccc' }} />
 
-        <label htmlFor="leadVolume" style={{ fontWeight: 600 }}>Desired Lead Volume per Month</label>
-        <select id="leadVolume" name="leadVolume" required value={formData.leadVolume} onChange={handleChange} style={{ padding: 12, fontSize: 16, borderRadius: 6, border: '1px solid #ccc' }}>
+        <label htmlFor="leadVolume" style={{ fontWeight: 600, fontSize: 'clamp(14px, 1.8vw, 16px)' }}>Desired Lead Volume per Month</label>
+        <select id="leadVolume" name="leadVolume" required value={formData.leadVolume} onChange={handleChange} style={{ padding: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 2vw, 16px)', borderRadius: 'clamp(6px, 1vw, 8px)', border: '1px solid #ccc' }}>
           <option value="">Select volume</option>
           <option value="1-5">1-5 Leads</option>
           <option value="6-10">6-10 Leads</option>
@@ -123,10 +123,10 @@ export default function Partners() {
           backgroundColor: '#111827',
           color: '#fff',
           border: 'none',
-          borderRadius: '12px',
+          borderRadius: 'clamp(10px, 1.5vw, 12px)',
           fontWeight: 600,
-          fontSize: 16,
-          padding: '12px 32px',
+          fontSize: 'clamp(14px, 2vw, 16px)',
+          padding: 'clamp(10px, 1.5vw, 12px) clamp(24px, 4vw, 32px)',
           cursor: 'pointer',
           boxShadow: '0 6px 20px rgba(0,0,0,0.18)',
           transition: 'all 0.2s',
