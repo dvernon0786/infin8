@@ -237,7 +237,7 @@ export default function Home() {
                 maxWidth: '500px',
               }}>
                 <a
-                  href="#contact"
+                  href="/e2/eligibility"
                   style={{
                     position: 'relative',
                     display: 'inline-flex',
@@ -269,7 +269,7 @@ export default function Home() {
                     zIndex: 1,
                     transform: primaryButtonHovered ? 'translateX(4px)' : 'translateX(0)',
                     transition: 'transform 0.3s',
-                  }}>View Our Spaces</span>
+                  }}>Start Eligibility Quiz</span>
                   <svg 
                     width="20" 
                     height="20" 
@@ -320,10 +320,8 @@ export default function Home() {
                     background: 'radial-gradient(120% 80% at 50% -20%, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0.06) 55%, rgba(255,255,255,0) 60%), radial-gradient(90% 80% at 50% 120%, rgba(56,189,248,0.18) 0%, rgba(56,189,248,0) 60%)',
                   }}></span>
                 </a>
-                <button
-                  onClick={() => {
-                    // Navigate to learn more
-                  }}
+                <a
+                  href="/contact"
                   style={{
                     position: 'relative',
                     width: '100%',
@@ -341,11 +339,15 @@ export default function Home() {
                     fontWeight: 500,
                     cursor: 'pointer',
                     transition: 'all 0.5s ease-in-out',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    textDecoration: 'none',
                   }}
                   onMouseEnter={() => setButtonHovered(true)}
                   onMouseLeave={() => setButtonHovered(false)}
                 >
-                  <span style={{ position: 'relative', zIndex: 1 }}>See Our Service</span>
+                  <span style={{ position: 'relative', zIndex: 1 }}>Book Consultation</span>
                   <div style={{
                     position: 'absolute',
                     top: 0,
@@ -357,7 +359,7 @@ export default function Home() {
                     transition: 'width 0.5s ease-in-out',
                     zIndex: -1,
                   }}></div>
-                </button>
+                </a>
               </div>
             </div>
 
