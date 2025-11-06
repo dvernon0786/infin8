@@ -1,0 +1,140 @@
+import React from 'react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+
+const blogPosts = [
+  { id: 1, title: 'How Much Investment Does the E-2 Visa Require?', slug: '/blog/e2-investment-amount', excerpt: 'Learn the true minimum investment required and how to properly document your funds.' },
+  { id: 2, title: 'E-2 Visa Approval Timeline by Consulate', slug: '/blog/e2-timeline', excerpt: 'Typical processing times by US embassy consulate locations explained.' },
+  { id: 3, title: 'Franchise vs Buy vs Build: Which Business Is Right?', slug: '/blog/franchise-vs-buy-vs-build', excerpt: 'Compare the most common business paths for E-2 investors.' },
+  { id: 4, title: 'Common E-2 Visa Mistakes to Avoid', slug: '/blog/e2-common-mistakes', excerpt: 'Avoid pitfalls that lead to application denials.' },
+  { id: 5, title: 'Understanding Marginality for E-2 Visa Applicants', slug: '/blog/e2-marginality', excerpt: 'What does substantial investment really mean?' }
+];
+
+const tools = [
+  { id: 1, name: 'E-2 Investment Calculator', description: 'Calculate the required investment for your business model.', link: '/tools/investment-calculator' },
+  { id: 2, name: 'Treaty Country Checker', description: 'Check if your country qualifies for the E-2 visa.', link: '/tools/treaty-checker' },
+  { id: 3, name: 'Business Type Matcher', description: 'Find which business type fits your profile.', link: '/quiz' },
+];
+
+const gatedResources = [
+  { id: 1, title: 'E-2 Business Setup Roadmap PDF', link: '/downloads/e2-business-setup-roadmap.pdf' },
+  { id: 2, title: 'Country Specific Checklists', link: '/downloads/country-checklists.zip' },
+  { id: 3, title: 'Franchise Selection Guide', link: '/downloads/franchise-selection-guide.pdf' },
+  { id: 4, title: 'Investment Source Documentation Template', link: '/downloads/investment-documentation-template.pdf' },
+];
+
+export default function Resources() {
+  return (
+    <div style={{ fontFamily: "'Inter', sans-serif", color: '#1A1A1A' }}>
+      <Navbar />
+      <div style={{ maxWidth: 1000, margin: '40px auto', padding: '0 20px' }}>
+      <h1 style={{ fontSize: 38, fontWeight: 700, marginBottom: 24 }}>Resources & Tools</h1>
+
+      {/* Blog Section */}
+      <section style={{ marginBottom: 48 }}>
+        <h2 style={{ fontSize: 28, fontWeight: 700, marginBottom: 20 }}>Recent Blog Posts</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 24 }}>
+          {blogPosts.map(({ id, title, slug, excerpt }) => (
+            <a href={slug} key={id} style={{
+              padding: 20,
+              backgroundColor: '#F5F5F5',
+              borderRadius: 12,
+              textDecoration: 'none',
+              color: '#1A1A1A',
+              boxShadow: '0 1px 5px rgba(0,0,0,0.05)',
+              display: 'block'
+            }}>
+              <h3 style={{ fontWeight: 700, fontSize: 22 }}>{title}</h3>
+              <p style={{ fontSize: 16 }}>{excerpt}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      {/* Tools Section */}
+      <section style={{ marginBottom: 48 }}>
+        <h2 style={{ fontSize: 28, fontWeight: 700, marginBottom: 20 }}>Interactive Tools</h2>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16 }}>
+          {tools.map(({ id, name, description, link }) => (
+            <a href={link} key={id} style={{
+              flex: '1 1 280px',
+              padding: 20,
+              backgroundColor: '#E6F4EA',
+              borderRadius: 12,
+              textDecoration: 'none',
+              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+              fontWeight: 600,
+              fontSize: 18,
+              display: 'block',
+            }}>
+              <h3 style={{ marginBottom: 8 }}>{name}</h3>
+              <p style={{ fontWeight: 400 }}>{description}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      {/* Gated Resources Section */}
+      <section style={{ marginBottom: 48 }}>
+        <h2 style={{ fontSize: 28, fontWeight: 700, marginBottom: 20 }}>Premium Guides & Checklists</h2>
+        <ul style={{ listStyleType: 'none', paddingLeft: 0 }}>
+          {gatedResources.map(({ id, title, link }) => (
+            <li key={id} style={{
+              marginBottom: 20,
+              backgroundColor: '#F5F5F5',
+              padding: 16,
+              borderRadius: 12,
+              boxShadow: '0 1px 5px rgba(0,0,0,0.05)',
+            }}>
+              <a
+                href={link}
+                onClick={(e) => {
+                  e.preventDefault();
+                  // Trigger modal email capture here before download
+                }}
+                style={{
+                  textDecoration: 'none',
+                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  fontWeight: 600,
+                  fontSize: 18,
+                }}
+              >
+                {title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* FAQ Archive Link */}
+      <section style={{ textAlign: 'center', marginBottom: 40 }}>
+        <a href="/faq" style={{
+          fontWeight: 600,
+          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+          fontSize: 18,
+          textDecoration: 'none',
+          cursor: 'pointer',
+          transition: 'opacity 0.2s',
+        }}
+        onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
+        onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+        >
+          Browse Full FAQ Archive
+        </a>
+      </section>
+      <Footer />
+      </div>
+    </div>
+  );
+}
+
