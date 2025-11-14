@@ -110,10 +110,10 @@ The Infin8 project has been transformed from an E-2 visa services platform to a 
     - Dark background (#0A0A0A) with glass morphism effects
     - Subtle decor elements (blurred orbs) for visual depth
     - Two-column layout: plan selection buttons on left, dynamic plan details on right
-    - Integrated Add-ons & Upsells section within pricing container
     - Added "BEST VALUE" badge for Annual Growth Plan
     - White CTA buttons with hover effects
     - All content center-aligned
+    - Removed Add-ons & Upsells section and legal notes from pricing section
 
 14. ✅ **Client Requirements Section Remix**
     - Remixed "What We Need From You" section with Prism Studio brand theme
@@ -219,7 +219,7 @@ The Infin8 project has been transformed from an E-2 visa services platform to a 
 - Implemented Prism Studio dark theme (#0A0A0A background, glass morphism)
 - Two-column layout: plan selection buttons (left) and dynamic plan details (right)
 - Interactive state management for plan selection (Simple Monthly, Annual Growth Plan, No-Contract Flex Plan)
-- Integrated Add-ons & Upsells section within pricing container
+- Removed Add-ons & Upsells section and legal notes for cleaner pricing presentation
 - All content center-aligned with Prism Studio brand aesthetic
 
 **Full Site Center Alignment**
