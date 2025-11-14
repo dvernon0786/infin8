@@ -1,14 +1,34 @@
 import React, { useState } from 'react';
+import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 export default function Home() {
   const [buttonHovered, setButtonHovered] = useState(false);
   const [primaryButtonHovered, setPrimaryButtonHovered] = useState(false);
+  const [heroVariant, setHeroVariant] = useState('A'); // A/B testing
+
+  const heroContent = {
+    A: {
+      headline: "Your Business on Autopilot — $1,000/month",
+      subheadline: "Everything you need to run and grow your small business — website, booking, payments, CRM, chatbot, content, and monthly optimization — all for $1,000/month. First month covers setup. 6‑month minimum."
+    },
+    B: {
+      headline: "A Full Marketing Team — For Less Than One Employee",
+      subheadline: "$1,000/month gives you the full stack: website + automation + content + support — built and managed for you. Pay monthly; first month covers setup. 6‑month minimum."
+    }
+  };
+
+  const currentHero = heroContent[heroVariant];
 
   return (
-    <div style={{ fontFamily: "'Inter', sans-serif", color: '#1A1A1A' }}>
-      <Navbar />
+    <>
+      <Head>
+        <title>Infin8 Automation — Full Marketing & Operations — $1,000/month</title>
+        <meta name="description" content="$1,000/month gets you a full marketing & automation team: website, booking & payments, CRM, SMS reminders, chatbot, content pipeline, analytics. 6‑month minimum." />
+      </Head>
+      <div style={{ fontFamily: "'Inter', sans-serif", color: '#1A1A1A' }}>
+        <Navbar />
 
       {/* Hero Section */}
       <section style={{
@@ -198,19 +218,20 @@ export default function Home() {
                   <path d="M22 4h-4"/>
                   <circle cx="4" cy="20" r="2"/>
                 </svg>
-                U.S. Visa Startup Support
+                Business Automation
               </span>
 
               {/* Brand + Title */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexDirection: 'column' }}>
                 <h1 style={{
-                  fontSize: 'clamp(48px, 6vw, 60px)',
+                  fontSize: 'clamp(36px, 5vw, 56px)',
                   fontWeight: '600',
                   color: '#111827',
                   letterSpacing: '-0.02em',
-                  lineHeight: 1,
+                  lineHeight: 1.2,
+                  maxWidth: '900px',
                 }}>
-                  SMARTER AI SOLUTIONS
+                  {currentHero.headline}
                 </h1>
               </div>
 
@@ -219,11 +240,11 @@ export default function Home() {
                 marginTop: '12px',
                 fontSize: 'clamp(16px, 2vw, 18px)',
                 color: '#4B5563',
-                maxWidth: '600px',
-                lineHeight: 1.5,
+                maxWidth: '700px',
+                lineHeight: 1.6,
                 fontWeight: 400,
               }}>
-                Custom AI solutions, built for the innovators of tomorrow
+                {currentHero.subheadline}
               </p>
 
               {/* CTAs */}
@@ -237,7 +258,7 @@ export default function Home() {
                 flexWrap: 'wrap',
               }}>
                 <a
-                  href="/e2/eligibility"
+                  href="/contact"
                   style={{
                     position: 'relative',
                     display: 'inline-flex',
@@ -268,7 +289,7 @@ export default function Home() {
                     zIndex: 1,
                     transform: primaryButtonHovered ? 'translateX(4px)' : 'translateX(0)',
                     transition: 'transform 0.3s',
-                  }}>Start Eligibility Quiz</span>
+                  }}>Get Started — $1K/Month</span>
                   <svg 
                     width="20" 
                     height="20" 
@@ -345,7 +366,7 @@ export default function Home() {
                   onMouseEnter={() => setButtonHovered(true)}
                   onMouseLeave={() => setButtonHovered(false)}
                 >
-                  <span style={{ position: 'relative', zIndex: 1 }}>Book Consultation</span>
+                  <span style={{ position: 'relative', zIndex: 1 }}>Schedule a 15‑minute Call</span>
                   <div style={{
                     position: 'absolute',
                     top: 0,
@@ -406,7 +427,7 @@ export default function Home() {
                   animation: 'lyricFadeIn 0.8s ease-in-out forwards',
                   animationDelay: '0s',
                 }}
-              >"We assess</span>
+              >Small businesses waste time and money</span>
               <span 
                 className="lyric-line"
                 style={{
@@ -418,7 +439,7 @@ export default function Home() {
                   color: '#111827',
                   fontWeight: 600,
                 }}
-              >your visa profile</span>
+              >juggling half-built tools,</span>
               <span 
                 className="lyric-line"
                 style={{
@@ -427,7 +448,7 @@ export default function Home() {
                   animation: 'lyricFadeIn 0.8s ease-in-out forwards',
                   animationDelay: '1.6s',
                 }}
-              >, map your goals,</span>
+              >missed bookings, no‑shows,</span>
               <span 
                 className="lyric-line"
                 style={{
@@ -448,7 +469,7 @@ export default function Home() {
                   color: '#111827',
                   fontWeight: 600,
                 }}
-              >use expert guidance</span>
+              >inconsistent social content.</span>
               <span 
                 className="lyric-line"
                 style={{
@@ -458,7 +479,7 @@ export default function Home() {
                   animationDelay: '4s',
                   marginLeft: '0.5rem',
                 }}
-              >to help your journey break through the barriers.</span>
+              >You need reliable systems that just work</span>
               <span 
                 className="lyric-line"
                 style={{
@@ -467,7 +488,7 @@ export default function Home() {
                   animation: 'lyricFadeIn 0.8s ease-in-out forwards',
                   animationDelay: '4.8s',
                 }}
-              >The best part?</span>
+              >—</span>
               <span 
                 className="lyric-line"
                 style={{
@@ -479,7 +500,7 @@ export default function Home() {
                   color: '#111827',
                   fontWeight: 600,
                 }}
-              >We act</span>
+              >without hiring a full team.</span>
               <span 
                 className="lyric-line"
                 style={{
@@ -488,7 +509,7 @@ export default function Home() {
                   animation: 'lyricFadeIn 0.8s ease-in-out forwards',
                   animationDelay: '6.4s',
                 }}
-              >, too."</span>
+              >We solve that problem.</span>
             </p>
 
             <div style={{
@@ -512,7 +533,7 @@ export default function Home() {
                   transform: 'translateY(10px)',
                 }}></div>
                 <img 
-                  src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/b5fa796b-5a4e-4746-8463-8e491f896f5c_320w.jpg" 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces&auto=format" 
                   alt="Founder avatar" 
                   style={{
                     width: '48px',
@@ -527,7 +548,7 @@ export default function Home() {
               <span style={{
                 fontSize: '16px',
                 color: '#374151',
-              }}>Founder of Infin8</span>
+              }}>Founder of Infin8 Automation</span>
             </div>
           </div>
         </div>
@@ -573,7 +594,7 @@ export default function Home() {
                 <path d="M22 4h-4"></path>
                 <circle cx="4" cy="20" r="2"></circle>
               </svg>
-              Benefits
+              Core Features
             </span>
             <h2 style={{
               fontSize: 'clamp(32px, 5vw, 48px)',
@@ -591,7 +612,7 @@ export default function Home() {
               margin: 'clamp(8px, 1.5vw, 12px) auto 0',
               lineHeight: 1.6,
             }}>
-              Partner with an E-2 visa agency delivering expert solutions.
+              Everything you need to automate your business, all in one place.
             </p>
           </div>
 
@@ -666,14 +687,14 @@ export default function Home() {
                 color: '#111827',
                 marginBottom: 'clamp(6px, 1vw, 8px)',
               }}>
-                Real‑Time Tracking
+                SMS & Email Reminders
               </h3>
               <p style={{
                 color: '#4B5563',
                 lineHeight: 1.6,
                 fontSize: 'clamp(14px, 1.8vw, 16px)',
               }}>
-                Stay ahead with accurate, real‑time visa status tracking.
+                Automated confirmations, pre-visit reminders, and no-show prevention that cut missed appointments by up to 50%.
               </p>
             </div>
 
@@ -713,7 +734,7 @@ export default function Home() {
                     border: '1px solid rgba(0,0,0,0.05)',
                     animation: 'float 3s ease-in-out infinite 0.3s',
                     boxShadow: '0 8px 18px rgba(0,0,0,0.06)',
-                  }}>20% Faster</span>
+                  }}>50% Growth</span>
                   <span style={{
                     position: 'absolute',
                     right: 'clamp(12px, 2vw, 16px)',
@@ -727,7 +748,7 @@ export default function Home() {
                     border: '1px solid rgba(0,0,0,0.05)',
                     animation: 'float 3s ease-in-out infinite 0.7s',
                     boxShadow: '0 8px 18px rgba(0,0,0,0.06)',
-                  }}>60% Success</span>
+                  }}>Real-Time</span>
                   <div style={{
                     position: 'absolute',
                     left: 'clamp(24px, 4vw, 32px)',
@@ -793,14 +814,14 @@ export default function Home() {
                 color: '#111827',
                 marginBottom: 'clamp(6px, 1vw, 8px)',
               }}>
-                Expert Guidance
+                Monthly Analytics
               </h3>
               <p style={{
                 color: '#4B5563',
                 lineHeight: 1.6,
                 fontSize: 'clamp(14px, 1.8vw, 16px)',
               }}>
-                Make smarter moves with accurate, real‑time visa insights.
+                Performance snapshot with prioritized action list and insights to help you make data-driven decisions.
               </p>
             </div>
 
@@ -859,14 +880,14 @@ export default function Home() {
                 color: '#111827',
                 marginBottom: 'clamp(6px, 1vw, 8px)',
               }}>
-                Real-Time Updates
+                AI Chatbot
               </h3>
               <p style={{
                 color: '#4B5563',
                 lineHeight: 1.6,
                 fontSize: 'clamp(14px, 1.8vw, 16px)',
               }}>
-                Connect with your team instantly to track progress and updates.
+                24/7 triage, booking assistance, and lead capture on your website—never miss an opportunity.
               </p>
             </div>
           </div>
@@ -900,11 +921,11 @@ export default function Home() {
                 flexShrink: 0,
               }}>
                 {[
-                  { icon: 'coins', text: 'Cost Effective' },
-                  { icon: 'activity', text: 'Real‑Time Insights' },
-                  { icon: 'workflow', text: 'Expert Support' },
-                  { icon: 'brain-circuit', text: 'Strategic Planning' },
-                  { icon: 'zap', text: 'Faster Processing' },
+                  { text: 'Website & Booking' },
+                  { text: 'Payments Integrated' },
+                  { text: 'CRM & Lead Capture' },
+                  { text: 'Daily Content' },
+                  { text: 'Priority Support' },
                 ].map((item, idx) => (
                   <span key={idx} style={{
                     display: 'inline-flex',
@@ -919,46 +940,6 @@ export default function Home() {
                     border: '1px solid rgba(0,0,0,0.05)',
                     boxShadow: '0 1px 2px rgba(0,0,0,0.05)',
                   }}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: 'clamp(14px, 2vw, 16px)', height: 'clamp(14px, 2vw, 16px)' }}>
-                      {item.icon === 'coins' && (
-                        <>
-                          <circle cx="8" cy="8" r="6"></circle>
-                          <path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path>
-                          <path d="M7 6h1v4"></path>
-                          <path d="m16.71 13.88.7.71-2.82 2.82"></path>
-                        </>
-                      )}
-                      {item.icon === 'activity' && (
-                        <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path>
-                      )}
-                      {item.icon === 'workflow' && (
-                        <>
-                          <rect width="8" height="8" x="3" y="3" rx="2"></rect>
-                          <path d="M7 11v4a2 2 0 0 0 2 2h4"></path>
-                          <rect width="8" height="8" x="13" y="13" rx="2"></rect>
-                        </>
-                      )}
-                      {item.icon === 'brain-circuit' && (
-                        <>
-                          <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path>
-                          <path d="M9 13a4.5 4.5 0 0 0 3-4"></path>
-                          <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path>
-                          <path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path>
-                          <path d="M6 18a4 4 0 0 1-1.967-.516"></path>
-                          <path d="M12 13h4"></path>
-                          <path d="M12 18h6a2 2 0 0 1 2 2v1"></path>
-                          <path d="M12 8h8"></path>
-                          <path d="M16 8V5a2 2 0 0 1 2-2"></path>
-                          <circle cx="16" cy="13" r=".5"></circle>
-                          <circle cx="18" cy="3" r=".5"></circle>
-                          <circle cx="20" cy="21" r=".5"></circle>
-                          <circle cx="20" cy="8" r=".5"></circle>
-                        </>
-                      )}
-                      {item.icon === 'zap' && (
-                        <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
-                      )}
-                    </svg>
                     {item.text}
                   </span>
                 ))}
@@ -971,11 +952,11 @@ export default function Home() {
                 flexShrink: 0,
               }} aria-hidden="true">
                 {[
-                  { icon: 'coins', text: 'Cost Effective' },
-                  { icon: 'activity', text: 'Real‑Time Insights' },
-                  { icon: 'workflow', text: 'Expert Support' },
-                  { icon: 'brain-circuit', text: 'Strategic Planning' },
-                  { icon: 'zap', text: 'Faster Processing' },
+                  { text: 'Website & Booking' },
+                  { text: 'Payments Integrated' },
+                  { text: 'CRM & Lead Capture' },
+                  { text: 'Daily Content' },
+                  { text: 'Priority Support' },
                 ].map((item, idx) => (
                   <span key={idx} style={{
                     display: 'inline-flex',
@@ -990,46 +971,6 @@ export default function Home() {
                     border: '1px solid rgba(0,0,0,0.05)',
                     boxShadow: '0 1px 2px rgba(0,0,0,0.05)',
                   }}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: 'clamp(14px, 2vw, 16px)', height: 'clamp(14px, 2vw, 16px)' }}>
-                      {item.icon === 'coins' && (
-                        <>
-                          <circle cx="8" cy="8" r="6"></circle>
-                          <path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path>
-                          <path d="M7 6h1v4"></path>
-                          <path d="m16.71 13.88.7.71-2.82 2.82"></path>
-                        </>
-                      )}
-                      {item.icon === 'activity' && (
-                        <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path>
-                      )}
-                      {item.icon === 'workflow' && (
-                        <>
-                          <rect width="8" height="8" x="3" y="3" rx="2"></rect>
-                          <path d="M7 11v4a2 2 0 0 0 2 2h4"></path>
-                          <rect width="8" height="8" x="13" y="13" rx="2"></rect>
-                        </>
-                      )}
-                      {item.icon === 'brain-circuit' && (
-                        <>
-                          <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path>
-                          <path d="M9 13a4.5 4.5 0 0 0 3-4"></path>
-                          <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path>
-                          <path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path>
-                          <path d="M6 18a4 4 0 0 1-1.967-.516"></path>
-                          <path d="M12 13h4"></path>
-                          <path d="M12 18h6a2 2 0 0 1 2 2v1"></path>
-                          <path d="M12 8h8"></path>
-                          <path d="M16 8V5a2 2 0 0 1 2-2"></path>
-                          <circle cx="16" cy="13" r=".5"></circle>
-                          <circle cx="18" cy="3" r=".5"></circle>
-                          <circle cx="20" cy="21" r=".5"></circle>
-                          <circle cx="20" cy="8" r=".5"></circle>
-                        </>
-                      )}
-                      {item.icon === 'zap' && (
-                        <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
-                      )}
-                    </svg>
                     {item.text}
                   </span>
                 ))}
@@ -1076,175 +1017,303 @@ export default function Home() {
           color: '#111827',
           letterSpacing: '-0.02em',
         }}>
-          Why E-2 Visas Are Different
+          Our Promise
         </h2>
-        <ul style={{
-          listStyle: 'none',
-          paddingLeft: 0,
-          maxWidth: '680px',
-          margin: '0 auto',
-          fontSize: '18px',
+        <p style={{
+          fontSize: 'clamp(18px, 2.5vw, 22px)',
           color: '#4B5563',
-          lineHeight: '1.6',
+          maxWidth: '900px',
+          margin: '0 auto',
+          lineHeight: 1.6,
           fontWeight: 400,
         }}>
-          {[
-            'Active management — You manage your business day-to-day (no passive investment).',
-            'Live and work in the United States through your business.',
-            'Spouse work benefit — Your spouse can work anywhere in the U.S.',
-            'No permanent residency requirement — Stay as long as your business operates.',
-            'Faster than EB-5 — Typically approved in 4 to 8 months versus years.',
-          ].map((point, i) => (
-            <li key={i} style={{ marginBottom: 16, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12 }}>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 6L9 17L5 13" stroke="#667eea" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-              <span>{point}</span>
-            </li>
-          ))}
-        </ul>
+          We build and run the tools that make your business predictable: automated booking, payments, CRM follow-ups, SMS confirmations, review generation, daily social content, and simple monthly reporting — for $1,000/month.
+        </p>
       </section>
 
-      {/* Our Role Section */}
+      {/* What's Included Section */}
       <section style={{
         backgroundColor: '#F9FAFB',
         padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)',
         textAlign: 'center',
       }}>
-        <h2 style={{
-          fontSize: 'clamp(32px, 5vw, 48px)',
-          fontWeight: 700,
-          marginBottom: 'clamp(32px, 6vw, 48px)',
-          color: '#111827',
-          letterSpacing: '-0.02em',
-        }}>
-          Our Role: Your Bridge to Success
-        </h2>
         <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(260px, 30vw, 320px), 1fr))',
           maxWidth: 1280,
           margin: '0 auto',
-          gap: 'clamp(24px, 4vw, 32px)',
-          justifyContent: 'center',
         }}>
-          {/* Card: Eligibility Check */}
+          <h2 style={{
+            fontSize: 'clamp(32px, 5vw, 48px)',
+            fontWeight: 700,
+            marginBottom: 'clamp(16px, 3vw, 24px)',
+            color: '#111827',
+            letterSpacing: '-0.02em',
+          }}>
+            What's Included
+          </h2>
+          <p style={{
+            fontSize: 'clamp(16px, 2vw, 18px)',
+            marginBottom: 'clamp(32px, 6vw, 48px)',
+            color: '#4B5563',
+            lineHeight: 1.6,
+            maxWidth: '800px',
+            margin: '0 auto clamp(32px, 6vw, 48px)',
+          }}>
+            Everything you need to automate your business operations and marketing
+          </p>
           <div style={{
-            backgroundColor: '#fff',
-            padding: 'clamp(24px, 4vw, 32px)',
-            borderRadius: '24px',
-            border: '1px solid rgba(0, 0, 0, 0.05)',
-            boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
-            transition: 'all 0.3s',
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = 'translateY(-8px)';
-            e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = 'translateY(0)';
-            e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
-          }}
-          >
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginBottom: 20 }}>
-              <path d="M12 22C17.5229 22 22 17.5228 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47714 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#667eea" strokeWidth="2"/>
-              <path d="M9 12.75L11 14.5L15 10" stroke="#667eea" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            <h3 style={{ fontSize: 20, marginBottom: 12, color: '#111827', fontWeight: 600 }}>
-              Eligibility Check
-            </h3>
-            <p style={{ fontSize: 16, color: '#4B5563', lineHeight: 1.6 }}>
-              We verify you meet treaty and investment requirements, so there are no surprises during your application.
-            </p>
-          </div>
-
-          {/* Card: Business Matching */}
-          <div style={{
-            backgroundColor: '#fff',
-            padding: '32px',
-            borderRadius: '24px',
-            border: '1px solid rgba(0, 0, 0, 0.05)',
-            boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
-            transition: 'all 0.3s',
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = 'translateY(-8px)';
-            e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = 'translateY(0)';
-            e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
-          }}
-          >
-            <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginBottom: 20 }} viewBox="0 0 24 24">
-              <path d="M3 3L21 21" stroke="#667eea" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              <circle cx="9" cy="9" r="7" stroke="#667eea" strokeWidth="2"/>
-              <path d="M9 5V9L12 12" stroke="#667eea" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            <h3 style={{ fontSize: 20, marginBottom: 12, color: '#111827', fontWeight: 600 }}>
-              Business Matching
-            </h3>
-            <p style={{ fontSize: 16, color: '#4B5563', lineHeight: 1.6 }}>
-              We match you with franchise, acquisition, or startup options tailored for E-2 visa success.
-            </p>
-          </div>
-
-          {/* Card: Partner Network */}
-          <div style={{
-            backgroundColor: '#fff',
-            padding: '32px',
-            borderRadius: '24px',
-            border: '1px solid rgba(0, 0, 0, 0.05)',
-            boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
-            transition: 'all 0.3s',
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = 'translateY(-8px)';
-            e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = 'translateY(0)';
-            e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
-          }}
-          >
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginBottom: 20 }}>
-              <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C13.9719 22 15.822 21.3642 17.2654 20.29" stroke="#667eea" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M18 14C19.6569 14 21 12.6569 21 11C21 9.34315 19.6569 8 18 8C16.3431 8 15 9.34315 15 11C15 12.6569 16.3431 14 18 14Z" stroke="#667eea" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M15 8L12 12L9 15" stroke="#667eea" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            <h3 style={{ fontSize: 20, marginBottom: 12, color: '#111827', fontWeight: 600 }}>
-              Partner Network
-            </h3>
-            <p style={{ fontSize: 16, color: '#4B5563', lineHeight: 1.6 }}>
-              Connect with vetted immigration attorneys, formation services, and business brokers through our trusted network.
-            </p>
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(280px, 30vw, 360px), 1fr))',
+            gap: 'clamp(24px, 4vw, 32px)',
+            justifyContent: 'center',
+          }}>
+            {[
+              { title: 'Website & Booking', desc: 'Mobile-first website refresh with integrated booking page and one-click scheduling.' },
+              { title: 'Payments Integrated', desc: 'Stripe/Square integration with deposits, no-show fees, and automated receipts.' },
+              { title: 'CRM + Lead Capture', desc: 'Automated lead routing, immediate follow-up, and nurture sequences.' },
+              { title: 'Daily Content Pipeline', desc: '3 uploads/week transformed into daily social posts with scheduling.' },
+              { title: 'Review Management', desc: 'Automated review requests, monitoring, and reputation management.' },
+              { title: 'Priority Support', desc: 'Unlimited email support, monthly check-ins, and one major tweak per month.' },
+            ].map((item, idx) => (
+              <div key={idx} style={{
+                backgroundColor: '#fff',
+                padding: 'clamp(24px, 4vw, 32px)',
+                borderRadius: '24px',
+                border: '1px solid rgba(0, 0, 0, 0.05)',
+                boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+                transition: 'all 0.3s',
+                textAlign: 'left',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-8px)';
+                e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+              }}
+              >
+                <h3 style={{ fontSize: 20, marginBottom: 12, color: '#111827', fontWeight: 600 }}>{item.title}</h3>
+                <p style={{ fontSize: 16, color: '#4B5563', lineHeight: 1.6 }}>{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
-        <button style={{
-          marginTop: 'clamp(32px, 6vw, 48px)',
-          backgroundColor: '#111827',
-          color: '#fff',
-          fontWeight: 600,
-          padding: 'clamp(10px, 2vw, 12px) clamp(24px, 4vw, 32px)',
-          fontSize: 'clamp(14px, 2vw, 16px)',
-          border: 'none',
-          borderRadius: '12px',
-          cursor: 'pointer',
-          boxShadow: '0 6px 20px rgba(0,0,0,0.18)',
-          transition: 'all 0.2s',
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.backgroundColor = '#1F2937';
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.backgroundColor = '#111827';
-        }}
-          onClick={() => {
-            // scroll or open quiz modal
-          }}
-        >
-          Get Started
-        </button>
+      </section>
+
+      {/* Pricing Section */}
+      <section style={{
+        backgroundColor: '#ffffff',
+        padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)',
+        textAlign: 'center',
+      }}>
+        <div style={{
+          maxWidth: 1280,
+          margin: '0 auto',
+        }}>
+          <h2 style={{
+            fontSize: 'clamp(32px, 5vw, 48px)',
+            fontWeight: 700,
+            marginBottom: 'clamp(16px, 3vw, 24px)',
+            color: '#111827',
+            letterSpacing: '-0.02em',
+          }}>
+            Simple, Transparent Pricing
+          </h2>
+          <p style={{
+            fontSize: 'clamp(16px, 2vw, 18px)',
+            marginBottom: 'clamp(32px, 6vw, 48px)',
+            color: '#4B5563',
+            lineHeight: 1.6,
+          }}>
+            Choose the plan that works for your business
+          </p>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(280px, 30vw, 320px), 1fr))',
+            gap: 'clamp(24px, 4vw, 32px)',
+            justifyContent: 'center',
+          }}>
+            {/* Plan 1: Simple Monthly */}
+            <div style={{
+              backgroundColor: '#fff',
+              padding: 'clamp(32px, 4vw, 40px)',
+              borderRadius: '24px',
+              border: '1px solid rgba(0, 0, 0, 0.05)',
+              boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+              transition: 'all 0.3s',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-8px)';
+              e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+            }}
+            >
+              <h3 style={{ fontSize: 24, marginBottom: 12, color: '#111827', fontWeight: 600 }}>Simple Monthly</h3>
+              <div style={{ fontSize: 48, fontWeight: 700, marginBottom: 8, color: '#111827' }}>$1,000</div>
+              <div style={{ fontSize: 16, color: '#6B7280', marginBottom: 24 }}>per month</div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 16px 0', textAlign: 'left' }}>
+                <li style={{ padding: '8px 0', fontSize: 14, color: '#4B5563' }}>✔ Setup included in the first month</li>
+                <li style={{ padding: '8px 0', fontSize: 14, color: '#4B5563' }}>✔ 6-month minimum</li>
+                <li style={{ padding: '8px 0', fontSize: 14, color: '#4B5563' }}>✔ Month-to-month after 6 months</li>
+              </ul>
+              <p style={{ fontSize: 13, color: '#6B7280', marginBottom: 24, fontStyle: 'italic', lineHeight: 1.5 }}>
+                Best for: Businesses wanting predictable monthly billing with setup spread out.
+              </p>
+              <a href="/contact" style={{
+                display: 'block',
+                backgroundColor: '#111827',
+                color: '#fff',
+                fontWeight: 600,
+                padding: '12px 24px',
+                borderRadius: '12px',
+                textDecoration: 'none',
+                fontSize: 16,
+                transition: 'all 0.2s',
+                textAlign: 'center',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#1F2937';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#111827';
+              }}
+              >
+                Get Started
+              </a>
+            </div>
+
+            {/* Plan 2: Annual Growth Plan — Best Value */}
+            <div style={{
+              backgroundColor: '#fff',
+              padding: 'clamp(32px, 4vw, 40px)',
+              borderRadius: '24px',
+              border: '2px solid #667eea',
+              boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+              transition: 'all 0.3s',
+              position: 'relative',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-8px)';
+              e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+            }}
+            >
+              <span style={{
+                position: 'absolute',
+                top: -12,
+                left: '50%',
+                transform: 'translateX(-50%)',
+                backgroundColor: '#667eea',
+                color: '#fff',
+                padding: '4px 12px',
+                borderRadius: '12px',
+                fontSize: 12,
+                fontWeight: 600,
+              }}>⭐ BEST VALUE</span>
+              <h3 style={{ fontSize: 24, marginBottom: 12, color: '#111827', fontWeight: 600 }}>Annual Growth Plan</h3>
+              <div style={{ fontSize: 48, fontWeight: 700, marginBottom: 8, color: '#111827' }}>$1,000</div>
+              <div style={{ fontSize: 16, color: '#6B7280', marginBottom: 24 }}>per month (12 months)</div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 16px 0', textAlign: 'left' }}>
+                <li style={{ padding: '8px 0', fontSize: 14, color: '#4B5563' }}>✔ $6,000 setup completely waived</li>
+                <li style={{ padding: '8px 0', fontSize: 14, color: '#4B5563' }}>✔ 12-month commitment</li>
+                <li style={{ padding: '8px 0', fontSize: 14, color: '#4B5563' }}>✔ Save $6,000 instantly</li>
+                <li style={{ padding: '8px 0', fontSize: 14, color: '#4B5563' }}>✔ Priority support + quarterly optimization reviews (bonus value)</li>
+              </ul>
+              <p style={{ fontSize: 13, color: '#6B7280', marginBottom: 24, fontStyle: 'italic', lineHeight: 1.5 }}>
+                Best for: Businesses ready to scale fast with maximum savings.
+              </p>
+              <a href="/contact" style={{
+                display: 'block',
+                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                color: '#fff',
+                fontWeight: 600,
+                padding: '12px 24px',
+                borderRadius: '12px',
+                textDecoration: 'none',
+                fontSize: 16,
+                transition: 'all 0.2s',
+                textAlign: 'center',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.opacity = '0.9';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.opacity = '1';
+              }}
+              >
+                Get Started
+              </a>
+            </div>
+
+            {/* Plan 3: No-Contract Flex Plan */}
+            <div style={{
+              backgroundColor: '#fff',
+              padding: 'clamp(32px, 4vw, 40px)',
+              borderRadius: '24px',
+              border: '1px solid rgba(0, 0, 0, 0.05)',
+              boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+              transition: 'all 0.3s',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-8px)';
+              e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+            }}
+            >
+              <h3 style={{ fontSize: 24, marginBottom: 12, color: '#111827', fontWeight: 600 }}>No-Contract Flex Plan</h3>
+              <div style={{ fontSize: 48, fontWeight: 700, marginBottom: 8, color: '#111827' }}>$6,000</div>
+              <div style={{ fontSize: 16, color: '#6B7280', marginBottom: 8 }}>one-time setup</div>
+              <div style={{ fontSize: 20, fontWeight: 600, marginBottom: 24, color: '#111827' }}>+ $1,000/month</div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 16px 0', textAlign: 'left' }}>
+                <li style={{ padding: '8px 0', fontSize: 14, color: '#4B5563' }}>✔ No commitments</li>
+                <li style={{ padding: '8px 0', fontSize: 14, color: '#4B5563' }}>✔ Pay setup upfront</li>
+                <li style={{ padding: '8px 0', fontSize: 14, color: '#4B5563' }}>✔ Cancel anytime</li>
+              </ul>
+              <p style={{ fontSize: 13, color: '#6B7280', marginBottom: 24, fontStyle: 'italic', lineHeight: 1.5 }}>
+                Best for: Businesses that want full flexibility with no lock-ins.
+              </p>
+              <a href="/contact" style={{
+                display: 'block',
+                backgroundColor: '#111827',
+                color: '#fff',
+                fontWeight: 600,
+                padding: '12px 24px',
+                borderRadius: '12px',
+                textDecoration: 'none',
+                fontSize: 16,
+                transition: 'all 0.2s',
+                textAlign: 'center',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#1F2937';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#111827';
+              }}
+              >
+                Get Started
+              </a>
+            </div>
+          </div>
+          <p style={{
+            marginTop: 32,
+            fontSize: 12,
+            color: '#6B7280',
+            maxWidth: 800,
+            margin: '32px auto 0',
+          }}>
+            6‑month minimum applies to Simple Monthly offers. Annual Saver requires 12‑month commitment. Setup value referenced is for internal accounting — savings only apply if the client honors the commitment. No refunds on prior-service months. We pause automations for unpaid invoices.
+          </p>
+        </div>
       </section>
 
       {/* Timeline Section */}
@@ -1262,22 +1331,21 @@ export default function Home() {
           marginBottom: 'clamp(32px, 6vw, 48px)',
           letterSpacing: '-0.02em',
         }}>
-          The E-2 Path (Step-by-Step)
+          Onboarding & Timeline
         </h2>
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(150px, 20vw, 200px), 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(200px, 25vw, 240px), 1fr))',
           gap: 'clamp(16px, 3vw, 24px)',
         }}>
           {[
-            { number: 1, title: 'Verify Eligibility', desc: 'Your country + investment' },
-            { number: 2, title: 'Choose Business Type', desc: 'Franchise vs. Acquisition vs. Startup' },
-            { number: 3, title: 'Form Company', desc: 'LLC formation, bank accounts, contracts' },
-            { number: 4, title: 'Gather Documentation', desc: 'Business plan, investment proof, tax docs' },
-            { number: 5, title: 'File E-2 Application', desc: 'Interview + consulate approval' },
-            { number: 6, title: 'Launch your business', desc: 'Move to US + operate' },
-          ].map(({ number, title, desc }) => (
-            <div key={number} style={{
+            { week: 'Week 0', title: 'Sign & Access', desc: 'Pay first month, provide domain, logins, 3 raw media uploads' },
+            { week: 'Week 1', title: 'Foundation', desc: 'Audit, sitemap, homepage & booking skeleton live' },
+            { week: 'Week 2', title: 'Automation Setup', desc: 'CRM, lead flows, chatbot; basic booking/payment live' },
+            { week: 'Week 3', title: 'Content & Reminders', desc: 'Content pipeline scheduled (first 14 posts), SMS reminders activated' },
+            { week: 'Week 4', title: 'Analytics & Handoff', desc: 'Analytics dashboard + monthly snapshot delivered' },
+          ].map(({ week, title, desc }, idx) => (
+            <div key={idx} style={{
               backgroundColor: '#F9FAFB',
               borderRadius: '24px',
               padding: 'clamp(20px, 3vw, 24px)',
@@ -1297,14 +1365,11 @@ export default function Home() {
             }}
             >
               <div style={{
-                fontSize: 28,
-                fontWeight: '700',
-                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                marginBottom: 12,
-              }}>{number}</div>
+                fontSize: 14,
+                fontWeight: '600',
+                color: '#667eea',
+                marginBottom: 8,
+              }}>{week}</div>
               <h3 style={{ fontSize: 20, fontWeight: 600, marginBottom: 8, color: '#111827' }}>{title}</h3>
               <p style={{ fontSize: 14, color: '#4B5563', lineHeight: 1.5 }}>{desc}</p>
             </div>
@@ -1317,7 +1382,7 @@ export default function Home() {
           color: '#6B7280',
           fontSize: 14,
         }}>
-          Typically 4-8 months after setup.
+          Months 2–6: Ongoing optimization, content, and monthly improvements.
         </p>
       </section>
 
@@ -1345,7 +1410,7 @@ export default function Home() {
             color: '#111827',
             letterSpacing: '-0.02em',
           }}>
-            Trusted by E-2 Visa Holders Worldwide
+            Trusted by Small Business Owners
           </h2>
 
           <blockquote style={{
@@ -1355,7 +1420,7 @@ export default function Home() {
             color: '#111827',
             marginBottom: 20,
           }}>
-            "I had no idea where to start. The eligibility quiz made it clear I qualified, and within a week I was connected with an amazing immigration attorney. Six months later, I had my E-2 approval. Game-changing."
+            "Infin8 Automation transformed my booking system. No-shows dropped by 60%, and I'm saving 15 hours a week on admin work. The automated content pipeline alone has been a game-changer."
           </blockquote>
 
           <footer style={{
@@ -1366,16 +1431,117 @@ export default function Home() {
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
           }}>
-            Kenji T. — Japan, Fine Dining Restaurant, Miami, FL
+            Sarah M. — Salon Owner, Austin, TX
           </footer>
         </div>
       </section>
 
-      {/* Country Selector Section */}
+      {/* Client Requirements Section */}
+      <section style={{
+        backgroundColor: '#F9FAFB',
+        padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)',
+        textAlign: 'center',
+      }}>
+        <div style={{
+          maxWidth: 1280,
+          margin: '0 auto',
+        }}>
+          <h2 style={{
+            fontSize: 'clamp(32px, 5vw, 48px)',
+            fontWeight: 700,
+            marginBottom: 'clamp(16px, 3vw, 24px)',
+            color: '#111827',
+            letterSpacing: '-0.02em',
+          }}>
+            What We Need From You
+          </h2>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(260px, 30vw, 320px), 1fr))',
+            gap: 'clamp(24px, 4vw, 32px)',
+            marginTop: 48,
+          }}>
+            {[
+              { title: 'Domain & Hosting', desc: 'Access to your domain/hosting or we can host/manage for you' },
+              { title: 'Social Accounts', desc: 'Access to social media accounts or we can manage them' },
+              { title: 'Content Uploads', desc: '3 raw content pieces (videos/images) to jumpstart content pipeline' },
+              { title: 'POS/Booking Access', desc: 'Access to existing POS/booking systems or we onboard new accounts' },
+            ].map((item, idx) => (
+              <div key={idx} style={{
+                backgroundColor: '#fff',
+                padding: 'clamp(24px, 4vw, 32px)',
+                borderRadius: '24px',
+                border: '1px solid rgba(0,0,0,0.05)',
+                boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+                transition: 'all 0.3s',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-8px)';
+                e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+              }}
+              >
+                <h3 style={{ fontSize: 20, marginBottom: 12, color: '#111827', fontWeight: 600 }}>{item.title}</h3>
+                <p style={{ fontSize: 16, color: '#4B5563', lineHeight: 1.6 }}>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* KPIs Section */}
       <section style={{
         padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)',
         maxWidth: '1280px',
         margin: '0 auto',
+        backgroundColor: '#fff',
+      }}>
+        <h2 style={{
+          textAlign: 'center',
+          fontSize: 'clamp(32px, 5vw, 48px)',
+          fontWeight: '700',
+          color: '#111827',
+          marginBottom: 'clamp(32px, 6vw, 48px)',
+          letterSpacing: '-0.02em',
+        }}>
+          Monthly Performance Snapshot
+        </h2>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(200px, 25vw, 240px), 1fr))',
+          gap: 'clamp(16px, 3vw, 24px)',
+        }}>
+          {[
+            { metric: 'Leads per Week', desc: 'Track incoming inquiries' },
+            { metric: 'Bookings per Week', desc: 'Monitor appointment volume' },
+            { metric: 'Conversion Rate', desc: 'Measure booking efficiency' },
+            { metric: 'No-Show %', desc: 'Pre/post automation comparison' },
+            { metric: 'Revenue Attributed', desc: 'Track automation ROI' },
+          ].map((item, idx) => (
+            <div key={idx} style={{
+              backgroundColor: '#F9FAFB',
+              borderRadius: '24px',
+              padding: 'clamp(20px, 3vw, 24px)',
+              textAlign: 'center',
+              border: '1px solid rgba(0, 0, 0, 0.05)',
+              boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+            }}>
+              <h3 style={{ fontSize: 18, fontWeight: 600, marginBottom: 8, color: '#111827' }}>{item.metric}</h3>
+              <p style={{ fontSize: 14, color: '#4B5563', lineHeight: 1.5 }}>{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Add-ons Section */}
+      <section style={{
+        padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)',
+        maxWidth: '1280px',
+        margin: '0 auto',
+        backgroundColor: '#fff',
         textAlign: 'center',
       }}>
         <h2 style={{
@@ -1385,56 +1551,29 @@ export default function Home() {
           color: '#111827',
           letterSpacing: '-0.02em',
         }}>
-          Ready to explore your country's specific visa timeline?
+          Add-ons & Upsells
         </h2>
-        <p style={{
-          fontSize: 'clamp(16px, 2vw, 18px)',
-          marginBottom: 'clamp(32px, 6vw, 48px)',
-          color: '#4B5563',
-          lineHeight: 1.6,
-        }}>
-          E-2 visa timelines and consulate requirements vary by country. Select yours below.
-        </p>
         <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          gap: 'clamp(16px, 3vw, 24px)',
-          flexWrap: 'wrap',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(260px, 30vw, 320px), 1fr))',
+          gap: 'clamp(24px, 4vw, 32px)',
+          marginTop: 48,
         }}>
           {[
-            { flag: '🇯🇵', name: 'Japan', link: '/country/jp/e2' },
-            { flag: '🇲🇽', name: 'Mexico', link: '/country/mx/e2' },
-            { flag: '🇪🇸', name: 'Spain', link: '/country/es/e2' },
-            { flag: '🇬🇧', name: 'United Kingdom', link: '/country/uk/e2' },
-            { flag: '🇨🇦', name: 'Canada', link: '/country/ca/e2' },
-          ].map(({ flag, name, link }) => (
-            <a key={name} href={link} style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              padding: 'clamp(16px, 3vw, 24px)',
+            { title: 'Paid Ads Management', desc: 'Google/Facebook ad management — monthly management fee + ad spend' },
+            { title: 'Advanced E-commerce', desc: 'Advanced POS integrations and e-commerce features — one-time dev quote' },
+            { title: 'Multi-Location', desc: 'Multi-location management — added monthly fee per location' },
+          ].map((item, idx) => (
+            <div key={idx} style={{
+              backgroundColor: '#F9FAFB',
+              padding: 'clamp(24px, 4vw, 32px)',
               borderRadius: '24px',
-              background: '#fff',
-              fontSize: 'clamp(24px, 4vw, 28px)',
-              color: '#111827',
-              textDecoration: 'none',
-              width: 'clamp(100px, 20vw, 140px)',
               border: '1px solid rgba(0, 0, 0, 0.05)',
               boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
-              transition: 'all 0.3s',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-8px)';
-              e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
-            }}
-            >
-              <span>{flag}</span>
-              <span style={{ marginTop: 12, fontWeight: 600, fontSize: 16 }}>{name}</span>
-            </a>
+            }}>
+              <h3 style={{ fontSize: 20, marginBottom: 12, color: '#111827', fontWeight: 600 }}>{item.title}</h3>
+              <p style={{ fontSize: 16, color: '#4B5563', lineHeight: 1.6 }}>{item.desc}</p>
+            </div>
           ))}
         </div>
       </section>
@@ -1457,22 +1596,21 @@ export default function Home() {
           Frequently Asked Questions
         </h2>
         <div style={{ maxWidth: 700, margin: '0 auto', padding: '0 clamp(16px, 4vw, 0)' }}>
-          {/* Example Accordion FAQ Items */}
           {[{
-            q: 'Is there a minimum investment amount for E-2?',
-            a: 'Most applicants invest $75K–$150K as a substantial amount, but USCIS has no fixed minimum. The key is proving the investment is viable and non-marginal.'
+            q: 'Do you own my site/content?',
+            a: 'You retain domain and content ownership. We deliver credentials and a handoff file.'
           }, {
-            q: 'Can my spouse work while I have an E-2 visa?',
-            a: 'Yes, your spouse gets derivative status and can work anywhere in the U.S. without restrictions.'
+            q: 'How long until I see results?',
+            a: 'Basic improvements (booking flow, reminders) are immediate; measurable revenue improvements typically within 6–12 weeks.'
           }, {
-            q: 'How long does E-2 visa approval typically take?',
-            a: 'Average processing time is 4-6 months, depending on consulate workload and application completeness.'
+            q: 'What if I want custom development?',
+            a: 'Small tweaks are included (one major tweak/month). Larger custom dev is quoted separately.'
           }, {
-            q: 'Is it better to buy an existing business or start from scratch?',
-            a: 'Buying established businesses is often faster and lower risk. Startups offer more control but require detailed business planning.'
+            q: 'What happens if I cancel early?',
+            a: 'For Simple Monthly (6‑month minimum) you are billed the remaining months. For Annual Saver, early cancellation triggers a one-time setup balance fee (see pricing).'
           }, {
-            q: 'What happens if my E-2 business fails?',
-            a: 'Your visa depends on business viability. If your business fails, status could be at risk unless you make a timely application amendment or renewal.'
+            q: 'What payment methods?',
+            a: 'Card on file (Stripe) is required for monthly plans. We can process ACH for annual invoices.'
           }].map(({ q, a }, idx) => (
             <details key={idx} style={{
               backgroundColor: '#fff',
@@ -1514,6 +1652,7 @@ export default function Home() {
 
       <Footer />
     </div>
+    </>
   );
 }
 
