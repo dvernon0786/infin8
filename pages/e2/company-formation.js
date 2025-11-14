@@ -29,7 +29,7 @@ export default function CompanyFormation() {
 
       {/* Entity Type Comparison */}
       <section style={{ marginBottom: 'clamp(24px, 4vw, 40px)' }}>
-        <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: '700', marginBottom: 'clamp(12px, 2vw, 16px)' }}>
+        <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: '700', marginBottom: 'clamp(12px, 2vw, 16px)', letterSpacing: '-0.02em' }}>
           LLC vs S-Corp vs C-Corp
         </h2>
 
@@ -132,14 +132,14 @@ export default function CompanyFormation() {
 
       {/* State Selection Guide */}
       <section style={{ marginBottom: 'clamp(24px, 4vw, 40px)' }}>
-        <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: '700', marginBottom: 'clamp(12px, 2vw, 16px)' }}>
+        <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: '700', marginBottom: 'clamp(12px, 2vw, 16px)', letterSpacing: '-0.02em' }}>
           Choosing Your State of Incorporation
         </h2>
-        <p style={{ fontSize: 'clamp(14px, 2vw, 16px)', color: '#555', marginBottom: 'clamp(16px, 2.5vw, 20px)' }}>
+        <p style={{ fontSize: 'clamp(14px, 2vw, 16px)', color: '#4B5563', marginBottom: 'clamp(16px, 2.5vw, 20px)' }}>
           Where you form your company impacts taxes, costs, and legal compliance. Most investors choose their business's physical location state or Delaware for flexibility.
         </p>
 
-        <ul style={{ fontSize: 'clamp(14px, 2vw, 16px)', color: '#444', paddingLeft: 'clamp(16px, 2.5vw, 20px)', marginBottom: 'clamp(16px, 2.5vw, 20px)', lineHeight: 1.8 }}>
+        <ul style={{ fontSize: 'clamp(14px, 2vw, 16px)', color: '#4B5563', paddingLeft: 'clamp(16px, 2.5vw, 20px)', marginBottom: 'clamp(16px, 2.5vw, 20px)', lineHeight: 1.8 }}>
           <li><strong>Delaware:</strong> Business-friendly laws, privacy, no sales tax; add registration fees if operating out-of-state.</li>
           <li><strong>Nevada:</strong> No corporate tax, privacy, relatively low fees.</li>
           <li><strong>Your Business State:</strong> Recommended for brick-and-mortar businesses for local compliance.</li>
@@ -174,20 +174,20 @@ export default function CompanyFormation() {
 
       {/* Timeline & Costs */}
       <section style={{ marginBottom: 'clamp(24px, 4vw, 40px)' }}>
-        <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: '700', marginBottom: 'clamp(12px, 2vw, 16px)' }}>
+        <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: '700', marginBottom: 'clamp(12px, 2vw, 16px)', letterSpacing: '-0.02em' }}>
           Formation Timeline & Costs
         </h2>
-        <p style={{ fontSize: 'clamp(14px, 2vw, 16px)', color: '#555', marginBottom: 'clamp(16px, 2.5vw, 20px)' }}>
+        <p style={{ fontSize: 'clamp(14px, 2vw, 16px)', color: '#4B5563', marginBottom: 'clamp(16px, 2.5vw, 20px)' }}>
           Typical company formation steps and estimated timelines:
         </p>
-        <ol style={{ fontSize: 'clamp(14px, 2vw, 16px)', color: '#444', paddingLeft: 'clamp(16px, 2.5vw, 20px)', lineHeight: 1.8 }}>
+        <ol style={{ fontSize: 'clamp(14px, 2vw, 16px)', color: '#4B5563', paddingLeft: 'clamp(16px, 2.5vw, 20px)', lineHeight: 1.8 }}>
           <li>Choose entity and state: 1-2 days</li>
           <li>Submit formation documents: 1 day</li>
           <li>Approval by state: 3-7 business days</li>
           <li>Get Employer Identification Number (EIN) from IRS: same day to 2 weeks</li>
           <li>Open business bank account: 1-3 days</li>
         </ol>
-        <p style={{ fontSize: 'clamp(14px, 2vw, 16px)', color: '#555', marginTop: 'clamp(16px, 2.5vw, 20px)' }}>
+        <p style={{ fontSize: 'clamp(14px, 2vw, 16px)', color: '#4B5563', marginTop: 'clamp(16px, 2.5vw, 20px)' }}>
           <strong>Estimated costs:</strong> $150-$500 initial fees including state, agent, and EIN processing.
         </p>
       </section>

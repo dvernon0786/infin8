@@ -138,7 +138,7 @@ export default function TreatyCountries() {
       </div>
 
       {/* Not Listed Clause and Lead Capture */}
-      <div style={{ textAlign: 'center', marginBottom: 'clamp(40px, 8vw, 80px)', fontSize: 'clamp(14px, 2vw, 16px)', color: '#444' }}>
+      <div style={{ textAlign: 'center', marginBottom: 'clamp(40px, 8vw, 80px)', fontSize: 'clamp(14px, 2vw, 16px)', color: '#4B5563' }}>
         <p>
           Don't see your country? You might still qualify for an L-1 visa instead. 
           <button
@@ -176,7 +176,7 @@ export default function TreatyCountries() {
           <div style={{
             backgroundColor: '#fff',
             padding: 'clamp(24px, 4vw, 32px)',
-            borderRadius: 'clamp(10px, 1.5vw, 12px)',
+            borderRadius: '12px',
             width: 'clamp(320px, 50vw, 400px)',
             maxWidth: '90%',
             boxShadow: '0 8px 20px rgba(0,0,0,0.3)',
@@ -192,7 +192,7 @@ export default function TreatyCountries() {
                 border: 'none',
                 fontSize: 'clamp(20px, 3vw, 24px)',
                 cursor: 'pointer',
-                color: '#666',
+                color: '#9CA3AF',
               }}
             >
               &times;

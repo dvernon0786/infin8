@@ -113,7 +113,7 @@ export default function Contact() {
           color: '#111827',
           fontWeight: 600,
           padding: 'clamp(10px, 1.5vw, 12px) clamp(24px, 4vw, 32px)',
-          borderRadius: 'clamp(10px, 1.5vw, 12px)',
+          borderRadius: '12px',
           textDecoration: 'none',
           fontSize: 'clamp(14px, 2vw, 16px)',
           cursor: 'pointer',
