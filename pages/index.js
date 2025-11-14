@@ -3566,48 +3566,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Add-ons Section */}
-      <section style={{
-        padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)',
-        maxWidth: '1280px',
-        margin: '0 auto',
-        backgroundColor: '#fff',
-        textAlign: 'center',
-      }}>
-        <h2 style={{
-          fontSize: 'clamp(32px, 5vw, 48px)',
-          fontWeight: 700,
-          marginBottom: 'clamp(16px, 3vw, 24px)',
-          color: '#111827',
-          letterSpacing: '-0.02em',
-        }}>
-          Add-ons & Upsells
-        </h2>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(260px, 30vw, 320px), 1fr))',
-          gap: 'clamp(24px, 4vw, 32px)',
-          marginTop: 48,
-        }}>
-          {[
-            { title: 'Paid Ads Management', desc: 'Google/Facebook ad management — monthly management fee + ad spend' },
-            { title: 'Advanced E-commerce', desc: 'Advanced POS integrations and e-commerce features — one-time dev quote' },
-            { title: 'Multi-Location', desc: 'Multi-location management — added monthly fee per location' },
-          ].map((item, idx) => (
-            <div key={idx} style={{
-              backgroundColor: '#F9FAFB',
-              padding: 'clamp(24px, 4vw, 32px)',
-              borderRadius: '24px',
-              border: '1px solid rgba(0, 0, 0, 0.05)',
-              boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
-            }}>
-              <h3 style={{ fontSize: 20, marginBottom: 12, color: '#111827', fontWeight: 600 }}>{item.title}</h3>
-              <p style={{ fontSize: 16, color: '#4B5563', lineHeight: 1.6 }}>{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* FAQ Preview Section */}
       <section style={{
         backgroundColor: '#F9FAFB',
