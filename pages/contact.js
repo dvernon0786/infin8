@@ -55,16 +55,16 @@ export default function Contact() {
   return (
     <div style={{ fontFamily: "'Inter', sans-serif", color: '#1A1A1A' }}>
       <Navbar />
-      <div style={{ maxWidth: 600, margin: 'clamp(32px, 5vw, 40px) auto', padding: '0 clamp(16px, 4vw, 20px)' }}>
-      <h1 style={{ fontSize: 'clamp(32px, 5vw, 38px)', fontWeight: '700', marginBottom: 'clamp(24px, 4vw, 36px)' }}>Contact Us</h1>
-      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(16px, 2.5vw, 20px)' }}>
-        <label htmlFor="name" style={{ fontWeight: 600, fontSize: 'clamp(14px, 1.8vw, 16px)' }}>Full Name</label>
+      <div style={{ maxWidth: 600, margin: 'clamp(32px, 5vw, 40px) auto', padding: '0 clamp(16px, 4vw, 20px)', textAlign: 'center' }}>
+      <h1 style={{ fontSize: 'clamp(32px, 5vw, 38px)', fontWeight: '700', marginBottom: 'clamp(24px, 4vw, 36px)', textAlign: 'center' }}>Contact Us</h1>
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(16px, 2.5vw, 20px)', textAlign: 'left' }}>
+        <label htmlFor="name" style={{ fontWeight: 600, fontSize: 'clamp(14px, 1.8vw, 16px)', textAlign: 'left' }}>Full Name</label>
         <input type="text" name="name" id="name" required value={formData.name} onChange={handleChange} style={{ padding: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 2vw, 16px)', borderRadius: 'clamp(6px, 1vw, 8px)', border: '1px solid #ccc' }} />
 
-        <label htmlFor="email" style={{ fontWeight: 600, fontSize: 'clamp(14px, 1.8vw, 16px)' }}>Email Address</label>
+        <label htmlFor="email" style={{ fontWeight: 600, fontSize: 'clamp(14px, 1.8vw, 16px)', textAlign: 'left' }}>Email Address</label>
         <input type="email" name="email" id="email" required value={formData.email} onChange={handleChange} style={{ padding: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 2vw, 16px)', borderRadius: 'clamp(6px, 1vw, 8px)', border: '1px solid #ccc' }} />
 
-        <label htmlFor="country" style={{ fontWeight: 600, fontSize: 'clamp(14px, 1.8vw, 16px)' }}>Country</label>
+        <label htmlFor="country" style={{ fontWeight: 600, fontSize: 'clamp(14px, 1.8vw, 16px)', textAlign: 'left' }}>Country</label>
         <select name="country" id="country" required value={formData.country} onChange={handleChange} style={{ padding: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 2vw, 16px)', borderRadius: 'clamp(6px, 1vw, 8px)', border: '1px solid #ccc' }}>
           <option value="">Select your country</option>
           {/* Ideally, load full E-2 treaty countries here */}
@@ -75,7 +75,7 @@ export default function Contact() {
           <option value="Canada">Canada</option>
         </select>
 
-        <label htmlFor="question" style={{ fontWeight: 600, fontSize: 'clamp(14px, 1.8vw, 16px)' }}>Your Question / Message</label>
+        <label htmlFor="question" style={{ fontWeight: 600, fontSize: 'clamp(14px, 1.8vw, 16px)', textAlign: 'left' }}>Your Question / Message</label>
         <textarea name="question" id="question" rows="4" required value={formData.question} onChange={handleChange} style={{ padding: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 2vw, 16px)', borderRadius: 'clamp(6px, 1vw, 8px)', border: '1px solid #ccc' }} />
 
         <button type="submit" style={{

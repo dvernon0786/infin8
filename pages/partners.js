@@ -66,15 +66,15 @@ export default function Partners() {
   return (
     <div style={{ fontFamily: "'Inter', sans-serif", color: '#1A1A1A' }}>
       <Navbar />
-      <div style={{ maxWidth: 700, margin: 'clamp(32px, 5vw, 40px) auto', padding: '0 clamp(16px, 4vw, 20px)' }}>
-      <h1 style={{ fontSize: 'clamp(32px, 5vw, 38px)', fontWeight: '700', marginBottom: 'clamp(16px, 3vw, 24px)' }}>
+      <div style={{ maxWidth: 700, margin: 'clamp(32px, 5vw, 40px) auto', padding: '0 clamp(16px, 4vw, 20px)', textAlign: 'center' }}>
+      <h1 style={{ fontSize: 'clamp(32px, 5vw, 38px)', fontWeight: '700', marginBottom: 'clamp(16px, 3vw, 24px)', textAlign: 'center' }}>
         Join Our Partner Network
       </h1>
-      <p style={{ fontSize: 'clamp(16px, 2vw, 18px)', marginBottom: 'clamp(24px, 4vw, 32px)' }}>
+      <p style={{ fontSize: 'clamp(16px, 2vw, 18px)', marginBottom: 'clamp(24px, 4vw, 32px)', textAlign: 'center' }}>
         We work with immigration attorneys, business formation services, franchise consultants, and brokers to refer high-quality E-2 visa leads. Complete the application below to join.
       </p>
-      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(16px, 2.5vw, 20px)' }}>
-        <label htmlFor="name" style={{ fontWeight: 600, fontSize: 'clamp(14px, 1.8vw, 16px)' }}>Full Name</label>
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(16px, 2.5vw, 20px)', textAlign: 'left' }}>
+        <label htmlFor="name" style={{ fontWeight: 600, fontSize: 'clamp(14px, 1.8vw, 16px)', textAlign: 'left' }}>Full Name</label>
         <input id="name" name="name" required value={formData.name} onChange={handleChange} style={{ padding: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 2vw, 16px)', borderRadius: 'clamp(6px, 1vw, 8px)', border: '1px solid #ccc' }} />
 
         <label htmlFor="email" style={{ fontWeight: 600, fontSize: 'clamp(14px, 1.8vw, 16px)' }}>Email Address</label>

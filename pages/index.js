@@ -7,6 +7,7 @@ export default function Home() {
   const [buttonHovered, setButtonHovered] = useState(false);
   const [primaryButtonHovered, setPrimaryButtonHovered] = useState(false);
   const [heroVariant, setHeroVariant] = useState('A'); // A/B testing
+  const [selectedPlan, setSelectedPlan] = useState('simple'); // Pricing plan selection
 
   const heroContent = {
     A: {
@@ -37,6 +38,7 @@ export default function Home() {
         paddingBottom: 'clamp(40px, 8vw, 80px)',
         overflow: 'hidden',
         minHeight: '100vh',
+        textAlign: 'center',
       }}>
         {/* Background Video */}
         <div style={{
@@ -405,6 +407,7 @@ export default function Home() {
       <section style={{
         backgroundColor: '#F3F4F6',
         padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)',
+        textAlign: 'center',
       }}>
         <div style={{
           maxWidth: '1280px',
@@ -561,6 +564,7 @@ export default function Home() {
         padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 32px)',
         alignItems: 'center',
         justifyContent: 'center',
+        textAlign: 'center',
       }}>
         <div style={{
           maxWidth: '1280px',
@@ -686,6 +690,7 @@ export default function Home() {
                 letterSpacing: '-0.01em',
                 color: '#111827',
                 marginBottom: 'clamp(6px, 1vw, 8px)',
+                textAlign: 'center',
               }}>
                 SMS & Email Reminders
               </h3>
@@ -693,6 +698,7 @@ export default function Home() {
                 color: '#4B5563',
                 lineHeight: 1.6,
                 fontSize: 'clamp(14px, 1.8vw, 16px)',
+                textAlign: 'center',
               }}>
                 Automated confirmations, pre-visit reminders, and no-show prevention that cut missed appointments by up to 50%.
               </p>
@@ -813,6 +819,7 @@ export default function Home() {
                 letterSpacing: '-0.01em',
                 color: '#111827',
                 marginBottom: 'clamp(6px, 1vw, 8px)',
+                textAlign: 'center',
               }}>
                 Monthly Analytics
               </h3>
@@ -820,6 +827,7 @@ export default function Home() {
                 color: '#4B5563',
                 lineHeight: 1.6,
                 fontSize: 'clamp(14px, 1.8vw, 16px)',
+                textAlign: 'center',
               }}>
                 Performance snapshot with prioritized action list and insights to help you make data-driven decisions.
               </p>
@@ -879,6 +887,7 @@ export default function Home() {
                 letterSpacing: '-0.01em',
                 color: '#111827',
                 marginBottom: 'clamp(6px, 1vw, 8px)',
+                textAlign: 'center',
               }}>
                 AI Chatbot
               </h3>
@@ -886,6 +895,7 @@ export default function Home() {
                 color: '#4B5563',
                 lineHeight: 1.6,
                 fontSize: 'clamp(14px, 1.8vw, 16px)',
+                textAlign: 'center',
               }}>
                 24/7 triage, booking assistance, and lead capture on your website—never miss an opportunity.
               </p>
@@ -1081,7 +1091,7 @@ export default function Home() {
                 border: '1px solid rgba(0, 0, 0, 0.05)',
                 boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
                 transition: 'all 0.3s',
-                textAlign: 'left',
+                textAlign: 'center',
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-8px)';
@@ -1092,226 +1102,587 @@ export default function Home() {
                 e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
               }}
               >
-                <h3 style={{ fontSize: 20, marginBottom: 12, color: '#111827', fontWeight: 600 }}>{item.title}</h3>
-                <p style={{ fontSize: 16, color: '#4B5563', lineHeight: 1.6 }}>{item.desc}</p>
+                <h3 style={{ fontSize: 20, marginBottom: 12, color: '#111827', fontWeight: 600, textAlign: 'center' }}>{item.title}</h3>
+                <p style={{ fontSize: 16, color: '#4B5563', lineHeight: 1.6, textAlign: 'center' }}>{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* Pricing Section - Prism Studio Dark Theme */}
       <section style={{
-        backgroundColor: '#ffffff',
-        padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)',
+        padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 32px)',
+        maxWidth: '1280px',
+        margin: '0 auto',
         textAlign: 'center',
+        position: 'relative',
       }}>
         <div style={{
-          maxWidth: 1280,
-          margin: '0 auto',
+          position: 'relative',
+          overflow: 'hidden',
+          borderRadius: '24px',
+          border: '1px solid rgba(255, 255, 255, 0.1)',
+          backgroundColor: '#0A0A0A',
+          backdropFilter: 'blur(20px)',
+          WebkitBackdropFilter: 'blur(20px)',
         }}>
-          <h2 style={{
-            fontSize: 'clamp(32px, 5vw, 48px)',
-            fontWeight: 700,
-            marginBottom: 'clamp(16px, 3vw, 24px)',
-            color: '#111827',
-            letterSpacing: '-0.02em',
-          }}>
-            Simple, Transparent Pricing
-          </h2>
-          <p style={{
-            fontSize: 'clamp(16px, 2vw, 18px)',
-            marginBottom: 'clamp(32px, 6vw, 48px)',
-            color: '#4B5563',
-            lineHeight: 1.6,
-          }}>
-            Choose the plan that works for your business
-          </p>
+          {/* Subtle decor */}
+          <div style={{
+            position: 'absolute',
+            pointerEvents: 'none',
+            right: '-96px',
+            top: '-96px',
+            width: '288px',
+            height: '288px',
+            borderRadius: '50%',
+            backgroundColor: 'rgba(255, 255, 255, 0.05)',
+            filter: 'blur(96px)',
+          }}></div>
+          <div style={{
+            position: 'absolute',
+            pointerEvents: 'none',
+            left: '-96px',
+            bottom: '-96px',
+            width: '288px',
+            height: '288px',
+            borderRadius: '50%',
+            backgroundColor: 'rgba(255, 255, 255, 0.04)',
+            filter: 'blur(96px)',
+          }}></div>
+
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(280px, 30vw, 320px), 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(300px, 45vw, 500px), 1fr))',
             gap: 'clamp(24px, 4vw, 32px)',
-            justifyContent: 'center',
+            padding: 'clamp(24px, 4vw, 40px)',
           }}>
-            {/* Plan 1: Simple Monthly */}
+            {/* LEFT: Plan Selection */}
             <div style={{
-              backgroundColor: '#fff',
-              padding: 'clamp(32px, 4vw, 40px)',
-              borderRadius: '24px',
-              border: '1px solid rgba(0, 0, 0, 0.05)',
-              boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
-              transition: 'all 0.3s',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-8px)';
-              e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
-            }}
-            >
-              <h3 style={{ fontSize: 24, marginBottom: 12, color: '#111827', fontWeight: 600 }}>Simple Monthly</h3>
-              <div style={{ fontSize: 48, fontWeight: 700, marginBottom: 8, color: '#111827' }}>$1,000</div>
-              <div style={{ fontSize: 16, color: '#6B7280', marginBottom: 24 }}>per month</div>
-              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 16px 0', textAlign: 'left' }}>
-                <li style={{ padding: '8px 0', fontSize: 14, color: '#4B5563' }}>✔ Setup included in the first month</li>
-                <li style={{ padding: '8px 0', fontSize: 14, color: '#4B5563' }}>✔ 6-month minimum</li>
-                <li style={{ padding: '8px 0', fontSize: 14, color: '#4B5563' }}>✔ Month-to-month after 6 months</li>
-              </ul>
-              <p style={{ fontSize: 13, color: '#6B7280', marginBottom: 24, fontStyle: 'italic', lineHeight: 1.5 }}>
-                Best for: Businesses wanting predictable monthly billing with setup spread out.
-              </p>
-              <a href="/contact" style={{
-                display: 'block',
-                backgroundColor: '#111827',
-                color: '#fff',
+              display: 'flex',
+              flexDirection: 'column',
+              padding: 'clamp(24px, 4vw, 40px)',
+            }}>
+              <h2 style={{
+                fontSize: 'clamp(32px, 5vw, 48px)',
                 fontWeight: 600,
-                padding: '12px 24px',
-                borderRadius: '12px',
-                textDecoration: 'none',
-                fontSize: 16,
-                transition: 'all 0.2s',
+                color: '#fff',
+                letterSpacing: '-0.02em',
+                marginBottom: '16px',
                 textAlign: 'center',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#1F2937';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#111827';
-              }}
-              >
-                Get Started
-              </a>
+              }}>
+                Simple pricing
+                <span style={{ display: 'block' }}>that grows with you</span>
+              </h2>
+
+              <p style={{
+                marginTop: '16px',
+                fontSize: 'clamp(14px, 2vw, 16px)',
+                color: 'rgba(212, 212, 212, 0.9)',
+                maxWidth: '500px',
+                margin: '16px auto 24px',
+                textAlign: 'center',
+              }}>
+                Pick a plan today and switch anytime. Clear value across all plans.
+              </p>
+
+              {/* Plan Selection Buttons */}
+              <div style={{
+                marginTop: '24px',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '12px',
+              }}>
+                {/* Simple Monthly */}
+                <button
+                  onClick={() => setSelectedPlan('simple')}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    textAlign: 'left',
+                    padding: '20px',
+                    borderRadius: '16px',
+                    background: selectedPlan === 'simple' 
+                      ? 'linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0))'
+                      : 'linear-gradient(to bottom right, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0))',
+                    border: selectedPlan === 'simple' ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(255, 255, 255, 0.1)',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s',
+                    color: '#fff',
+                  }}
+                  onMouseEnter={(e) => {
+                    if (selectedPlan !== 'simple') {
+                      e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.07)';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (selectedPlan !== 'simple') {
+                      e.currentTarget.style.backgroundColor = 'transparent';
+                    }
+                  }}
+                >
+                  <div>
+                    <p style={{ fontSize: '18px', fontWeight: 600, color: '#fff', marginBottom: '4px' }}>Simple Monthly</p>
+                    <p style={{ fontSize: '12px', color: 'rgba(212, 212, 212, 0.8)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                      Predictable monthly billing
+                    </p>
+                  </div>
+                  <div style={{
+                    width: '36px',
+                    height: '36px',
+                    borderRadius: '50%',
+                    backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'rgba(212, 212, 212, 0.8)',
+                  }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </div>
+                </button>
+
+                {/* Annual Growth Plan */}
+                <button
+                  onClick={() => setSelectedPlan('annual')}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    textAlign: 'left',
+                    padding: '20px',
+                    borderRadius: '16px',
+                    background: selectedPlan === 'annual' 
+                      ? 'linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0))'
+                      : 'linear-gradient(to bottom right, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0))',
+                    border: selectedPlan === 'annual' ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(255, 255, 255, 0.1)',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s',
+                    color: '#fff',
+                  }}
+                  onMouseEnter={(e) => {
+                    if (selectedPlan !== 'annual') {
+                      e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.07)';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (selectedPlan !== 'annual') {
+                      e.currentTarget.style.backgroundColor = 'transparent';
+                    }
+                  }}
+                >
+                  <div>
+                    <p style={{ fontSize: '18px', fontWeight: 600, color: '#fff', marginBottom: '4px' }}>Annual Growth Plan</p>
+                    <p style={{ fontSize: '12px', color: 'rgba(212, 212, 212, 0.8)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                      Maximum savings & value
+                    </p>
+                  </div>
+                  <div style={{
+                    width: '36px',
+                    height: '36px',
+                    borderRadius: '50%',
+                    backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'rgba(212, 212, 212, 0.8)',
+                  }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </div>
+                </button>
+
+                {/* No-Contract Flex Plan */}
+                <button
+                  onClick={() => setSelectedPlan('flex')}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    textAlign: 'left',
+                    padding: '20px',
+                    borderRadius: '16px',
+                    background: selectedPlan === 'flex' 
+                      ? 'linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0))'
+                      : 'linear-gradient(to bottom right, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0))',
+                    border: selectedPlan === 'flex' ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(255, 255, 255, 0.1)',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s',
+                    color: '#fff',
+                  }}
+                  onMouseEnter={(e) => {
+                    if (selectedPlan !== 'flex') {
+                      e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.07)';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (selectedPlan !== 'flex') {
+                      e.currentTarget.style.backgroundColor = 'transparent';
+                    }
+                  }}
+                >
+                  <div>
+                    <p style={{ fontSize: '18px', fontWeight: 600, color: '#fff', marginBottom: '4px' }}>No-Contract Flex</p>
+                    <p style={{ fontSize: '12px', color: 'rgba(212, 212, 212, 0.8)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                      Full flexibility, no lock-ins
+                    </p>
+                  </div>
+                  <div style={{
+                    width: '36px',
+                    height: '36px',
+                    borderRadius: '50%',
+                    backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'rgba(212, 212, 212, 0.8)',
+                  }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </div>
+                </button>
+              </div>
             </div>
 
-            {/* Plan 2: Annual Growth Plan — Best Value */}
+            {/* RIGHT: Plan Details */}
             <div style={{
-              backgroundColor: '#fff',
-              padding: 'clamp(32px, 4vw, 40px)',
-              borderRadius: '24px',
-              border: '2px solid #667eea',
-              boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
-              transition: 'all 0.3s',
+              display: 'flex',
+              flexDirection: 'column',
+              padding: 'clamp(24px, 4vw, 40px)',
+              background: 'linear-gradient(to bottom right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0))',
+              borderRadius: '16px',
               position: 'relative',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-8px)';
-              e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
-            }}
-            >
-              <span style={{
+              boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.04)',
+            }}>
+              <div style={{
                 position: 'absolute',
-                top: -12,
-                left: '50%',
-                transform: 'translateX(-50%)',
-                backgroundColor: '#667eea',
-                color: '#fff',
-                padding: '4px 12px',
-                borderRadius: '12px',
-                fontSize: 12,
-                fontWeight: 600,
-              }}>⭐ BEST VALUE</span>
-              <h3 style={{ fontSize: 24, marginBottom: 12, color: '#111827', fontWeight: 600 }}>Annual Growth Plan</h3>
-              <div style={{ fontSize: 48, fontWeight: 700, marginBottom: 8, color: '#111827' }}>$1,000</div>
-              <div style={{ fontSize: 16, color: '#6B7280', marginBottom: 24 }}>per month (12 months)</div>
-              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 16px 0', textAlign: 'left' }}>
-                <li style={{ padding: '8px 0', fontSize: 14, color: '#4B5563' }}>✔ $6,000 setup completely waived</li>
-                <li style={{ padding: '8px 0', fontSize: 14, color: '#4B5563' }}>✔ 12-month commitment</li>
-                <li style={{ padding: '8px 0', fontSize: 14, color: '#4B5563' }}>✔ Save $6,000 instantly</li>
-                <li style={{ padding: '8px 0', fontSize: 14, color: '#4B5563' }}>✔ Priority support + quarterly optimization reviews (bonus value)</li>
-              </ul>
-              <p style={{ fontSize: 13, color: '#6B7280', marginBottom: 24, fontStyle: 'italic', lineHeight: 1.5 }}>
-                Best for: Businesses ready to scale fast with maximum savings.
-              </p>
-              <a href="/contact" style={{
-                display: 'block',
-                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                color: '#fff',
-                fontWeight: 600,
-                padding: '12px 24px',
-                borderRadius: '12px',
-                textDecoration: 'none',
-                fontSize: 16,
-                transition: 'all 0.2s',
-                textAlign: 'center',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.opacity = '0.9';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.opacity = '1';
-              }}
-              >
-                Get Started
-              </a>
-            </div>
+                pointerEvents: 'none',
+                inset: 0,
+                opacity: 0.05,
+                background: 'radial-gradient(900px 360px at 20% -10%, rgba(255,255,255,0.12) 15%, transparent 60%)',
+                borderRadius: '16px',
+              }}></div>
 
-            {/* Plan 3: No-Contract Flex Plan */}
-            <div style={{
-              backgroundColor: '#fff',
-              padding: 'clamp(32px, 4vw, 40px)',
-              borderRadius: '24px',
-              border: '1px solid rgba(0, 0, 0, 0.05)',
-              boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
-              transition: 'all 0.3s',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-8px)';
-              e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
-            }}
-            >
-              <h3 style={{ fontSize: 24, marginBottom: 12, color: '#111827', fontWeight: 600 }}>No-Contract Flex Plan</h3>
-              <div style={{ fontSize: 48, fontWeight: 700, marginBottom: 8, color: '#111827' }}>$6,000</div>
-              <div style={{ fontSize: 16, color: '#6B7280', marginBottom: 8 }}>one-time setup</div>
-              <div style={{ fontSize: 20, fontWeight: 600, marginBottom: 24, color: '#111827' }}>+ $1,000/month</div>
-              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 16px 0', textAlign: 'left' }}>
-                <li style={{ padding: '8px 0', fontSize: 14, color: '#4B5563' }}>✔ No commitments</li>
-                <li style={{ padding: '8px 0', fontSize: 14, color: '#4B5563' }}>✔ Pay setup upfront</li>
-                <li style={{ padding: '8px 0', fontSize: 14, color: '#4B5563' }}>✔ Cancel anytime</li>
-              </ul>
-              <p style={{ fontSize: 13, color: '#6B7280', marginBottom: 24, fontStyle: 'italic', lineHeight: 1.5 }}>
-                Best for: Businesses that want full flexibility with no lock-ins.
-              </p>
-              <a href="/contact" style={{
-                display: 'block',
-                backgroundColor: '#111827',
-                color: '#fff',
-                fontWeight: 600,
-                padding: '12px 24px',
-                borderRadius: '12px',
-                textDecoration: 'none',
-                fontSize: 16,
-                transition: 'all 0.2s',
+              {/* Plan Name */}
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '16px',
+                marginBottom: '24px',
+              }}>
+                {selectedPlan === 'annual' && (
+                  <span style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    borderRadius: '9999px',
+                    border: '1px solid rgba(255, 255, 255, 0.15)',
+                    backgroundColor: 'rgba(255, 255, 255, 0.06)',
+                    padding: '4px 12px',
+                    fontSize: '11px',
+                    fontWeight: 600,
+                    color: 'rgba(212, 212, 212, 0.9)',
+                    letterSpacing: '0.05em',
+                  }}>
+                    ⭐ BEST VALUE
+                  </span>
+                )}
+                <h3 style={{
+                  fontSize: 'clamp(24px, 3vw, 32px)',
+                  fontWeight: 600,
+                  color: '#fff',
+                  letterSpacing: '-0.02em',
+                  textAlign: 'center',
+                }}>
+                  {selectedPlan === 'simple' && 'Simple Monthly'}
+                  {selectedPlan === 'annual' && 'Annual Growth Plan'}
+                  {selectedPlan === 'flex' && 'No-Contract Flex Plan'}
+                </h3>
+              </div>
+
+              {/* Price */}
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '8px',
+                marginBottom: '24px',
+              }}>
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'baseline',
+                  gap: '8px',
+                  justifyContent: 'center',
+                }}>
+                  <span style={{
+                    fontSize: 'clamp(48px, 6vw, 64px)',
+                    fontWeight: 700,
+                    color: '#fff',
+                    letterSpacing: '-0.02em',
+                  }}>
+                    {selectedPlan === 'simple' && '$1,000'}
+                    {selectedPlan === 'annual' && '$1,000'}
+                    {selectedPlan === 'flex' && '$6,000'}
+                  </span>
+                  <span style={{
+                    fontSize: 'clamp(14px, 2vw, 16px)',
+                    color: 'rgba(212, 212, 212, 0.8)',
+                    marginBottom: '8px',
+                  }}>
+                    {selectedPlan === 'flex' ? 'setup' : '/month'}
+                  </span>
+                </div>
+                {selectedPlan === 'flex' && (
+                  <div style={{
+                    fontSize: 'clamp(20px, 2.5vw, 24px)',
+                    fontWeight: 600,
+                    color: '#fff',
+                  }}>
+                    + $1,000/month
+                  </div>
+                )}
+                {selectedPlan === 'annual' && (
+                  <div style={{
+                    fontSize: 'clamp(14px, 2vw, 16px)',
+                    color: 'rgba(212, 212, 212, 0.8)',
+                  }}>
+                    (12 months)
+                  </div>
+                )}
+              </div>
+
+              {/* Tagline */}
+              <p style={{
+                fontSize: '12px',
+                fontWeight: 500,
+                color: 'rgba(212, 212, 212, 0.9)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
                 textAlign: 'center',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#1F2937';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#111827';
-              }}
-              >
-                Get Started
-              </a>
+                marginBottom: '24px',
+              }}>
+                {selectedPlan === 'simple' && 'GREAT FOR PREDICTABLE MONTHLY BILLING WITH SETUP SPREAD OUT.'}
+                {selectedPlan === 'annual' && 'PERFECT FOR BUSINESSES READY TO SCALE FAST WITH MAXIMUM SAVINGS.'}
+                {selectedPlan === 'flex' && 'IDEAL FOR BUSINESSES THAT WANT FULL FLEXIBILITY WITH NO LOCK-INS.'}
+              </p>
+
+              {/* Features */}
+              <div style={{
+                background: 'linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0))',
+                borderRadius: '16px',
+                padding: '24px',
+                marginBottom: '24px',
+              }}>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '12px',
+                }}>
+                  {selectedPlan === 'simple' && [
+                    'Setup included in the first month',
+                    '6-month minimum',
+                    'Month-to-month after 6 months',
+                  ].map((feature, idx) => (
+                    <li key={idx} style={{
+                      display: 'flex',
+                      alignItems: 'flex-start',
+                      gap: '12px',
+                      fontSize: '14px',
+                      color: 'rgba(212, 212, 212, 0.9)',
+                    }}>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" style={{ marginTop: '2px', flexShrink: 0 }}>
+                        <path d="M20 6 9 17l-5-5" />
+                      </svg>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                  {selectedPlan === 'annual' && [
+                    '$6,000 setup completely waived',
+                    '12-month commitment',
+                    'Save $6,000 instantly',
+                    'Priority support + quarterly optimization reviews',
+                  ].map((feature, idx) => (
+                    <li key={idx} style={{
+                      display: 'flex',
+                      alignItems: 'flex-start',
+                      gap: '12px',
+                      fontSize: '14px',
+                      color: 'rgba(212, 212, 212, 0.9)',
+                    }}>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" style={{ marginTop: '2px', flexShrink: 0 }}>
+                        <path d="M20 6 9 17l-5-5" />
+                      </svg>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                  {selectedPlan === 'flex' && [
+                    'No commitments',
+                    'Pay setup upfront',
+                    'Cancel anytime',
+                  ].map((feature, idx) => (
+                    <li key={idx} style={{
+                      display: 'flex',
+                      alignItems: 'flex-start',
+                      gap: '12px',
+                      fontSize: '14px',
+                      color: 'rgba(212, 212, 212, 0.9)',
+                    }}>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" style={{ marginTop: '2px', flexShrink: 0 }}>
+                        <path d="M20 6 9 17l-5-5" />
+                      </svg>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div style={{
+                  marginTop: '24px',
+                  paddingTop: '16px',
+                  borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+                  fontSize: '12px',
+                  color: 'rgba(212, 212, 212, 0.7)',
+                  textAlign: 'center',
+                }}>
+                  Have special requirements? <a href="/contact" style={{
+                    textDecoration: 'underline',
+                    textDecorationColor: 'rgba(255, 255, 255, 0.3)',
+                    color: 'rgba(212, 212, 212, 0.9)',
+                  }}>Talk to us</a>.
+                </div>
+
+                {/* CTA */}
+                <div style={{ marginTop: '24px' }}>
+                  <a href="/contact" style={{
+                    display: 'inline-flex',
+                    width: '100%',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '8px',
+                    borderRadius: '12px',
+                    backgroundColor: '#fff',
+                    color: '#0A0A0A',
+                    padding: '12px 24px',
+                    fontSize: '14px',
+                    fontWeight: 600,
+                    textDecoration: 'none',
+                    transition: 'all 0.2s',
+                    boxShadow: '0 8px 24px -8px rgba(255,255,255,0.25)',
+                    border: '1px solid rgba(255, 255, 255, 0.2)',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#f5f5f5';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = '#fff';
+                  }}
+                  >
+                    Get Started
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-          <p style={{
-            marginTop: 32,
-            fontSize: 12,
-            color: '#6B7280',
-            maxWidth: 800,
-            margin: '32px auto 0',
+
+          {/* Add-ons & Upsells Section */}
+          <div style={{
+            marginTop: 'clamp(32px, 6vw, 48px)',
+            padding: 'clamp(24px, 4vw, 32px)',
+            borderTop: '1px solid rgba(255, 255, 255, 0.1)',
           }}>
-            6‑month minimum applies to Simple Monthly offers. Annual Saver requires 12‑month commitment. Setup value referenced is for internal accounting — savings only apply if the client honors the commitment. No refunds on prior-service months. We pause automations for unpaid invoices.
+            <h3 style={{
+              fontSize: 'clamp(20px, 3vw, 24px)',
+              fontWeight: 600,
+              color: '#fff',
+              letterSpacing: '-0.02em',
+              marginBottom: '24px',
+              textAlign: 'center',
+            }}>
+              Add-ons & Upsells
+            </h3>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(250px, 30vw, 320px), 1fr))',
+              gap: 'clamp(16px, 3vw, 24px)',
+              maxWidth: '900px',
+              margin: '0 auto',
+            }}>
+              {[
+                {
+                  title: 'Paid Ads Management',
+                  description: 'Google/Facebook ad management — monthly management fee + ad spend',
+                },
+                {
+                  title: 'Advanced E-commerce',
+                  description: 'Advanced POS integrations and e-commerce features — one-time dev quote',
+                },
+                {
+                  title: 'Multi-Location',
+                  description: 'Multi-location management — added monthly fee per location',
+                },
+              ].map((addon, idx) => (
+                <div key={idx} style={{
+                  padding: '20px',
+                  borderRadius: '16px',
+                  background: 'linear-gradient(to bottom right, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0))',
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  transition: 'all 0.3s',
+                  textAlign: 'center',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.07)';
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                }}
+                >
+                  <h4 style={{
+                    fontSize: '16px',
+                    fontWeight: 600,
+                    color: '#fff',
+                    marginBottom: '8px',
+                  }}>
+                    {addon.title}
+                  </h4>
+                  <p style={{
+                    fontSize: '13px',
+                    color: 'rgba(212, 212, 212, 0.7)',
+                    lineHeight: 1.5,
+                  }}>
+                    {addon.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Legal Notes */}
+          <p style={{
+            marginTop: '32px',
+            fontSize: '12px',
+            color: 'rgba(212, 212, 212, 0.6)',
+            maxWidth: '800px',
+            margin: '32px auto 0',
+            padding: '0 clamp(16px, 4vw, 32px)',
+            paddingBottom: 'clamp(24px, 4vw, 32px)',
+            textAlign: 'center',
+            lineHeight: 1.6,
+          }}>
+            6‑month minimum applies to Simple Monthly offers. Annual Growth Plan requires 12‑month commitment. Setup value referenced is for internal accounting — savings only apply if the client honors the commitment. No refunds on prior-service months. We pause automations for unpaid invoices.
           </p>
         </div>
       </section>
@@ -1322,6 +1693,7 @@ export default function Home() {
         maxWidth: '1280px',
         margin: '0 auto',
         backgroundColor: '#fff',
+        textAlign: 'center',
       }}>
         {/* Header */}
         <div style={{
@@ -2080,6 +2452,7 @@ export default function Home() {
         maxWidth: '1280px',
         margin: '0 auto',
         backgroundColor: '#F9FAFB',
+        textAlign: 'center',
       }}>
         <div style={{
           display: 'flex',
@@ -2507,56 +2880,732 @@ export default function Home() {
 
       {/* Client Requirements Section */}
       <section style={{
-        backgroundColor: '#F9FAFB',
-        padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)',
+        padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 32px)',
+        maxWidth: '1280px',
+        margin: '0 auto',
+        backgroundColor: '#fff',
         textAlign: 'center',
       }}>
-        <div style={{
-          maxWidth: 1280,
-          margin: '0 auto',
-        }}>
+        <div style={{ marginBottom: 'clamp(48px, 8vw, 64px)', textAlign: 'center' }}>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '12px',
+            maxWidth: '400px',
+            margin: '0 auto 24px',
+          }}>
+            <span style={{
+              fontSize: 'clamp(11px, 1.5vw, 12px)',
+              fontWeight: 500,
+              color: '#9CA3AF',
+              textTransform: 'uppercase',
+              letterSpacing: '0.1em',
+            }}>Requirements</span>
+            <div style={{
+              height: '1px',
+              flex: 1,
+              backgroundColor: 'rgba(0, 0, 0, 0.1)',
+            }}></div>
+          </div>
           <h2 style={{
             fontSize: 'clamp(32px, 5vw, 48px)',
-            fontWeight: 700,
-            marginBottom: 'clamp(16px, 3vw, 24px)',
-            color: '#111827',
+            fontWeight: 600,
             letterSpacing: '-0.02em',
+            color: '#111827',
+            marginBottom: 'clamp(16px, 3vw, 24px)',
+            textAlign: 'center',
           }}>
             What We Need From You
           </h2>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(260px, 30vw, 320px), 1fr))',
-            gap: 'clamp(24px, 4vw, 32px)',
-            marginTop: 48,
+          <p style={{
+            fontSize: 'clamp(16px, 2vw, 18px)',
+            lineHeight: 1.6,
+            color: '#6B7280',
+            maxWidth: '768px',
+            margin: '0 auto',
+            textAlign: 'center',
           }}>
-            {[
-              { title: 'Domain & Hosting', desc: 'Access to your domain/hosting or we can host/manage for you' },
-              { title: 'Social Accounts', desc: 'Access to social media accounts or we can manage them' },
-              { title: 'Content Uploads', desc: '3 raw content pieces (videos/images) to jumpstart content pipeline' },
-              { title: 'POS/Booking Access', desc: 'Access to existing POS/booking systems or we onboard new accounts' },
-            ].map((item, idx) => (
-              <div key={idx} style={{
+            To get started, we'll need access to a few key systems. Don't have them? We can help set them up.
+          </p>
+        </div>
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(280px, 30vw, 360px), 1fr))',
+          gap: 'clamp(24px, 4vw, 32px)',
+        }}>
+          {/* Card 01 - Domain & Hosting */}
+          <div style={{
+            position: 'relative',
+            borderRadius: '24px',
+            border: '1px solid rgba(0, 0, 0, 0.05)',
+            backgroundColor: '#fff',
+            overflow: 'hidden',
+            transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+            boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-8px)';
+            e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            e.currentTarget.style.backgroundColor = 'rgba(249, 250, 251, 0.5)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+            e.currentTarget.style.backgroundColor = '#fff';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.05)';
+          }}
+          >
+            {/* Preview canvas */}
+            <div style={{
+              position: 'relative',
+              overflow: 'hidden',
+              backgroundColor: '#F9FAFB',
+              height: 'clamp(240px, 30vw, 320px)',
+              border: '1px solid rgba(0, 0, 0, 0.05)',
+              borderRadius: '16px',
+              margin: 'clamp(16px, 2vw, 24px)',
+            }}>
+              {/* Layered background cards for depth */}
+              <div style={{
+                position: 'absolute',
+                pointerEvents: 'none',
+                right: '8px',
+                top: '48px',
+                background: 'linear-gradient(to bottom right, rgba(0, 0, 0, 0.02), transparent)',
+                width: '68%',
+                height: '68%',
+                border: '1px solid rgba(0, 0, 0, 0.05)',
+                borderRadius: '12px',
+                transform: 'rotate(8deg)',
+                boxShadow: '0 20px 80px rgba(0,0,0,0.1)',
+              }}></div>
+
+              {/* Main interface card */}
+              <div style={{
+                position: 'relative',
+                zIndex: 10,
+                margin: '24px auto 0',
+                width: '88%',
+                height: '76%',
+                borderRadius: '12px',
                 backgroundColor: '#fff',
-                padding: 'clamp(24px, 4vw, 32px)',
-                borderRadius: '24px',
-                border: '1px solid rgba(0,0,0,0.05)',
-                boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
-                transition: 'all 0.3s',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-8px)';
-                e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
-              }}
-              >
-                <h3 style={{ fontSize: 20, marginBottom: 12, color: '#111827', fontWeight: 600 }}>{item.title}</h3>
-                <p style={{ fontSize: 16, color: '#4B5563', lineHeight: 1.6 }}>{item.desc}</p>
+                border: '1px solid rgba(0, 0, 0, 0.1)',
+                boxShadow: '0 32px 80px rgba(0,0,0,0.15)',
+              }}>
+                {/* Top bar */}
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  padding: '16px',
+                  borderBottom: '1px solid rgba(0, 0, 0, 0.05)',
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#EF4444' }}></div>
+                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#F59E0B' }}></div>
+                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#10B981' }}></div>
+                  </div>
+                  <p style={{
+                    fontSize: '11px',
+                    color: '#9CA3AF',
+                    fontFamily: 'monospace',
+                  }}>domain.com</p>
+                </div>
+
+                {/* Content area */}
+                <div style={{ padding: '20px' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                    <div style={{
+                      height: '8px',
+                      width: '32px',
+                      borderRadius: '9999px',
+                      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                    }}></div>
+                    <div style={{
+                      height: '8px',
+                      width: '128px',
+                      borderRadius: '9999px',
+                      backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                    }}></div>
+                    <div style={{
+                      height: '40px',
+                      width: '100%',
+                      borderRadius: '8px',
+                      border: '1px solid rgba(0, 0, 0, 0.1)',
+                      backgroundColor: '#F9FAFB',
+                      display: 'flex',
+                      alignItems: 'center',
+                      padding: '0 12px',
+                    }}>
+                      <div style={{
+                        width: '24px',
+                        height: '8px',
+                        borderRadius: '9999px',
+                        background: 'linear-gradient(90deg, #667eea 0%, #764ba2 100%)',
+                      }}></div>
+                    </div>
+                    <div style={{
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(3, 1fr)',
+                      gap: '8px',
+                      marginTop: '16px',
+                    }}>
+                      <div style={{
+                        height: '48px',
+                        borderRadius: '8px',
+                        backgroundColor: '#F9FAFB',
+                        border: '1px solid rgba(0, 0, 0, 0.1)',
+                      }}></div>
+                      <div style={{
+                        height: '48px',
+                        borderRadius: '8px',
+                        background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1))',
+                        border: '1px solid rgba(102, 126, 234, 0.2)',
+                      }}></div>
+                      <div style={{
+                        height: '48px',
+                        borderRadius: '8px',
+                        backgroundColor: '#F9FAFB',
+                        border: '1px solid rgba(0, 0, 0, 0.1)',
+                      }}></div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            ))}
+            </div>
+
+            {/* Content */}
+            <div style={{ padding: 'clamp(20px, 3vw, 24px)' }}>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                marginBottom: '16px',
+              }}>
+                <span style={{
+                  fontSize: 'clamp(16px, 2vw, 18px)',
+                  fontWeight: 600,
+                  letterSpacing: '-0.02em',
+                  color: '#667eea',
+                  fontFamily: 'monospace',
+                }}>01</span>
+              </div>
+              <h3 style={{
+                fontSize: 'clamp(20px, 2.5vw, 24px)',
+                fontWeight: 600,
+                letterSpacing: '-0.02em',
+                color: '#111827',
+                marginBottom: '12px',
+                textAlign: 'center',
+              }}>Domain & Hosting</h3>
+              <p style={{
+                color: '#6B7280',
+                lineHeight: 1.6,
+                fontSize: 'clamp(14px, 1.8vw, 16px)',
+                textAlign: 'center',
+              }}>
+                Access to your domain/hosting or we can host/manage for you.
+              </p>
+            </div>
+          </div>
+
+          {/* Card 02 - Social Accounts */}
+          <div style={{
+            position: 'relative',
+            borderRadius: '24px',
+            border: '1px solid rgba(0, 0, 0, 0.05)',
+            backgroundColor: '#fff',
+            overflow: 'hidden',
+            transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+            boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-8px)';
+            e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            e.currentTarget.style.backgroundColor = 'rgba(249, 250, 251, 0.5)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+            e.currentTarget.style.backgroundColor = '#fff';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.05)';
+          }}
+          >
+            {/* Preview canvas */}
+            <div style={{
+              position: 'relative',
+              overflow: 'hidden',
+              backgroundColor: '#F9FAFB',
+              height: 'clamp(240px, 30vw, 320px)',
+              border: '1px solid rgba(0, 0, 0, 0.05)',
+              borderRadius: '16px',
+              margin: 'clamp(16px, 2vw, 24px)',
+            }}>
+              {/* Main design interface */}
+              <div style={{
+                position: 'relative',
+                zIndex: 10,
+                backgroundColor: '#fff',
+                width: '88%',
+                height: '76%',
+                border: '1px solid rgba(0, 0, 0, 0.1)',
+                borderRadius: '12px',
+                margin: '24px auto 0',
+                boxShadow: '0 32px 80px rgba(0,0,0,0.15)',
+              }}>
+                {/* Top bar */}
+                <div style={{
+                  display: 'flex',
+                  borderBottom: '1px solid rgba(0, 0, 0, 0.05)',
+                  padding: '16px',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#EF4444' }}></div>
+                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#F59E0B' }}></div>
+                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#10B981' }}></div>
+                  </div>
+                  <p style={{
+                    fontSize: '11px',
+                    color: '#9CA3AF',
+                    fontFamily: 'monospace',
+                  }}>Social Dashboard</p>
+                </div>
+
+                {/* Design elements */}
+                <div style={{ padding: '20px' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                    {/* Icon grid */}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                      <div style={{
+                        width: '16px',
+                        height: '16px',
+                        borderRadius: '50%',
+                        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                      }}></div>
+                      <div style={{
+                        width: '16px',
+                        height: '16px',
+                        borderRadius: '50%',
+                        background: 'linear-gradient(135deg, #10B981 0%, #14B8A6 100%)',
+                      }}></div>
+                      <div style={{
+                        width: '16px',
+                        height: '16px',
+                        borderRadius: '50%',
+                        background: 'linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%)',
+                      }}></div>
+                      <div style={{
+                        width: '16px',
+                        height: '16px',
+                        borderRadius: '50%',
+                        backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                      }}></div>
+                    </div>
+
+                    {/* Components */}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                      <div style={{
+                        height: '32px',
+                        width: '96px',
+                        borderRadius: '8px',
+                        background: 'linear-gradient(90deg, #667eea 0%, #764ba2 100%)',
+                      }}></div>
+                      <div style={{
+                        height: '24px',
+                        width: '100%',
+                        borderRadius: '8px',
+                        backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                      }}></div>
+                      <div style={{ display: 'flex', gap: '8px' }}>
+                        <div style={{
+                          height: '16px',
+                          width: '64px',
+                          borderRadius: '9999px',
+                          backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                        }}></div>
+                        <div style={{
+                          height: '16px',
+                          width: '48px',
+                          borderRadius: '9999px',
+                          background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2))',
+                        }}></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div style={{ padding: 'clamp(20px, 3vw, 24px)' }}>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                marginBottom: '16px',
+              }}>
+                <span style={{
+                  fontSize: 'clamp(16px, 2vw, 18px)',
+                  fontWeight: 600,
+                  letterSpacing: '-0.02em',
+                  color: '#3B82F6',
+                  fontFamily: 'monospace',
+                }}>02</span>
+              </div>
+              <h3 style={{
+                fontSize: 'clamp(20px, 2.5vw, 24px)',
+                fontWeight: 600,
+                letterSpacing: '-0.02em',
+                color: '#111827',
+                marginBottom: '12px',
+                textAlign: 'center',
+              }}>Social Accounts</h3>
+              <p style={{
+                color: '#6B7280',
+                lineHeight: 1.6,
+                fontSize: 'clamp(14px, 1.8vw, 16px)',
+                textAlign: 'center',
+              }}>
+                Access to social media accounts or we can manage them.
+              </p>
+            </div>
+          </div>
+
+          {/* Card 03 - Content Uploads */}
+          <div style={{
+            position: 'relative',
+            borderRadius: '24px',
+            border: '1px solid rgba(0, 0, 0, 0.05)',
+            backgroundColor: '#fff',
+            overflow: 'hidden',
+            transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+            boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-8px)';
+            e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            e.currentTarget.style.backgroundColor = 'rgba(249, 250, 251, 0.5)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+            e.currentTarget.style.backgroundColor = '#fff';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.05)';
+          }}
+          >
+            {/* Preview canvas */}
+            <div style={{
+              position: 'relative',
+              height: 'clamp(240px, 30vw, 320px)',
+              borderRadius: '16px',
+              backgroundColor: '#F9FAFB',
+              border: '1px solid rgba(0, 0, 0, 0.05)',
+              overflow: 'hidden',
+              margin: 'clamp(16px, 2vw, 24px)',
+            }}>
+              {/* Main content interface */}
+              <div style={{
+                position: 'relative',
+                zIndex: 10,
+                backgroundColor: '#fff',
+                width: '88%',
+                height: '76%',
+                border: '1px solid rgba(0, 0, 0, 0.1)',
+                borderRadius: '12px',
+                margin: '24px auto 0',
+                boxShadow: '0 32px 80px rgba(0,0,0,0.15)',
+              }}>
+                {/* Terminal-style header */}
+                <div style={{
+                  display: 'flex',
+                  borderBottom: '1px solid rgba(0, 0, 0, 0.05)',
+                  padding: '16px',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#EF4444' }}></div>
+                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#F59E0B' }}></div>
+                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#10B981' }}></div>
+                  </div>
+                  <p style={{
+                    fontSize: '11px',
+                    color: '#9CA3AF',
+                    fontFamily: 'monospace',
+                  }}>content-upload.js</p>
+                </div>
+
+                {/* Content-like area */}
+                <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <span style={{
+                      fontSize: '11px',
+                      color: '#10B981',
+                      fontFamily: 'monospace',
+                    }}>const</span>
+                    <div style={{
+                      height: '8px',
+                      width: '64px',
+                      borderRadius: '9999px',
+                      background: 'linear-gradient(90deg, #3B82F6 0%, #60A5FA 100%)',
+                    }}></div>
+                    <div style={{
+                      height: '8px',
+                      width: '32px',
+                      borderRadius: '9999px',
+                      backgroundColor: 'rgba(0, 0, 0, 0.2)',
+                    }}></div>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <div style={{
+                      height: '8px',
+                      width: '16px',
+                      borderRadius: '9999px',
+                      background: 'linear-gradient(90deg, #A855F7 0%, #C084FC 100%)',
+                    }}></div>
+                    <div style={{
+                      height: '8px',
+                      width: '80px',
+                      borderRadius: '9999px',
+                      backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                    }}></div>
+                  </div>
+                  <div style={{ paddingLeft: '16px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                    <div style={{
+                      height: '32px',
+                      width: '100%',
+                      borderRadius: '8px',
+                      background: 'linear-gradient(to right, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.1))',
+                      border: '1px solid rgba(16, 185, 129, 0.2)',
+                    }}></div>
+                    <div style={{ display: 'flex', gap: '12px' }}>
+                      <div style={{
+                        height: '8px',
+                        width: '48px',
+                        borderRadius: '9999px',
+                        background: 'linear-gradient(90deg, #667eea 0%, #764ba2 100%)',
+                      }}></div>
+                      <div style={{
+                        height: '8px',
+                        width: '24px',
+                        borderRadius: '9999px',
+                        background: 'linear-gradient(90deg, #10B981 0%, #14B8A6 100%)',
+                      }}></div>
+                    </div>
+                  </div>
+
+                  {/* Status indicator */}
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    marginTop: '16px',
+                    padding: '8px 12px',
+                    borderRadius: '8px',
+                    background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(20, 184, 166, 0.1))',
+                    border: '1px solid rgba(16, 185, 129, 0.2)',
+                  }}>
+                    <div style={{
+                      width: '8px',
+                      height: '8px',
+                      borderRadius: '50%',
+                      backgroundColor: '#10B981',
+                    }}></div>
+                    <span style={{
+                      fontSize: '11px',
+                      color: '#10B981',
+                      fontFamily: 'monospace',
+                    }}>Upload complete</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div style={{ padding: 'clamp(20px, 3vw, 24px)' }}>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                marginBottom: '16px',
+              }}>
+                <span style={{
+                  fontSize: 'clamp(16px, 2vw, 18px)',
+                  fontWeight: 600,
+                  letterSpacing: '-0.02em',
+                  color: '#A855F7',
+                  fontFamily: 'monospace',
+                }}>03</span>
+              </div>
+              <h3 style={{
+                fontSize: 'clamp(20px, 2.5vw, 24px)',
+                fontWeight: 600,
+                letterSpacing: '-0.02em',
+                color: '#111827',
+                marginBottom: '12px',
+                textAlign: 'center',
+              }}>Content Uploads</h3>
+              <p style={{
+                color: '#6B7280',
+                lineHeight: 1.6,
+                fontSize: 'clamp(14px, 1.8vw, 16px)',
+                textAlign: 'center',
+              }}>
+                3 raw content pieces (videos/images) to jumpstart content pipeline.
+              </p>
+            </div>
+          </div>
+
+          {/* Card 04 - POS/Booking Access */}
+          <div style={{
+            position: 'relative',
+            borderRadius: '24px',
+            border: '1px solid rgba(0, 0, 0, 0.05)',
+            backgroundColor: '#fff',
+            overflow: 'hidden',
+            transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+            boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-8px)';
+            e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            e.currentTarget.style.backgroundColor = 'rgba(249, 250, 251, 0.5)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+            e.currentTarget.style.backgroundColor = '#fff';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.05)';
+          }}
+          >
+            {/* Preview canvas */}
+            <div style={{
+              position: 'relative',
+              overflow: 'hidden',
+              backgroundColor: '#F9FAFB',
+              height: 'clamp(240px, 30vw, 320px)',
+              border: '1px solid rgba(0, 0, 0, 0.05)',
+              borderRadius: '16px',
+              margin: 'clamp(16px, 2vw, 24px)',
+            }}>
+              {/* Main booking interface */}
+              <div style={{
+                position: 'relative',
+                zIndex: 10,
+                backgroundColor: '#fff',
+                width: '88%',
+                height: '76%',
+                border: '1px solid rgba(0, 0, 0, 0.1)',
+                borderRadius: '12px',
+                margin: '24px auto 0',
+                boxShadow: '0 32px 80px rgba(0,0,0,0.15)',
+              }}>
+                {/* Top bar */}
+                <div style={{
+                  display: 'flex',
+                  borderBottom: '1px solid rgba(0, 0, 0, 0.05)',
+                  padding: '16px',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#EF4444' }}></div>
+                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#F59E0B' }}></div>
+                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#10B981' }}></div>
+                  </div>
+                  <p style={{
+                    fontSize: '11px',
+                    color: '#9CA3AF',
+                    fontFamily: 'monospace',
+                  }}>Booking System</p>
+                </div>
+
+                {/* Booking elements */}
+                <div style={{ padding: '20px' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                    {/* Calendar grid */}
+                    <div style={{
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(7, 1fr)',
+                      gap: '4px',
+                    }}>
+                      {Array.from({ length: 14 }).map((_, i) => (
+                        <div key={i} style={{
+                          height: '24px',
+                          borderRadius: '4px',
+                          backgroundColor: i === 7 || i === 8 ? 'rgba(102, 126, 234, 0.1)' : 'rgba(0, 0, 0, 0.05)',
+                          border: i === 7 || i === 8 ? '1px solid rgba(102, 126, 234, 0.2)' : '1px solid transparent',
+                        }}></div>
+                      ))}
+                    </div>
+
+                    {/* Time slots */}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      <div style={{
+                        height: '24px',
+                        width: '100%',
+                        borderRadius: '6px',
+                        background: 'linear-gradient(90deg, #667eea 0%, #764ba2 100%)',
+                      }}></div>
+                      <div style={{
+                        height: '24px',
+                        width: '80%',
+                        borderRadius: '6px',
+                        backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                      }}></div>
+                      <div style={{
+                        height: '24px',
+                        width: '60%',
+                        borderRadius: '6px',
+                        backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                      }}></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div style={{ padding: 'clamp(20px, 3vw, 24px)' }}>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                marginBottom: '16px',
+              }}>
+                <span style={{
+                  fontSize: 'clamp(16px, 2vw, 18px)',
+                  fontWeight: 600,
+                  letterSpacing: '-0.02em',
+                  color: '#10B981',
+                  fontFamily: 'monospace',
+                }}>04</span>
+              </div>
+              <h3 style={{
+                fontSize: 'clamp(20px, 2.5vw, 24px)',
+                fontWeight: 600,
+                letterSpacing: '-0.02em',
+                color: '#111827',
+                marginBottom: '12px',
+                textAlign: 'center',
+              }}>POS/Booking Access</h3>
+              <p style={{
+                color: '#6B7280',
+                lineHeight: 1.6,
+                fontSize: 'clamp(14px, 1.8vw, 16px)',
+                textAlign: 'center',
+              }}>
+                Access to existing POS/booking systems or we onboard new accounts.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -2567,6 +3616,7 @@ export default function Home() {
         maxWidth: '1280px',
         margin: '0 auto',
         backgroundColor: '#fff',
+        textAlign: 'center',
       }}>
         <h2 style={{
           textAlign: 'center',
@@ -2653,6 +3703,7 @@ export default function Home() {
         padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)',
         maxWidth: 1280,
         margin: '0 auto',
+        textAlign: 'center',
       }}>
         <h2 style={{
           fontSize: 'clamp(32px, 5vw, 48px)',

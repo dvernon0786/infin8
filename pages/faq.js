@@ -111,12 +111,12 @@ export default function FAQ() {
   return (
     <div style={{ fontFamily: "'Inter', sans-serif", color: '#1A1A1A' }}>
       <Navbar />
-      <div style={{ maxWidth: 900, margin: 'clamp(32px, 5vw, 40px) auto', padding: '0 clamp(16px, 4vw, 20px)' }}>
-      <h1 style={{ fontSize: 'clamp(32px, 5vw, 38px)', fontWeight: '700', marginBottom: 'clamp(24px, 4vw, 32px)' }}>Frequently Asked Questions</h1>
+      <div style={{ maxWidth: 900, margin: 'clamp(32px, 5vw, 40px) auto', padding: '0 clamp(16px, 4vw, 20px)', textAlign: 'center' }}>
+      <h1 style={{ fontSize: 'clamp(32px, 5vw, 38px)', fontWeight: '700', marginBottom: 'clamp(24px, 4vw, 32px)', textAlign: 'center' }}>Frequently Asked Questions</h1>
 
       {Object.entries(faqsByCategory).map(([category, faqs]) => (
-        <section key={category} style={{ marginBottom: 'clamp(32px, 6vw, 48px)' }}>
-          <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: '700', marginBottom: 'clamp(16px, 3vw, 24px)', textTransform: 'capitalize' }}>{category}</h2>
+        <section key={category} style={{ marginBottom: 'clamp(32px, 6vw, 48px)', textAlign: 'center' }}>
+          <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: '700', marginBottom: 'clamp(16px, 3vw, 24px)', textTransform: 'capitalize', textAlign: 'center' }}>{category}</h2>
           <div>
             {faqs.map(({ question, answer }, idx) => (
               <details key={idx} style={{
@@ -126,8 +126,8 @@ export default function FAQ() {
                 marginBottom: 'clamp(12px, 2vw, 16px)',
                 boxShadow: '0 1px 5px rgba(0,0,0,0.05)',
               }}>
-                <summary style={{ fontSize: 'clamp(16px, 2.2vw, 18px)', fontWeight: '600', cursor: 'pointer' }}>{question}</summary>
-                <p style={{ marginTop: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 2vw, 16px)', color: '#444' }}>{answer}</p>
+                <summary style={{ fontSize: 'clamp(16px, 2.2vw, 18px)', fontWeight: '600', cursor: 'pointer', textAlign: 'left' }}>{question}</summary>
+                <p style={{ marginTop: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 2vw, 16px)', color: '#444', textAlign: 'left' }}>{answer}</p>
               </details>
             ))}
           </div>
