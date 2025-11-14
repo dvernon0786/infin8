@@ -1316,124 +1316,1193 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Timeline Section */}
+      {/* Onboarding & Timeline Section */}
       <section style={{
-        padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)',
-        backgroundColor: '#fff',
+        padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 32px)',
         maxWidth: '1280px',
         margin: '0 auto',
+        backgroundColor: '#fff',
       }}>
-        <h2 style={{
+        {/* Header */}
+        <div style={{
           textAlign: 'center',
-          fontSize: 'clamp(32px, 5vw, 48px)',
-          fontWeight: '700',
-          color: '#111827',
-          marginBottom: 'clamp(32px, 6vw, 48px)',
-          letterSpacing: '-0.02em',
+          maxWidth: '768px',
+          margin: '0 auto clamp(48px, 8vw, 64px)',
         }}>
-          Onboarding & Timeline
-        </h2>
+          <div style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '4px 12px',
+            borderRadius: '9999px',
+            backgroundColor: '#111827',
+            border: '1px solid rgba(255,255,255,0.05)',
+            fontSize: 'clamp(11px, 1.5vw, 14px)',
+            color: '#9CA3AF',
+            marginBottom: '24px',
+          }}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px' }}>
+              <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" />
+              <path d="M20 2v4" />
+              <path d="M22 4h-4" />
+              <circle cx="4" cy="20" r="2" />
+            </svg>
+            <span>Onboarding Process</span>
+          </div>
+          <h2 style={{
+            fontSize: 'clamp(32px, 5vw, 48px)',
+            fontWeight: 600,
+            letterSpacing: '-0.02em',
+            color: '#111827',
+            marginBottom: 'clamp(16px, 3vw, 24px)',
+            margin: '0 0 clamp(16px, 3vw, 24px)',
+          }}>
+            Your 4-Week Journey
+          </h2>
+          <p style={{
+            fontSize: 'clamp(16px, 2vw, 18px)',
+            color: '#6B7280',
+            lineHeight: 1.6,
+            margin: 0,
+          }}>
+            From sign-up to full automation in just four weeks. Clear milestones, transparent progress.
+          </p>
+        </div>
+
+        {/* Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(200px, 25vw, 240px), 1fr))',
-          gap: 'clamp(16px, 3vw, 24px)',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(280px, 30vw, 360px), 1fr))',
+          gap: 'clamp(20px, 3vw, 24px)',
         }}>
-          {[
-            { week: 'Week 0', title: 'Sign & Access', desc: 'Pay first month, provide domain, logins, 3 raw media uploads' },
-            { week: 'Week 1', title: 'Foundation', desc: 'Audit, sitemap, homepage & booking skeleton live' },
-            { week: 'Week 2', title: 'Automation Setup', desc: 'CRM, lead flows, chatbot; basic booking/payment live' },
-            { week: 'Week 3', title: 'Content & Reminders', desc: 'Content pipeline scheduled (first 14 posts), SMS reminders activated' },
-            { week: 'Week 4', title: 'Analytics & Handoff', desc: 'Analytics dashboard + monthly snapshot delivered' },
-          ].map(({ week, title, desc }, idx) => (
-            <div key={idx} style={{
-              backgroundColor: '#F9FAFB',
+          {/* Week 0 - Sign & Access */}
+          <div style={{
+            position: 'relative',
+            borderRadius: '24px',
+            backgroundColor: '#fff',
+            border: '1px solid rgba(0, 0, 0, 0.05)',
+            padding: 'clamp(24px, 4vw, 32px)',
+            overflow: 'hidden',
+            boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-8px)';
+            e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.05)';
+          }}
+          >
+            <div style={{
+              position: 'absolute',
+              inset: 0,
               borderRadius: '24px',
-              padding: 'clamp(20px, 3vw, 24px)',
-              boxSizing: 'border-box',
-              textAlign: 'center',
-              border: '1px solid rgba(0, 0, 0, 0.05)',
-              boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
-              transition: 'all 0.3s',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-8px)';
-              e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
-            }}
-            >
+              pointerEvents: 'none',
+              background: 'radial-gradient(1200px 400px at 85% -10%, rgba(99, 102, 241, 0.04), transparent)',
+              maskImage: 'radial-gradient(60% 60% at 80% 0%, white, transparent)',
+            }}></div>
+            <div style={{ position: 'relative' }}>
               <div style={{
-                fontSize: 14,
-                fontWeight: '600',
-                color: '#667eea',
-                marginBottom: 8,
-              }}>{week}</div>
-              <h3 style={{ fontSize: 20, fontWeight: 600, marginBottom: 8, color: '#111827' }}>{title}</h3>
-              <p style={{ fontSize: 14, color: '#4B5563', lineHeight: 1.5 }}>{desc}</p>
+                width: '48px',
+                height: '48px',
+                borderRadius: '16px',
+                backgroundColor: '#F9FAFB',
+                border: '1px solid rgba(0, 0, 0, 0.05)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '20px',
+              }}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '24px', height: '24px', color: '#667eea' }}>
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <div style={{
+                fontSize: 'clamp(11px, 1.5vw, 12px)',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                color: '#9CA3AF',
+                marginBottom: '8px',
+              }}>Week 0</div>
+              <h3 style={{
+                fontSize: 'clamp(20px, 2.5vw, 24px)',
+                fontWeight: 600,
+                letterSpacing: '-0.02em',
+                color: '#111827',
+                marginBottom: '12px',
+              }}>Sign & Access</h3>
+              <p style={{
+                fontSize: 'clamp(14px, 1.8vw, 16px)',
+                color: '#6B7280',
+                lineHeight: 1.6,
+                marginBottom: '24px',
+              }}>
+                Pay first month, provide domain access, logins, and 3 raw media uploads to get started.
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  padding: '12px 16px',
+                  borderRadius: '12px',
+                  backgroundColor: '#F9FAFB',
+                  border: '1px solid rgba(0, 0, 0, 0.05)',
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', color: '#9CA3AF' }}>
+                      <rect width="20" height="14" x="2" y="5" rx="2" />
+                      <line x1="2" x2="22" y1="10" y2="10" />
+                    </svg>
+                    <span style={{ fontSize: '14px', color: '#4B5563' }}>Payment processed</span>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', color: '#10B981' }}>
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                </div>
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  padding: '12px 16px',
+                  borderRadius: '12px',
+                  backgroundColor: '#F9FAFB',
+                  border: '1px solid rgba(0, 0, 0, 0.05)',
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', color: '#9CA3AF' }}>
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    <span style={{ fontSize: '14px', color: '#4B5563' }}>Access credentials</span>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', color: '#10B981' }}>
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                </div>
+              </div>
             </div>
-          ))}
+          </div>
+
+          {/* Week 1 - Foundation */}
+          <div style={{
+            position: 'relative',
+            borderRadius: '24px',
+            backgroundColor: '#fff',
+            border: '1px solid rgba(0, 0, 0, 0.05)',
+            padding: 'clamp(24px, 4vw, 32px)',
+            overflow: 'hidden',
+            boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-8px)';
+            e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.05)';
+          }}
+          >
+            <div style={{
+              position: 'absolute',
+              inset: 0,
+              borderRadius: '24px',
+              pointerEvents: 'none',
+              background: 'radial-gradient(60% 50% at 50% 100%, rgba(16, 185, 129, 0.08), transparent 60%)',
+            }}></div>
+            <div style={{ position: 'relative' }}>
+              <div style={{
+                width: '48px',
+                height: '48px',
+                borderRadius: '16px',
+                backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                border: '1px solid rgba(16, 185, 129, 0.2)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '20px',
+              }}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '24px', height: '24px', color: '#10B981' }}>
+                  <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                  <polyline points="14 2 14 8 20 8" />
+                  <line x1="16" x2="8" y1="13" y2="13" />
+                  <line x1="16" x2="8" y1="17" y2="17" />
+                  <polyline points="10 9 9 9 8 9" />
+                </svg>
+              </div>
+              <div style={{
+                fontSize: 'clamp(11px, 1.5vw, 12px)',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                color: '#9CA3AF',
+                marginBottom: '8px',
+              }}>Week 1</div>
+              <h3 style={{
+                fontSize: 'clamp(20px, 2.5vw, 24px)',
+                fontWeight: 600,
+                letterSpacing: '-0.02em',
+                color: '#111827',
+                marginBottom: '12px',
+              }}>Foundation</h3>
+              <p style={{
+                fontSize: 'clamp(14px, 1.8vw, 16px)',
+                color: '#6B7280',
+                lineHeight: 1.6,
+                marginBottom: '24px',
+              }}>
+                Complete audit, create sitemap, and launch homepage & booking skeleton live.
+              </p>
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(2, 1fr)',
+                gap: '16px',
+                marginBottom: '24px',
+              }}>
+                <div>
+                  <p style={{
+                    fontSize: '11px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    color: '#9CA3AF',
+                    marginBottom: '8px',
+                  }}>Audit</p>
+                  <p style={{
+                    fontSize: '18px',
+                    fontWeight: 600,
+                    color: '#111827',
+                  }}>Complete</p>
+                </div>
+                <div>
+                  <p style={{
+                    fontSize: '11px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    color: '#9CA3AF',
+                    marginBottom: '8px',
+                  }}>Sitemap</p>
+                  <p style={{
+                    fontSize: '18px',
+                    fontWeight: 600,
+                    color: '#111827',
+                  }}>Live</p>
+                </div>
+              </div>
+              <div style={{
+                position: 'relative',
+                borderRadius: '16px',
+                background: 'linear-gradient(to bottom, #F9FAFB, #fff)',
+                border: '1px solid rgba(0, 0, 0, 0.05)',
+                padding: '16px',
+                overflow: 'hidden',
+              }}>
+                <div style={{
+                  position: 'absolute',
+                  inset: 0,
+                  borderRadius: '16px',
+                  pointerEvents: 'none',
+                  background: 'linear-gradient(120deg, rgba(16, 185, 129, 0.08), transparent 40%)',
+                }}></div>
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', color: '#10B981' }}>
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  <span style={{
+                    fontSize: '14px',
+                    fontWeight: 500,
+                    color: '#111827',
+                  }}>Homepage & booking live</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Week 2 - Automation Setup */}
+          <div style={{
+            position: 'relative',
+            borderRadius: '24px',
+            backgroundColor: '#fff',
+            border: '1px solid rgba(0, 0, 0, 0.05)',
+            padding: 'clamp(24px, 4vw, 32px)',
+            overflow: 'hidden',
+            boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-8px)';
+            e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.05)';
+          }}
+          >
+            <div style={{
+              position: 'absolute',
+              inset: 0,
+              borderRadius: '24px',
+              pointerEvents: 'none',
+              background: 'linear-gradient(160deg, rgba(168, 85, 247, 0.08), transparent 40%)',
+            }}></div>
+            <div style={{ position: 'relative', flex: 1, display: 'flex', flexDirection: 'column' }}>
+              <div style={{
+                width: '48px',
+                height: '48px',
+                borderRadius: '16px',
+                backgroundColor: 'rgba(168, 85, 247, 0.1)',
+                border: '1px solid rgba(168, 85, 247, 0.2)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '20px',
+              }}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '24px', height: '24px', color: '#A855F7' }}>
+                  <path d="M12.22 2h-.44a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z" />
+                  <path d="M18 2h-3a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z" />
+                  <path d="M4 2H2v20h2" />
+                </svg>
+              </div>
+              <div style={{
+                fontSize: 'clamp(11px, 1.5vw, 12px)',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                color: '#9CA3AF',
+                marginBottom: '8px',
+              }}>Week 2</div>
+              <h3 style={{
+                fontSize: 'clamp(20px, 2.5vw, 24px)',
+                fontWeight: 600,
+                letterSpacing: '-0.02em',
+                color: '#111827',
+                marginBottom: '12px',
+              }}>Automation Setup</h3>
+              <p style={{
+                fontSize: 'clamp(14px, 1.8vw, 16px)',
+                color: '#6B7280',
+                lineHeight: 1.6,
+                marginBottom: '24px',
+              }}>
+                CRM integration, lead flows, chatbot configuration; basic booking & payment systems go live.
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '24px', flex: 1 }}>
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  padding: '8px 0',
+                }}>
+                  <span style={{ fontSize: '14px', color: '#6B7280' }}>CRM Integration</span>
+                  <span style={{ fontSize: '14px', fontWeight: 600, color: '#111827' }}>Active</span>
+                </div>
+                <div style={{
+                  height: '4px',
+                  borderRadius: '9999px',
+                  backgroundColor: '#F3F4F6',
+                  overflow: 'hidden',
+                  border: '1px solid rgba(0, 0, 0, 0.05)',
+                }}>
+                  <div style={{
+                    height: '100%',
+                    background: 'linear-gradient(to right, #A855F7, #667eea)',
+                    width: '85%',
+                  }}></div>
+                </div>
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  padding: '8px 0',
+                }}>
+                  <span style={{ fontSize: '14px', color: '#6B7280' }}>Chatbot</span>
+                  <span style={{ fontSize: '14px', fontWeight: 600, color: '#111827' }}>Configured</span>
+                </div>
+                <div style={{
+                  height: '4px',
+                  borderRadius: '9999px',
+                  backgroundColor: '#F3F4F6',
+                  overflow: 'hidden',
+                  border: '1px solid rgba(0, 0, 0, 0.05)',
+                }}>
+                  <div style={{
+                    height: '100%',
+                    background: 'linear-gradient(to right, #10B981, #14B8A6)',
+                    width: '90%',
+                  }}></div>
+                </div>
+              </div>
+              <div style={{ marginTop: 'auto', paddingTop: '16px' }}>
+                <div style={{
+                  width: '100%',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '8px',
+                  borderRadius: '16px',
+                  backgroundColor: '#F9FAFB',
+                  color: '#111827',
+                  padding: '14px',
+                  border: '1px solid rgba(0, 0, 0, 0.05)',
+                  fontSize: '14px',
+                  fontWeight: 500,
+                  transition: 'all 0.2s',
+                }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px' }}>
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                  <span>Booking & payments live</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Week 3 - Content & Reminders */}
+          <div style={{
+            position: 'relative',
+            borderRadius: '24px',
+            backgroundColor: '#fff',
+            border: '1px solid rgba(0, 0, 0, 0.05)',
+            padding: 'clamp(24px, 4vw, 32px)',
+            overflow: 'hidden',
+            boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-8px)';
+            e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.05)';
+          }}
+          >
+            <div style={{
+              position: 'absolute',
+              top: '-48px',
+              right: '-48px',
+              width: '160px',
+              height: '160px',
+              borderRadius: '50%',
+              backgroundColor: 'rgba(249, 115, 22, 0.1)',
+              filter: 'blur(48px)',
+              pointerEvents: 'none',
+            }}></div>
+            <div style={{ position: 'relative' }}>
+              <div style={{
+                width: '48px',
+                height: '48px',
+                borderRadius: '16px',
+                backgroundColor: 'rgba(249, 115, 22, 0.1)',
+                border: '1px solid rgba(249, 115, 22, 0.2)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '20px',
+              }}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '24px', height: '24px', color: '#F97316' }}>
+                  <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                  <line x1="16" x2="16" y1="2" y2="6" />
+                  <line x1="8" x2="8" y1="2" y2="6" />
+                  <line x1="3" x2="21" y1="10" y2="10" />
+                  <path d="M8 14h.01" />
+                  <path d="M12 14h.01" />
+                  <path d="M16 14h.01" />
+                  <path d="M8 18h.01" />
+                  <path d="M12 18h.01" />
+                  <path d="M16 18h.01" />
+                </svg>
+              </div>
+              <div style={{
+                fontSize: 'clamp(11px, 1.5vw, 12px)',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                color: '#9CA3AF',
+                marginBottom: '8px',
+              }}>Week 3</div>
+              <h3 style={{
+                fontSize: 'clamp(20px, 2.5vw, 24px)',
+                fontWeight: 600,
+                letterSpacing: '-0.02em',
+                color: '#111827',
+                marginBottom: '12px',
+              }}>Content & Reminders</h3>
+              <p style={{
+                fontSize: 'clamp(14px, 1.8vw, 16px)',
+                color: '#6B7280',
+                lineHeight: 1.6,
+                marginBottom: '24px',
+              }}>
+                Content pipeline scheduled (first 14 posts), SMS reminders activated and tested.
+              </p>
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(3, 1fr)',
+                gap: '12px',
+              }}>
+                <div style={{
+                  padding: '12px',
+                  borderRadius: '12px',
+                  backgroundColor: '#F9FAFB',
+                  border: '1px solid rgba(0, 0, 0, 0.05)',
+                  textAlign: 'center',
+                }}>
+                  <p style={{
+                    fontSize: '11px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    color: '#9CA3AF',
+                    marginBottom: '4px',
+                  }}>Posts</p>
+                  <p style={{
+                    fontSize: '18px',
+                    fontWeight: 600,
+                    color: '#111827',
+                  }}>14</p>
+                </div>
+                <div style={{
+                  padding: '12px',
+                  borderRadius: '12px',
+                  backgroundColor: '#F9FAFB',
+                  border: '1px solid rgba(0, 0, 0, 0.05)',
+                  textAlign: 'center',
+                }}>
+                  <p style={{
+                    fontSize: '11px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    color: '#9CA3AF',
+                    marginBottom: '4px',
+                  }}>SMS</p>
+                  <p style={{
+                    fontSize: '18px',
+                    fontWeight: 600,
+                    color: '#111827',
+                  }}>Live</p>
+                </div>
+                <div style={{
+                  padding: '12px',
+                  borderRadius: '12px',
+                  backgroundColor: '#F9FAFB',
+                  border: '1px solid rgba(0, 0, 0, 0.05)',
+                  textAlign: 'center',
+                }}>
+                  <p style={{
+                    fontSize: '11px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    color: '#9CA3AF',
+                    marginBottom: '4px',
+                  }}>Status</p>
+                  <div style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                  }}>
+                    <div style={{
+                      width: '6px',
+                      height: '6px',
+                      borderRadius: '50%',
+                      backgroundColor: '#10B981',
+                    }}></div>
+                    <p style={{
+                      fontSize: '18px',
+                      fontWeight: 600,
+                      color: '#10B981',
+                    }}>Active</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Week 4 - Analytics & Handoff */}
+          <div style={{
+            position: 'relative',
+            borderRadius: '24px',
+            backgroundColor: '#fff',
+            border: '1px solid rgba(0, 0, 0, 0.05)',
+            padding: 'clamp(24px, 4vw, 32px)',
+            overflow: 'hidden',
+            boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-8px)';
+            e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.05)';
+          }}
+          >
+            <div style={{
+              position: 'absolute',
+              inset: 0,
+              borderRadius: '24px',
+              pointerEvents: 'none',
+              background: 'radial-gradient(60% 60% at 20% 0%, rgba(239, 68, 68, 0.04), transparent)',
+              maskImage: 'radial-gradient(60% 60% at 20% 0%, white, transparent)',
+            }}></div>
+            <div style={{ position: 'relative' }}>
+              <div style={{
+                width: '48px',
+                height: '48px',
+                borderRadius: '16px',
+                backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                border: '1px solid rgba(239, 68, 68, 0.2)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '20px',
+              }}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '24px', height: '24px', color: '#EF4444' }}>
+                  <path d="M3 3v18h18" />
+                  <path d="M18 7c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z" />
+                  <path d="M6 17c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z" />
+                  <path d="M21 15c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z" />
+                  <path d="M6 17L18 7" />
+                </svg>
+              </div>
+              <div style={{
+                fontSize: 'clamp(11px, 1.5vw, 12px)',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                color: '#9CA3AF',
+                marginBottom: '8px',
+              }}>Week 4</div>
+              <h3 style={{
+                fontSize: 'clamp(20px, 2.5vw, 24px)',
+                fontWeight: 600,
+                letterSpacing: '-0.02em',
+                color: '#111827',
+                marginBottom: '12px',
+              }}>Analytics & Handoff</h3>
+              <p style={{
+                fontSize: 'clamp(14px, 1.8vw, 16px)',
+                color: '#6B7280',
+                lineHeight: 1.6,
+                marginBottom: '24px',
+              }}>
+                Analytics dashboard configured, monthly snapshot delivered, and full system handoff completed.
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '12px',
+                  padding: '12px 16px',
+                  borderRadius: '12px',
+                  backgroundColor: '#F9FAFB',
+                  border: '1px solid rgba(0, 0, 0, 0.05)',
+                }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', color: '#9CA3AF' }}>
+                    <path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" />
+                  </svg>
+                  <span style={{ fontSize: '14px', color: '#4B5563' }}>Dashboard configured</span>
+                </div>
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '12px',
+                  padding: '12px 16px',
+                  borderRadius: '12px',
+                  backgroundColor: '#F9FAFB',
+                  border: '1px solid rgba(0, 0, 0, 0.05)',
+                }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', color: '#9CA3AF' }}>
+                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                  </svg>
+                  <span style={{ fontSize: '14px', color: '#4B5563' }}>Monthly snapshot delivered</span>
+                </div>
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '12px',
+                  padding: '12px 16px',
+                  borderRadius: '12px',
+                  backgroundColor: '#F9FAFB',
+                  border: '1px solid rgba(0, 0, 0, 0.05)',
+                }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', color: '#9CA3AF' }}>
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                  <span style={{ fontSize: '14px', color: '#4B5563' }}>System handoff complete</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
+        {/* Footer Note */}
         <p style={{
-          marginTop: 40,
+          marginTop: 'clamp(40px, 6vw, 48px)',
           fontStyle: 'italic',
           textAlign: 'center',
           color: '#6B7280',
-          fontSize: 14,
+          fontSize: 'clamp(14px, 1.8vw, 16px)',
+          lineHeight: 1.6,
         }}>
           Months 2–6: Ongoing optimization, content, and monthly improvements.
         </p>
       </section>
 
-      {/* Social Proof Section */}
+      {/* Testimonials Section */}
       <section style={{
-        backgroundColor: '#F9FAFB',
-        padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)',
-        maxWidth: 1280,
+        padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 32px)',
+        maxWidth: '1280px',
         margin: '0 auto',
-        textAlign: 'center',
+        backgroundColor: '#F9FAFB',
       }}>
         <div style={{
-          backgroundColor: '#fff',
-          borderRadius: '24px',
-          padding: 'clamp(32px, 6vw, 64px) clamp(24px, 5vw, 48px)',
-          border: '1px solid rgba(0, 0, 0, 0.05)',
-          boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
-          maxWidth: 900,
-          margin: '0 auto',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          marginBottom: 'clamp(24px, 4vw, 32px)',
+          flexWrap: 'wrap',
+          gap: '16px',
         }}>
-          <h2 style={{
-            fontSize: 'clamp(32px, 5vw, 48px)',
-            fontWeight: 700,
-            marginBottom: 24,
-            color: '#111827',
-            letterSpacing: '-0.02em',
-          }}>
-            Trusted by Small Business Owners
-          </h2>
-
-          <blockquote style={{
-            fontStyle: 'italic',
-            fontSize: 18,
-            lineHeight: 1.6,
-            color: '#111827',
-            marginBottom: 20,
-          }}>
-            "Infin8 Automation transformed my booking system. No-shows dropped by 60%, and I'm saving 15 hours a week on admin work. The automated content pipeline alone has been a game-changer."
-          </blockquote>
-
-          <footer style={{
-            fontWeight: 600,
-            fontSize: 16,
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-          }}>
-            Sarah M. — Salon Owner, Austin, TX
-          </footer>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+            <p style={{
+              fontSize: 'clamp(11px, 1.5vw, 14px)',
+              color: '#9CA3AF',
+              margin: 0,
+              fontWeight: 400,
+            }}>What people say</p>
+            <h2 style={{
+              fontSize: 'clamp(24px, 3.5vw, 36px)',
+              fontWeight: 600,
+              letterSpacing: '-0.02em',
+              color: '#111827',
+              margin: 0,
+            }}>Testimonials</h2>
+          </div>
+          <div style={{
+            display: 'none',
+            alignItems: 'center',
+            gap: '8px',
+            color: '#9CA3AF',
+          }}
+          className="desktop-only"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px' }}>
+              <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
+              <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
+            </svg>
+            <span style={{ fontSize: 'clamp(12px, 1.5vw, 14px)', fontWeight: 400 }}>Real feedback from clients</span>
+          </div>
         </div>
+
+        <div style={{
+          overflow: 'hidden',
+          borderRadius: 'clamp(16px, 2.5vw, 24px)',
+          backgroundColor: '#0F172A',
+          border: '1px solid rgba(30, 41, 59, 0.8)',
+          position: 'relative',
+        }}>
+          {/* Animated glow background */}
+          <div style={{
+            position: 'absolute',
+            inset: '-4px',
+            borderRadius: 'clamp(16px, 2.5vw, 24px)',
+            pointerEvents: 'none',
+            background: 'linear-gradient(45deg, rgba(132, 204, 22, 0.1), rgba(52, 211, 153, 0.08), rgba(34, 211, 238, 0.06), rgba(163, 230, 53, 0.08))',
+            backgroundSize: '300%',
+            animation: 'glow-rotate 15s linear infinite',
+            filter: 'blur(25px)',
+            opacity: 0.6,
+            zIndex: -1,
+          }}></div>
+
+          {/* Animated border */}
+          <div style={{
+            position: 'absolute',
+            inset: 0,
+            borderRadius: 'clamp(16px, 2.5vw, 24px)',
+            pointerEvents: 'none',
+            zIndex: 1,
+          }}>
+            <div style={{
+              position: 'absolute',
+              inset: 0,
+              borderRadius: 'inherit',
+              padding: '1px',
+              background: 'linear-gradient(90deg, rgba(132, 204, 22, 0.3), rgba(52, 211, 153, 0.25), rgba(34, 211, 238, 0.2), rgba(163, 230, 53, 0.25))',
+              backgroundSize: '400% 100%',
+              animation: 'border-flow 8s linear infinite',
+              WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+              WebkitMaskComposite: 'xor',
+              maskComposite: 'exclude',
+            }}></div>
+          </div>
+
+          {/* Gradient overlays for fade effect */}
+          <div style={{
+            pointerEvents: 'none',
+            position: 'absolute',
+            inset: '0 0 0 0',
+            left: 0,
+            width: 'clamp(96px, 20vw, 160px)',
+            background: 'linear-gradient(to right, #0F172A, transparent)',
+            zIndex: 10,
+          }}></div>
+          <div style={{
+            pointerEvents: 'none',
+            position: 'absolute',
+            inset: '0 0 0 0',
+            right: 0,
+            width: 'clamp(96px, 20vw, 160px)',
+            background: 'linear-gradient(to left, #0F172A, transparent)',
+            zIndex: 10,
+          }}></div>
+
+          {/* Top marquee row */}
+          <div style={{
+            padding: 'clamp(24px, 4vw, 32px)',
+            position: 'relative',
+          }}>
+            <div style={{
+              display: 'flex',
+              gap: 'clamp(16px, 3vw, 20px)',
+              willChange: 'transform',
+              animation: 'marquee-ltr 45s linear infinite',
+            }}>
+              {[
+                { name: 'Sarah M.', handle: '@sarah_salon', quote: 'Infin8 Automation transformed my booking system. No shows dropped by 60 percent and I am saving 15 hours a week on admin work. The automated content pipeline alone has been a game changer.', avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces&auto=format' },
+                { name: 'Mike T.', handle: '@mike_home', quote: 'We went from missing follow ups to having every lead contacted instantly. Our conversion rate improved by 32 percent in the first month.', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces&auto=format' },
+                { name: 'Lisa K.', handle: '@lisa_restaurant', quote: 'Infin8 replaced three software tools we were paying for. Everything is now under one clean system and my team finally feels organised.', avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=faces&auto=format' },
+                { name: 'David R.', handle: '@david_consulting', quote: 'Our response times went from hours to seconds. Clients keep telling us how impressed they are with our new automated communication.', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=faces&auto=format' },
+                { name: 'Emma W.', handle: '@emma_wellness', quote: 'I am saving so much time it feels unreal. What used to take me an entire afternoon is now fully automated.', avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=faces&auto=format' },
+                { name: 'James P.', handle: '@james_fitness', quote: 'Infin8 helped us reduce operational mistakes by 70 percent. The workflows catch everything before it becomes a problem.', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=faces&auto=format' },
+                { name: 'Rachel B.', handle: '@rachel_beauty', quote: 'The AI follow up system booked more appointments in two weeks than my team did in two months.', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=faces&auto=format' },
+                { name: 'Alex M.', handle: '@alex_tech', quote: 'We cut admin tasks by at least 12 hours a week. Infin8 paid for itself in the first month.', avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&h=200&fit=crop&crop=faces&auto=format' },
+                { name: 'Priya S.', handle: '@priya_dev', quote: 'Our content output is ten times faster and everything is SEO optimised automatically. It has completely changed how we market.', avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=faces&auto=format' },
+                { name: 'Leo M.', handle: '@leom', quote: 'Infin8 brought structure to our messy workflow. Nothing slips through the cracks anymore.', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces&auto=format' },
+              ].map((testimonial, idx) => (
+                <div key={idx} style={{
+                  flexShrink: 0,
+                  width: 'clamp(280px, 35vw, 420px)',
+                  borderRadius: '16px',
+                  border: '1px solid rgba(30, 41, 59, 0.8)',
+                  backgroundColor: 'rgba(15, 23, 42, 0.4)',
+                  backdropFilter: 'blur(10px)',
+                  WebkitBackdropFilter: 'blur(10px)',
+                  padding: '20px',
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+                    <img 
+                      src={testimonial.avatar} 
+                      alt={testimonial.name} 
+                      style={{
+                        width: '36px',
+                        height: '36px',
+                        objectFit: 'cover',
+                        borderRadius: '50%',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                      }}
+                    />
+                    <div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                        <span style={{
+                          fontSize: 'clamp(13px, 1.8vw, 14px)',
+                          fontWeight: 500,
+                          color: '#F1F5F9',
+                        }}>{testimonial.name}</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '14px', height: '14px', color: '#60A5FA' }}>
+                          <circle cx="12" cy="12" r="10" />
+                          <path d="m9 12 2 2 4-4" />
+                        </svg>
+                      </div>
+                      <p style={{
+                        fontSize: 'clamp(11px, 1.5vw, 12px)',
+                        color: '#94A3B8',
+                        margin: 0,
+                        fontWeight: 400,
+                      }}>{testimonial.handle}</p>
+                    </div>
+                  </div>
+                  <p style={{
+                    marginTop: '16px',
+                    fontSize: 'clamp(13px, 1.8vw, 16px)',
+                    color: '#CBD5E1',
+                    lineHeight: 1.6,
+                    margin: 0,
+                    fontWeight: 400,
+                  }}>{testimonial.quote}</p>
+                </div>
+              ))}
+              {/* Duplicate for seamless loop */}
+              {[
+                { name: 'Sarah M.', handle: '@sarah_salon', quote: 'Infin8 Automation transformed my booking system. No shows dropped by 60 percent and I am saving 15 hours a week on admin work. The automated content pipeline alone has been a game changer.', avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces&auto=format' },
+                { name: 'Mike T.', handle: '@mike_home', quote: 'We went from missing follow ups to having every lead contacted instantly. Our conversion rate improved by 32 percent in the first month.', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces&auto=format' },
+                { name: 'Lisa K.', handle: '@lisa_restaurant', quote: 'Infin8 replaced three software tools we were paying for. Everything is now under one clean system and my team finally feels organised.', avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=faces&auto=format' },
+              ].map((testimonial, idx) => (
+                <div key={`dup-${idx}`} style={{
+                  flexShrink: 0,
+                  width: 'clamp(280px, 35vw, 420px)',
+                  borderRadius: '16px',
+                  border: '1px solid rgba(30, 41, 59, 0.8)',
+                  backgroundColor: 'rgba(15, 23, 42, 0.4)',
+                  backdropFilter: 'blur(10px)',
+                  WebkitBackdropFilter: 'blur(10px)',
+                  padding: '20px',
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+                    <img 
+                      src={testimonial.avatar} 
+                      alt={testimonial.name} 
+                      style={{
+                        width: '36px',
+                        height: '36px',
+                        objectFit: 'cover',
+                        borderRadius: '50%',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                      }}
+                    />
+                    <div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                        <span style={{
+                          fontSize: 'clamp(13px, 1.8vw, 14px)',
+                          fontWeight: 500,
+                          color: '#F1F5F9',
+                        }}>{testimonial.name}</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '14px', height: '14px', color: '#60A5FA' }}>
+                          <circle cx="12" cy="12" r="10" />
+                          <path d="m9 12 2 2 4-4" />
+                        </svg>
+                      </div>
+                      <p style={{
+                        fontSize: 'clamp(11px, 1.5vw, 12px)',
+                        color: '#94A3B8',
+                        margin: 0,
+                        fontWeight: 400,
+                      }}>{testimonial.handle}</p>
+                    </div>
+                  </div>
+                  <p style={{
+                    marginTop: '16px',
+                    fontSize: 'clamp(13px, 1.8vw, 16px)',
+                    color: '#CBD5E1',
+                    lineHeight: 1.6,
+                    margin: 0,
+                    fontWeight: 400,
+                  }}>{testimonial.quote}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div style={{
+            borderTop: '1px solid rgba(30, 41, 59, 0.8)',
+          }}></div>
+
+          {/* Bottom marquee row (reverse direction) */}
+          <div style={{
+            padding: 'clamp(24px, 4vw, 32px)',
+            position: 'relative',
+          }}>
+            <div style={{
+              display: 'flex',
+              gap: 'clamp(16px, 3vw, 20px)',
+              willChange: 'transform',
+              animation: 'marquee-rtl 45s linear infinite',
+            }}>
+              {[
+                { name: 'Tom H.', handle: '@tom_services', quote: 'I wish we had found Infin8 sooner. Our onboarding is now fully automated and clients move through our process with zero delays.', avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=faces&auto=format' },
+                { name: 'Nina C.', handle: '@nina_coaching', quote: 'The system runs my entire business while I am asleep. I wake up to booked appointments and completed tasks.', avatar: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=200&h=200&fit=crop&crop=faces&auto=format' },
+                { name: 'Sofia A.', handle: '@sofialabs', quote: 'The automated reminders alone reduced cancellations by almost half. My calendar finally stays full.', avatar: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200&h=200&fit=crop&crop=faces&auto=format' },
+                { name: 'Jackson L.', handle: '@jacksonlee', quote: 'Every lead gets followed up without me lifting a finger. My sales pipeline has never looked this healthy.', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces&auto=format' },
+                { name: 'Maya K.', handle: '@mayak', quote: 'We created a custom workflow that replaced a part time admin hire. The savings have been incredible.', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=faces&auto=format' },
+                { name: 'Ethan G.', handle: '@egarcia', quote: 'I love how simple everything is. Once the workflows were set, the system just runs by itself.', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces&auto=format' },
+                { name: 'Olivia R.', handle: '@olivia_biz', quote: 'Our clients love the new communication system. It is instant, friendly, and always consistent.', avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces&auto=format' },
+                { name: 'Chris D.', handle: '@chris_design', quote: 'The automation setup removed all the bottlenecks in our business. We can take on more clients with the same team.', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces&auto=format' },
+                { name: 'Sam L.', handle: '@sam_lead', quote: 'Infin8 doubled our lead to appointment ratio in the first month. The systems are powerful and very easy to manage.', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces&auto=format' },
+                { name: 'Taylor B.', handle: '@taylor_biz', quote: 'We finally feel like a modern business. Automated tasks, clean dashboards, and zero manual chasing. Infin8 has been the best investment this year.', avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces&auto=format' },
+              ].map((testimonial, idx) => (
+                <div key={idx} style={{
+                  flexShrink: 0,
+                  width: 'clamp(280px, 35vw, 420px)',
+                  borderRadius: '16px',
+                  border: '1px solid rgba(30, 41, 59, 0.8)',
+                  backgroundColor: 'rgba(15, 23, 42, 0.4)',
+                  backdropFilter: 'blur(10px)',
+                  WebkitBackdropFilter: 'blur(10px)',
+                  padding: '20px',
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+                    <img 
+                      src={testimonial.avatar} 
+                      alt={testimonial.name} 
+                      style={{
+                        width: '36px',
+                        height: '36px',
+                        objectFit: 'cover',
+                        borderRadius: '50%',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                      }}
+                    />
+                    <div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                        <span style={{
+                          fontSize: 'clamp(13px, 1.8vw, 14px)',
+                          fontWeight: 500,
+                          color: '#F1F5F9',
+                        }}>{testimonial.name}</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '14px', height: '14px', color: '#60A5FA' }}>
+                          <circle cx="12" cy="12" r="10" />
+                          <path d="m9 12 2 2 4-4" />
+                        </svg>
+                      </div>
+                      <p style={{
+                        fontSize: 'clamp(11px, 1.5vw, 12px)',
+                        color: '#94A3B8',
+                        margin: 0,
+                        fontWeight: 400,
+                      }}>{testimonial.handle}</p>
+                    </div>
+                  </div>
+                  <p style={{
+                    marginTop: '16px',
+                    fontSize: 'clamp(13px, 1.8vw, 16px)',
+                    color: '#CBD5E1',
+                    lineHeight: 1.6,
+                    margin: 0,
+                    fontWeight: 400,
+                  }}>{testimonial.quote}</p>
+                </div>
+              ))}
+              {/* Duplicate for seamless loop */}
+              {[
+                { name: 'Tom H.', handle: '@tom_services', quote: 'I wish we had found Infin8 sooner. Our onboarding is now fully automated and clients move through our process with zero delays.', avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=faces&auto=format' },
+                { name: 'Nina C.', handle: '@nina_coaching', quote: 'The system runs my entire business while I am asleep. I wake up to booked appointments and completed tasks.', avatar: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=200&h=200&fit=crop&crop=faces&auto=format' },
+                { name: 'Sofia A.', handle: '@sofialabs', quote: 'The automated reminders alone reduced cancellations by almost half. My calendar finally stays full.', avatar: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200&h=200&fit=crop&crop=faces&auto=format' },
+              ].map((testimonial, idx) => (
+                <div key={`dup-${idx}`} style={{
+                  flexShrink: 0,
+                  width: 'clamp(280px, 35vw, 420px)',
+                  borderRadius: '16px',
+                  border: '1px solid rgba(30, 41, 59, 0.8)',
+                  backgroundColor: 'rgba(15, 23, 42, 0.4)',
+                  backdropFilter: 'blur(10px)',
+                  WebkitBackdropFilter: 'blur(10px)',
+                  padding: '20px',
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+                    <img 
+                      src={testimonial.avatar} 
+                      alt={testimonial.name} 
+                      style={{
+                        width: '36px',
+                        height: '36px',
+                        objectFit: 'cover',
+                        borderRadius: '50%',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                      }}
+                    />
+                    <div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                        <span style={{
+                          fontSize: 'clamp(13px, 1.8vw, 14px)',
+                          fontWeight: 500,
+                          color: '#F1F5F9',
+                        }}>{testimonial.name}</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '14px', height: '14px', color: '#60A5FA' }}>
+                          <circle cx="12" cy="12" r="10" />
+                          <path d="m9 12 2 2 4-4" />
+                        </svg>
+                      </div>
+                      <p style={{
+                        fontSize: 'clamp(11px, 1.5vw, 12px)',
+                        color: '#94A3B8',
+                        margin: 0,
+                        fontWeight: 400,
+                      }}>{testimonial.handle}</p>
+                    </div>
+                  </div>
+                  <p style={{
+                    marginTop: '16px',
+                    fontSize: 'clamp(13px, 1.8vw, 16px)',
+                    color: '#CBD5E1',
+                    lineHeight: 1.6,
+                    margin: 0,
+                    fontWeight: 400,
+                  }}>{testimonial.quote}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <style jsx>{`
+          @keyframes marquee-ltr {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+          @keyframes marquee-rtl {
+            0% {
+              transform: translateX(-50%);
+            }
+            100% {
+              transform: translateX(0);
+            }
+          }
+          @keyframes glow-rotate {
+            0% {
+              background-position: 0% 50%;
+            }
+            50% {
+              background-position: 100% 50%;
+            }
+            100% {
+              background-position: 0% 50%;
+            }
+          }
+          @keyframes border-flow {
+            0% {
+              background-position: 0% 50%;
+            }
+            100% {
+              background-position: 400% 50%;
+            }
+          }
+          @media (min-width: 640px) {
+            .desktop-only {
+              display: flex !important;
+            }
+          }
+        `}</style>
       </section>
 
       {/* Client Requirements Section */}
