@@ -55,7 +55,7 @@ export default function Partners() {
       <div style={{ fontFamily: "'Inter', sans-serif", color: '#1A1A1A' }}>
         <Navbar />
         <div style={{ maxWidth: 600, margin: 'clamp(40px, 6vw, 60px) auto', padding: '0 clamp(16px, 4vw, 20px)', textAlign: 'center' }}>
-          <h1 style={{ fontSize: 'clamp(32px, 5vw, 38px)', fontWeight: '700', marginBottom: 'clamp(16px, 3vw, 24px)' }}>Thank You for Your Interest!</h1>
+          <h1 style={{ fontSize: 'clamp(32px, 5vw, 38px)', fontWeight: '700', letterSpacing: '-0.02em', marginBottom: 'clamp(16px, 3vw, 24px)' }}>Thank You for Your Interest!</h1>
           <p style={{ fontSize: 'clamp(16px, 2vw, 18px)' }}>We have received your application to join the Infin8 Partner Network. Our team will review and contact you within 48 hours.</p>
         </div>
         <Footer />
@@ -67,7 +67,7 @@ export default function Partners() {
     <div style={{ fontFamily: "'Inter', sans-serif", color: '#1A1A1A' }}>
       <Navbar />
       <div style={{ maxWidth: 700, margin: 'clamp(32px, 5vw, 40px) auto', padding: '0 clamp(16px, 4vw, 20px)', textAlign: 'center' }}>
-      <h1 style={{ fontSize: 'clamp(32px, 5vw, 38px)', fontWeight: '700', marginBottom: 'clamp(16px, 3vw, 24px)', textAlign: 'center' }}>
+      <h1 style={{ fontSize: 'clamp(32px, 5vw, 38px)', fontWeight: '700', letterSpacing: '-0.02em', marginBottom: 'clamp(16px, 3vw, 24px)', textAlign: 'center' }}>
         Join Our Partner Network
       </h1>
       <p style={{ fontSize: 'clamp(16px, 2vw, 18px)', marginBottom: 'clamp(24px, 4vw, 32px)', textAlign: 'center' }}>

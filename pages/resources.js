@@ -28,16 +28,16 @@ export default function Resources() {
     <div style={{ fontFamily: "'Inter', sans-serif", color: '#1A1A1A' }}>
       <Navbar />
       <div style={{ maxWidth: 1000, margin: 'clamp(32px, 5vw, 40px) auto', padding: '0 clamp(16px, 4vw, 20px)', textAlign: 'center' }}>
-      <h1 style={{ fontSize: 'clamp(32px, 5vw, 38px)', fontWeight: 700, marginBottom: 'clamp(16px, 3vw, 24px)', textAlign: 'center' }}>Resources & Tools</h1>
+      <h1 style={{ fontSize: 'clamp(32px, 5vw, 38px)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: 'clamp(16px, 3vw, 24px)', textAlign: 'center' }}>Resources & Tools</h1>
 
       {/* Blog Section */}
       <section style={{ marginBottom: 'clamp(32px, 6vw, 48px)', textAlign: 'center' }}>
-        <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: 700, marginBottom: 'clamp(16px, 2.5vw, 20px)', textAlign: 'center' }}>Recent Blog Posts</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 'clamp(16px, 3vw, 24px)' }}>
+        <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: 'clamp(16px, 2.5vw, 20px)', textAlign: 'center' }}>Recent Blog Posts</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(280px, 40vw, 400px), 1fr))', gap: 'clamp(16px, 3vw, 24px)' }}>
           {blogPosts.map(({ id, title, slug, excerpt }) => (
             <a href={slug} key={id} style={{
               padding: 'clamp(16px, 2.5vw, 20px)',
-              backgroundColor: '#F5F5F5',
+              backgroundColor: '#F9FAFB',
               borderRadius: 'clamp(10px, 1.5vw, 12px)',
               textDecoration: 'none',
               color: '#1A1A1A',
@@ -53,7 +53,7 @@ export default function Resources() {
 
       {/* Tools Section */}
       <section style={{ marginBottom: 'clamp(32px, 6vw, 48px)', textAlign: 'center' }}>
-        <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: 700, marginBottom: 'clamp(16px, 2.5vw, 20px)', textAlign: 'center' }}>Interactive Tools</h2>
+        <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: 'clamp(16px, 2.5vw, 20px)', textAlign: 'center' }}>Interactive Tools</h2>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'clamp(12px, 2vw, 16px)' }}>
           {tools.map(({ id, name, description, link }) => (
             <a href={link} key={id} style={{
@@ -80,12 +80,12 @@ export default function Resources() {
 
       {/* Gated Resources Section */}
       <section style={{ marginBottom: 'clamp(32px, 6vw, 48px)', textAlign: 'center' }}>
-        <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: 700, marginBottom: 'clamp(16px, 2.5vw, 20px)', textAlign: 'center' }}>Premium Guides & Checklists</h2>
+        <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: 'clamp(16px, 2.5vw, 20px)', textAlign: 'center' }}>Premium Guides & Checklists</h2>
         <ul style={{ listStyleType: 'none', paddingLeft: 0 }}>
           {gatedResources.map(({ id, title, link }) => (
             <li key={id} style={{
               marginBottom: 'clamp(16px, 2.5vw, 20px)',
-              backgroundColor: '#F5F5F5',
+              backgroundColor: '#F9FAFB',
               padding: 'clamp(12px, 2vw, 16px)',
               borderRadius: 'clamp(10px, 1.5vw, 12px)',
               boxShadow: '0 1px 5px rgba(0,0,0,0.05)',

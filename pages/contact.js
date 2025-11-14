@@ -40,10 +40,10 @@ export default function Contact() {
       <div style={{ fontFamily: "'Inter', sans-serif", color: '#1A1A1A' }}>
         <Navbar />
         <div style={{ maxWidth: 600, margin: 'clamp(40px, 6vw, 60px) auto', padding: '0 clamp(16px, 4vw, 20px)', textAlign: 'center' }}>
-          <h1 style={{ fontSize: 'clamp(32px, 5vw, 38px)', fontWeight: '700', marginBottom: 'clamp(16px, 3vw, 24px)' }}>
+          <h1 style={{ fontSize: 'clamp(32px, 5vw, 38px)', fontWeight: '700', letterSpacing: '-0.02em', marginBottom: 'clamp(16px, 3vw, 24px)' }}>
             Thank You!
           </h1>
-          <p style={{ fontSize: 'clamp(16px, 2vw, 18px)', color: '#555' }}>
+          <p style={{ fontSize: 'clamp(16px, 2vw, 18px)', color: '#4B5563' }}>
             Your message has been received. We will contact you within 24 hours.
           </p>
         </div>
@@ -56,7 +56,7 @@ export default function Contact() {
     <div style={{ fontFamily: "'Inter', sans-serif", color: '#1A1A1A' }}>
       <Navbar />
       <div style={{ maxWidth: 600, margin: 'clamp(32px, 5vw, 40px) auto', padding: '0 clamp(16px, 4vw, 20px)', textAlign: 'center' }}>
-      <h1 style={{ fontSize: 'clamp(32px, 5vw, 38px)', fontWeight: '700', marginBottom: 'clamp(24px, 4vw, 36px)', textAlign: 'center' }}>Contact Us</h1>
+      <h1 style={{ fontSize: 'clamp(32px, 5vw, 38px)', fontWeight: '700', letterSpacing: '-0.02em', marginBottom: 'clamp(24px, 4vw, 36px)', textAlign: 'center' }}>Contact Us</h1>
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(16px, 2.5vw, 20px)', textAlign: 'left' }}>
         <label htmlFor="name" style={{ fontWeight: 600, fontSize: 'clamp(14px, 1.8vw, 16px)', textAlign: 'left' }}>Full Name</label>
         <input type="text" name="name" id="name" required value={formData.name} onChange={handleChange} style={{ padding: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 2vw, 16px)', borderRadius: 'clamp(6px, 1vw, 8px)', border: '1px solid #ccc' }} />

@@ -1023,9 +1023,9 @@ export default function Home() {
         <h2 style={{
           fontSize: 'clamp(32px, 5vw, 48px)',
           fontWeight: '700',
-          marginBottom: '24px',
-          color: '#111827',
           letterSpacing: '-0.02em',
+          marginBottom: 'clamp(16px, 3vw, 24px)',
+          color: '#111827',
         }}>
           Our Promise
         </h2>
@@ -1054,9 +1054,9 @@ export default function Home() {
           <h2 style={{
             fontSize: 'clamp(32px, 5vw, 48px)',
             fontWeight: 700,
+            letterSpacing: '-0.02em',
             marginBottom: 'clamp(16px, 3vw, 24px)',
             color: '#111827',
-            letterSpacing: '-0.02em',
           }}>
             What's Included
           </h2>
