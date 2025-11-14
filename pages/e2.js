@@ -7,7 +7,7 @@ export default function E2Hub() {
   return (
     <div style={{ fontFamily: "'Inter', sans-serif", color: '#111827', paddingTop: 'clamp(64px, 10vw, 80px)' }}>
       <Navbar />
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)' }}>
+      <div style={{ maxWidth: 1280, margin: '0 auto', padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)', textAlign: 'center' }}>
       {/* Sidebar Navigation */}
       <aside style={{
         position: 'sticky',
@@ -38,19 +38,21 @@ export default function E2Hub() {
       </aside>
 
       {/* Main Content Area */}
-      <main style={{ marginLeft: 'clamp(0px, 30vw, 260px)', minHeight: '80vh' }}>
+      <main style={{ minHeight: '80vh', textAlign: 'center' }}>
         <h1 style={{
           fontSize: 'clamp(32px, 5vw, 48px)',
           fontWeight: '700',
           marginBottom: 'clamp(16px, 3vw, 24px)',
           color: '#111827',
           letterSpacing: '-0.02em',
+          textAlign: 'center',
         }}>E-2 Treaty Investor Visa Hub</h1>
         <p style={{
           fontSize: 'clamp(16px, 2vw, 18px)',
           color: '#4B5563',
           marginBottom: 'clamp(32px, 6vw, 48px)',
           lineHeight: 1.6,
+          textAlign: 'center',
         }}>
           Everything you need to know about the E-2 visa—from eligibility and requirements to business setup and timelines.
         </p>
@@ -61,6 +63,8 @@ export default function E2Hub() {
           gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(160px, 20vw, 180px), 1fr))',
           gap: 'clamp(16px, 3vw, 24px)',
           marginBottom: 'clamp(32px, 6vw, 64px)',
+          justifyContent: 'center',
+          maxWidth: '100%',
         }}>
           {[
             { number: '78', label: 'Treaty Countries' },
@@ -111,7 +115,7 @@ export default function E2Hub() {
             backgroundColor: '#111827',
             color: '#fff',
             padding: 'clamp(10px, 1.5vw, 12px) clamp(24px, 4vw, 32px)',
-            borderRadius: 'clamp(10px, 1.5vw, 12px)',
+            borderRadius: '12px',
             fontSize: 'clamp(14px, 2vw, 16px)',
             fontWeight: '600',
             textDecoration: 'none',
@@ -138,6 +142,8 @@ export default function E2Hub() {
           gridTemplateColumns: 'repeat(auto-fit,minmax(clamp(240px, 30vw, 280px),1fr))',
           gap: 'clamp(16px, 3vw, 24px)',
           marginBottom: 'clamp(40px, 8vw, 80px)',
+          justifyContent: 'center',
+          maxWidth: '100%',
         }}>
           {[{
             title: 'Start Here: Am I Eligible?',
@@ -190,8 +196,8 @@ export default function E2Hub() {
                 e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
               }}
             >
-              <h3 style={{ marginBottom: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(18px, 2.5vw, 20px)', fontWeight: 600 }}>{title}</h3>
-              <p style={{ fontWeight: '400', color: '#4B5563', lineHeight: 1.6, fontSize: 'clamp(14px, 1.8vw, 16px)' }}>{description}</p>
+              <h3 style={{ marginBottom: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(18px, 2.5vw, 20px)', fontWeight: 600, textAlign: 'center' }}>{title}</h3>
+              <p style={{ fontWeight: '400', color: '#4B5563', lineHeight: 1.6, fontSize: 'clamp(14px, 1.8vw, 16px)', textAlign: 'center' }}>{description}</p>
             </a></Link>
           ))}
         </section>

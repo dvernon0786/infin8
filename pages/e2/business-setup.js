@@ -6,13 +6,14 @@ export default function BusinessSetup() {
   return (
     <div style={{ fontFamily: "'Inter', sans-serif", color: '#111827', paddingTop: 'clamp(64px, 10vw, 80px)' }}>
       <Navbar />
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)' }}>
+      <div style={{ maxWidth: 1280, margin: '0 auto', padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)', textAlign: 'center' }}>
       <h1 style={{
         fontSize: 'clamp(32px, 5vw, 48px)',
         fontWeight: '700',
         marginBottom: 'clamp(16px, 3vw, 24px)',
         color: '#111827',
         letterSpacing: '-0.02em',
+        textAlign: 'center',
       }}>
         What Business Types Qualify for E-2?
       </h1>
@@ -21,6 +22,7 @@ export default function BusinessSetup() {
         color: '#4B5563',
         marginBottom: 'clamp(32px, 6vw, 48px)',
         lineHeight: 1.6,
+        textAlign: 'center',
       }}>
         The type of business you choose affects your chances of E-2 visa approval. Below is a comparison of the most common business paths used by investors.
       </p>
@@ -79,12 +81,14 @@ export default function BusinessSetup() {
               fontWeight: '600',
               fontSize: 'clamp(18px, 2.5vw, 20px)',
               marginBottom: 'clamp(10px, 1.5vw, 12px)',
-              color: '#111827'
+              color: '#111827',
+              textAlign: 'center',
             }}>{title}</h2>
             <p style={{
               fontSize: 'clamp(14px, 2vw, 16px)',
               color: '#4B5563',
               lineHeight: 1.6,
+              textAlign: 'center',
             }}>{description}</p>
             <ul style={{
               marginTop: 'clamp(16px, 2.5vw, 20px)',
@@ -96,13 +100,13 @@ export default function BusinessSetup() {
               <li><strong>Typical Approval Time:</strong> {approvalTime}</li>
               <li><strong>Best For:</strong> {bestFor}</li>
             </ul>
+            <div style={{ textAlign: 'center', marginTop: 'clamp(16px, 3vw, 24px)' }}>
             <a href={ctaLink} style={{
               display: 'inline-block',
-              marginTop: 'clamp(16px, 3vw, 24px)',
               backgroundColor: '#111827',
               color: '#fff',
               padding: 'clamp(10px, 1.5vw, 12px) clamp(24px, 4vw, 32px)',
-              borderRadius: 'clamp(10px, 1.5vw, 12px)',
+              borderRadius: '12px',
               fontWeight: '600',
               textDecoration: 'none',
               cursor: 'pointer',
@@ -121,6 +125,7 @@ export default function BusinessSetup() {
             >
               Explore Options
             </a>
+            </div>
           </div>
         ))}
       </div>
@@ -353,7 +358,7 @@ export default function BusinessSetup() {
           backgroundColor: '#111827',
           color: '#fff',
           padding: 'clamp(10px, 1.5vw, 12px) clamp(24px, 4vw, 32px)',
-          borderRadius: 'clamp(10px, 1.5vw, 12px)',
+          borderRadius: '12px',
           fontSize: 'clamp(14px, 2vw, 16px)',
           fontWeight: '600',
           cursor: 'pointer',

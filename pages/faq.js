@@ -126,8 +126,8 @@ export default function FAQ() {
                 marginBottom: 'clamp(12px, 2vw, 16px)',
                 boxShadow: '0 1px 5px rgba(0,0,0,0.05)',
               }}>
-                <summary style={{ fontSize: 'clamp(16px, 2.2vw, 18px)', fontWeight: '600', cursor: 'pointer', textAlign: 'left' }}>{question}</summary>
-                <p style={{ marginTop: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 2vw, 16px)', color: '#4B5563', textAlign: 'left' }}>{answer}</p>
+                <summary style={{ fontSize: 'clamp(16px, 2.2vw, 18px)', fontWeight: '600', cursor: 'pointer', textAlign: 'center' }}>{question}</summary>
+                <p style={{ marginTop: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 2vw, 16px)', color: '#4B5563', textAlign: 'center' }}>{answer}</p>
               </details>
             ))}
           </div>

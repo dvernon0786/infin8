@@ -6,13 +6,14 @@ export default function CompanyFormation() {
   return (
     <div style={{ fontFamily: "'Inter', sans-serif", color: '#111827', paddingTop: 'clamp(64px, 10vw, 80px)' }}>
       <Navbar />
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)' }}>
+      <div style={{ maxWidth: 1280, margin: '0 auto', padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)', textAlign: 'center' }}>
       <h1 style={{
         fontSize: 'clamp(32px, 5vw, 48px)',
         fontWeight: '700',
         marginBottom: 'clamp(16px, 3vw, 24px)',
         color: '#111827',
         letterSpacing: '-0.02em',
+        textAlign: 'center',
       }}>
         Company Formation for Your E-2 Visa Business
       </h1>
@@ -21,6 +22,7 @@ export default function CompanyFormation() {
         color: '#4B5563',
         marginBottom: 'clamp(32px, 6vw, 48px)',
         lineHeight: 1.6,
+        textAlign: 'center',
       }}>
         Choosing the right business structure and state of incorporation is crucial for your E-2 visa success. Learn the differences and typical timelines.
       </p>
@@ -151,7 +153,7 @@ export default function CompanyFormation() {
           padding: 'clamp(10px, 1.5vw, 12px) clamp(24px, 4vw, 32px)',
           fontWeight: '600',
           fontSize: 'clamp(14px, 2vw, 16px)',
-          borderRadius: 'clamp(10px, 1.5vw, 12px)',
+          borderRadius: '12px',
           textDecoration: 'none',
           cursor: 'pointer',
           boxShadow: '0 6px 20px rgba(0,0,0,0.18)',
@@ -199,7 +201,7 @@ export default function CompanyFormation() {
           backgroundColor: '#111827',
           color: '#fff',
           padding: 'clamp(10px, 1.5vw, 12px) clamp(24px, 4vw, 32px)',
-          borderRadius: 'clamp(10px, 1.5vw, 12px)',
+          borderRadius: '12px',
           fontWeight: '600',
           fontSize: 'clamp(14px, 2vw, 16px)',
           textDecoration: 'none',

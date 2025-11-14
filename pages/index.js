@@ -1043,69 +1043,460 @@ export default function Home() {
 
       {/* What's Included Section */}
       <section style={{
+        padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 32px)',
+        maxWidth: '1280px',
+        margin: '0 auto',
         backgroundColor: '#F9FAFB',
-        padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)',
         textAlign: 'center',
+        position: 'relative',
       }}>
+        {/* Ambient gradient */}
         <div style={{
-          maxWidth: 1280,
+          position: 'absolute',
+          pointerEvents: 'none',
+          inset: 0,
+          zIndex: 0,
+          overflow: 'hidden',
+        }}>
+          <div style={{
+            position: 'absolute',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            top: '-64px',
+            width: '672px',
+            height: '672px',
+            borderRadius: '50%',
+            background: 'linear-gradient(to bottom, rgba(99, 102, 241, 0.08), rgba(99, 102, 241, 0.04), transparent)',
+            filter: 'blur(96px)',
+          }}></div>
+        </div>
+
+        <div style={{
+          position: 'relative',
+          zIndex: 1,
+          maxWidth: '1280px',
           margin: '0 auto',
         }}>
+          {/* Section Header */}
           <h2 style={{
             fontSize: 'clamp(32px, 5vw, 48px)',
             fontWeight: 700,
-            letterSpacing: '-0.02em',
             marginBottom: 'clamp(16px, 3vw, 24px)',
             color: '#111827',
+            letterSpacing: '-0.02em',
+            textAlign: 'center',
           }}>
             What's Included
           </h2>
           <p style={{
             fontSize: 'clamp(16px, 2vw, 18px)',
-            marginBottom: 'clamp(32px, 6vw, 48px)',
             color: '#4B5563',
-            lineHeight: 1.6,
-            maxWidth: '800px',
-            margin: '0 auto clamp(32px, 6vw, 48px)',
+            marginBottom: 'clamp(48px, 8vw, 64px)',
+            textAlign: 'center',
+            maxWidth: '700px',
+            margin: '0 auto clamp(48px, 8vw, 64px)',
           }}>
-            Everything you need to automate your business operations and marketing
+            Everything you need to automate and grow your business, all included in one simple monthly fee.
           </p>
+
+          {/* Cards Grid */}
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(280px, 30vw, 360px), 1fr))',
             gap: 'clamp(24px, 4vw, 32px)',
-            justifyContent: 'center',
+            marginBottom: 'clamp(48px, 8vw, 64px)',
           }}>
-            {[
-              { title: 'Website & Booking', desc: 'Mobile-first website refresh with integrated booking page and one-click scheduling.' },
-              { title: 'Payments Integrated', desc: 'Stripe/Square integration with deposits, no-show fees, and automated receipts.' },
-              { title: 'CRM + Lead Capture', desc: 'Automated lead routing, immediate follow-up, and nurture sequences.' },
-              { title: 'Daily Content Pipeline', desc: '3 uploads/week transformed into daily social posts with scheduling.' },
-              { title: 'Review Management', desc: 'Automated review requests, monitoring, and reputation management.' },
-              { title: 'Priority Support', desc: 'Unlimited email support, monthly check-ins, and one major tweak per month.' },
-            ].map((item, idx) => (
-              <div key={idx} style={{
-                backgroundColor: '#fff',
-                padding: 'clamp(24px, 4vw, 32px)',
-                borderRadius: '24px',
+            {/* Card 1: Website & Payments */}
+            <div style={{
+              position: 'relative',
+              overflow: 'hidden',
+              borderRadius: '24px',
+              border: '1px solid rgba(0, 0, 0, 0.05)',
+              backgroundColor: '#fff',
+              padding: 'clamp(24px, 4vw, 32px)',
+              boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+              transition: 'all 0.3s',
+              textAlign: 'center',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-8px)';
+              e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+            }}
+            >
+              {/* Dot pattern background */}
+              <div style={{
+                position: 'absolute',
+                pointerEvents: 'none',
+                inset: 0,
+                opacity: 0.03,
+                backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(0,0,0,0.9) 1px, transparent 1px)',
+                backgroundSize: '14px 14px',
+              }}></div>
+
+              {/* Icon */}
+              <div style={{
+                position: 'relative',
+                display: 'inline-flex',
+                width: '48px',
+                height: '48px',
+                borderRadius: '50%',
                 border: '1px solid rgba(0, 0, 0, 0.05)',
-                boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
-                transition: 'all 0.3s',
-                textAlign: 'center',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-8px)';
-                e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
-              }}
-              >
-                <h3 style={{ fontSize: 20, marginBottom: 12, color: '#111827', fontWeight: 600, textAlign: 'center' }}>{item.title}</h3>
-                <p style={{ fontSize: 16, color: '#4B5563', lineHeight: 1.6, textAlign: 'center' }}>{item.desc}</p>
+                backgroundColor: '#F9FAFB',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: 'clamp(16px, 2.5vw, 20px)',
+                boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
+              }}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#667eea' }}>
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                  <path d="M2 17l10 5 10-5" />
+                  <path d="M2 12l10 5 10-5" />
+                </svg>
               </div>
-            ))}
+
+              <h3 style={{
+                fontSize: 'clamp(20px, 2.5vw, 24px)',
+                fontWeight: 600,
+                marginBottom: 'clamp(8px, 1.5vw, 12px)',
+                color: '#111827',
+                textAlign: 'center',
+              }}>
+                Website & Payments
+              </h3>
+              <p style={{
+                fontSize: 'clamp(14px, 2vw, 16px)',
+                color: '#4B5563',
+                lineHeight: 1.6,
+                marginBottom: 'clamp(20px, 3vw, 24px)',
+                textAlign: 'center',
+              }}>
+                Professional website with integrated payment processing and booking systems.
+              </p>
+
+              {/* Illustration */}
+              <div style={{
+                position: 'relative',
+                marginTop: '24px',
+                borderRadius: '16px',
+                padding: '16px',
+                border: '1px solid rgba(0, 0, 0, 0.05)',
+                background: 'linear-gradient(to bottom, rgba(102, 126, 234, 0.03), transparent)',
+              }}>
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  gap: '8px',
+                  flexWrap: 'wrap',
+                }}>
+                  {['Website', 'Payments', 'Booking', 'CRM'].map((item, idx) => (
+                    <div key={idx} style={{
+                      flex: '1 1 auto',
+                      minWidth: '60px',
+                      padding: '8px 12px',
+                      borderRadius: '8px',
+                      backgroundColor: '#F9FAFB',
+                      border: '1px solid rgba(0, 0, 0, 0.05)',
+                      fontSize: '12px',
+                      color: '#4B5563',
+                      fontWeight: 500,
+                    }}>
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Card 2: AI Chatbot */}
+            <div style={{
+              position: 'relative',
+              overflow: 'hidden',
+              borderRadius: '24px',
+              border: '1px solid rgba(0, 0, 0, 0.05)',
+              backgroundColor: '#fff',
+              padding: 'clamp(24px, 4vw, 32px)',
+              boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+              transition: 'all 0.3s',
+              textAlign: 'center',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-8px)';
+              e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+            }}
+            >
+              {/* Dot pattern background */}
+              <div style={{
+                position: 'absolute',
+                pointerEvents: 'none',
+                inset: 0,
+                opacity: 0.03,
+                backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(0,0,0,0.9) 1px, transparent 1px)',
+                backgroundSize: '14px 14px',
+              }}></div>
+
+              {/* Icon */}
+              <div style={{
+                position: 'relative',
+                display: 'inline-flex',
+                width: '48px',
+                height: '48px',
+                borderRadius: '50%',
+                border: '1px solid rgba(0, 0, 0, 0.05)',
+                backgroundColor: '#F9FAFB',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: 'clamp(16px, 2.5vw, 20px)',
+                boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
+              }}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#764ba2' }}>
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                  <path d="M8 10h.01" />
+                  <path d="M12 10h.01" />
+                  <path d="M16 10h.01" />
+                </svg>
+              </div>
+
+              <h3 style={{
+                fontSize: 'clamp(20px, 2.5vw, 24px)',
+                fontWeight: 600,
+                marginBottom: 'clamp(8px, 1.5vw, 12px)',
+                color: '#111827',
+                textAlign: 'center',
+              }}>
+                AI Chatbot
+              </h3>
+              <p style={{
+                fontSize: 'clamp(14px, 2vw, 16px)',
+                color: '#4B5563',
+                lineHeight: 1.6,
+                marginBottom: 'clamp(20px, 3vw, 24px)',
+                textAlign: 'center',
+              }}>
+                24/7 intelligent customer support with automated booking and lead capture.
+              </p>
+
+              {/* Illustration */}
+              <div style={{
+                position: 'relative',
+                marginTop: '24px',
+                borderRadius: '16px',
+                padding: '16px',
+                border: '1px solid rgba(0, 0, 0, 0.05)',
+                background: 'linear-gradient(to bottom, rgba(118, 75, 162, 0.03), transparent)',
+              }}>
+                <div style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  padding: '8px 16px',
+                  borderRadius: '9999px',
+                  background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1))',
+                  border: '1px solid rgba(0, 0, 0, 0.05)',
+                  fontSize: '14px',
+                  color: '#111827',
+                  fontWeight: 500,
+                }}>
+                  <span style={{
+                    width: '8px',
+                    height: '8px',
+                    borderRadius: '50%',
+                    backgroundColor: '#667eea',
+                    display: 'inline-block',
+                  }}></span>
+                  Always Online
+                </div>
+              </div>
+            </div>
+
+            {/* Card 3: Analytics & Reporting */}
+            <div style={{
+              position: 'relative',
+              overflow: 'hidden',
+              borderRadius: '24px',
+              border: '1px solid rgba(0, 0, 0, 0.05)',
+              backgroundColor: '#fff',
+              padding: 'clamp(24px, 4vw, 32px)',
+              boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+              transition: 'all 0.3s',
+              textAlign: 'center',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-8px)';
+              e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+            }}
+            >
+              {/* Dot pattern background */}
+              <div style={{
+                position: 'absolute',
+                pointerEvents: 'none',
+                inset: 0,
+                opacity: 0.03,
+                backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(0,0,0,0.9) 1px, transparent 1px)',
+                backgroundSize: '14px 14px',
+              }}></div>
+
+              {/* Icon */}
+              <div style={{
+                position: 'relative',
+                display: 'inline-flex',
+                width: '48px',
+                height: '48px',
+                borderRadius: '50%',
+                border: '1px solid rgba(0, 0, 0, 0.05)',
+                backgroundColor: '#F9FAFB',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: 'clamp(16px, 2.5vw, 20px)',
+                boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
+              }}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#667eea' }}>
+                  <path d="M3 3v18h18" />
+                  <path d="M19 9l-5 5-4-4-3 3" />
+                </svg>
+              </div>
+
+              <h3 style={{
+                fontSize: 'clamp(20px, 2.5vw, 24px)',
+                fontWeight: 600,
+                marginBottom: 'clamp(8px, 1.5vw, 12px)',
+                color: '#111827',
+                textAlign: 'center',
+              }}>
+                Analytics & Reporting
+              </h3>
+              <p style={{
+                fontSize: 'clamp(14px, 2vw, 16px)',
+                color: '#4B5563',
+                lineHeight: 1.6,
+                marginBottom: 'clamp(20px, 3vw, 24px)',
+                textAlign: 'center',
+              }}>
+                Monthly performance reports with actionable insights and recommendations.
+              </p>
+
+              {/* Illustration */}
+              <div style={{
+                position: 'relative',
+                marginTop: '24px',
+                borderRadius: '16px',
+                padding: '16px',
+                border: '1px solid rgba(0, 0, 0, 0.05)',
+                background: 'linear-gradient(to bottom, rgba(102, 126, 234, 0.03), transparent)',
+              }}>
+                {/* Mini chart bars */}
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'flex-end',
+                  justifyContent: 'center',
+                  gap: '4px',
+                  height: '40px',
+                }}>
+                  {[3, 6, 4, 8, 3, 6, 4, 7, 3, 5, 4, 7].map((height, idx) => (
+                    <div key={idx} style={{
+                      width: '4px',
+                      height: `${height * 4}px`,
+                      backgroundColor: '#667eea',
+                      borderRadius: '2px',
+                      opacity: 0.7,
+                    }}></div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Feature Bullets */}
+          <div style={{
+            marginTop: 'clamp(48px, 8vw, 64px)',
+            paddingTop: 'clamp(32px, 6vw, 48px)',
+            borderTop: '1px solid rgba(0, 0, 0, 0.05)',
+          }}>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(200px, 25vw, 280px), 1fr))',
+              gap: 'clamp(24px, 4vw, 32px)',
+              textAlign: 'center',
+            }}>
+              {[
+                { icon: 'clock', title: 'SMS & Email Reminders', desc: 'Automated confirmations and no-show prevention' },
+                { icon: 'content', title: 'Content Creation', desc: 'Regular social media and blog content' },
+                { icon: 'support', title: 'Dedicated Support', desc: 'Monthly check-ins and priority assistance' },
+                { icon: 'updates', title: 'Continuous Updates', desc: 'Regular improvements and new features' },
+              ].map(({ icon, title, desc }, idx) => (
+                <div key={idx} style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: '12px',
+                }}>
+                  <div style={{
+                    display: 'inline-flex',
+                    width: '40px',
+                    height: '40px',
+                    borderRadius: '50%',
+                    border: '1px solid rgba(0, 0, 0, 0.05)',
+                    backgroundColor: '#F9FAFB',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}>
+                    {icon === 'clock' && (
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#667eea' }}>
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 6v6l4 2" />
+                      </svg>
+                    )}
+                    {icon === 'content' && (
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#667eea' }}>
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <path d="M14 2v6h6" />
+                        <path d="M16 13H8" />
+                        <path d="M16 17H8" />
+                        <path d="M10 9H8" />
+                      </svg>
+                    )}
+                    {icon === 'support' && (
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#667eea' }}>
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                      </svg>
+                    )}
+                    {icon === 'updates' && (
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#667eea' }}>
+                        <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2" />
+                      </svg>
+                    )}
+                  </div>
+                  <div>
+                    <p style={{
+                      fontSize: 'clamp(14px, 1.8vw, 16px)',
+                      fontWeight: 600,
+                      color: '#111827',
+                      marginBottom: '4px',
+                    }}>
+                      {title}
+                    </p>
+                    <p style={{
+                      fontSize: 'clamp(13px, 1.6vw, 14px)',
+                      color: '#4B5563',
+                    }}>
+                      {desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -2342,6 +2733,141 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* Ongoing Support - Month 2+ */}
+          <div style={{
+            position: 'relative',
+            borderRadius: '24px',
+            backgroundColor: '#fff',
+            border: '1px solid rgba(0, 0, 0, 0.05)',
+            padding: 'clamp(24px, 4vw, 32px)',
+            overflow: 'hidden',
+            boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-8px)';
+            e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.05)';
+          }}
+          >
+            <div style={{
+              position: 'absolute',
+              inset: 0,
+              borderRadius: '24px',
+              pointerEvents: 'none',
+              background: 'radial-gradient(60% 50% at 50% 100%, rgba(59, 130, 246, 0.08), transparent 60%)',
+            }}></div>
+            <div style={{ position: 'relative' }}>
+              <div style={{
+                width: '48px',
+                height: '48px',
+                borderRadius: '16px',
+                backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                border: '1px solid rgba(59, 130, 246, 0.2)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '20px',
+              }}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '24px', height: '24px', color: '#3B82F6' }}>
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                </svg>
+              </div>
+              <div style={{
+                fontSize: 'clamp(11px, 1.5vw, 12px)',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                color: '#9CA3AF',
+                marginBottom: '8px',
+              }}>Month 2+</div>
+              <h3 style={{
+                fontSize: 'clamp(20px, 2.5vw, 24px)',
+                fontWeight: 600,
+                letterSpacing: '-0.02em',
+                color: '#111827',
+                marginBottom: '12px',
+              }}>Ongoing Support</h3>
+              <p style={{
+                fontSize: 'clamp(14px, 1.8vw, 16px)',
+                color: '#6B7280',
+                lineHeight: 1.6,
+                marginBottom: '24px',
+              }}>
+                Continuous optimization, monthly content, performance improvements, and dedicated support.
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  padding: '12px 16px',
+                  borderRadius: '12px',
+                  backgroundColor: '#F9FAFB',
+                  border: '1px solid rgba(0, 0, 0, 0.05)',
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', color: '#9CA3AF' }}>
+                      <path d="M3 3v18h18" />
+                      <path d="M19 9l-5 5-4-4-3 3" />
+                    </svg>
+                    <span style={{ fontSize: '14px', color: '#4B5563' }}>Monthly reports</span>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', color: '#10B981' }}>
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                </div>
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  padding: '12px 16px',
+                  borderRadius: '12px',
+                  backgroundColor: '#F9FAFB',
+                  border: '1px solid rgba(0, 0, 0, 0.05)',
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', color: '#9CA3AF' }}>
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                      <path d="M14 2v6h6" />
+                      <path d="M16 13H8" />
+                      <path d="M16 17H8" />
+                      <path d="M10 9H8" />
+                    </svg>
+                    <span style={{ fontSize: '14px', color: '#4B5563' }}>Content updates</span>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', color: '#10B981' }}>
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                </div>
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  padding: '12px 16px',
+                  borderRadius: '12px',
+                  backgroundColor: '#F9FAFB',
+                  border: '1px solid rgba(0, 0, 0, 0.05)',
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', color: '#9CA3AF' }}>
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                    </svg>
+                    <span style={{ fontSize: '14px', color: '#4B5563' }}>Priority support</span>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', color: '#10B981' }}>
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Footer Note */}
@@ -3518,51 +4044,1056 @@ export default function Home() {
               </p>
             </div>
           </div>
+
+          {/* Card 05 - Timely Feedback */}
+          <div style={{
+            position: 'relative',
+            borderRadius: '24px',
+            border: '1px solid rgba(0, 0, 0, 0.05)',
+            backgroundColor: '#fff',
+            overflow: 'hidden',
+            transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+            boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-8px)';
+            e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            e.currentTarget.style.backgroundColor = 'rgba(249, 250, 251, 0.5)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+            e.currentTarget.style.backgroundColor = '#fff';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.05)';
+          }}
+          >
+            {/* Preview canvas */}
+            <div style={{
+              position: 'relative',
+              overflow: 'hidden',
+              backgroundColor: '#F9FAFB',
+              height: 'clamp(240px, 30vw, 320px)',
+              border: '1px solid rgba(0, 0, 0, 0.05)',
+              borderRadius: '16px',
+              margin: 'clamp(16px, 2vw, 24px)',
+            }}>
+              {/* Main feedback interface */}
+              <div style={{
+                position: 'relative',
+                zIndex: 10,
+                backgroundColor: '#fff',
+                width: '88%',
+                height: '76%',
+                border: '1px solid rgba(0, 0, 0, 0.1)',
+                borderRadius: '12px',
+                margin: '24px auto 0',
+                boxShadow: '0 32px 80px rgba(0,0,0,0.15)',
+              }}>
+                {/* Top bar */}
+                <div style={{
+                  display: 'flex',
+                  borderBottom: '1px solid rgba(0, 0, 0, 0.05)',
+                  padding: '16px',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#EF4444' }}></div>
+                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#F59E0B' }}></div>
+                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#10B981' }}></div>
+                  </div>
+                  <p style={{
+                    fontSize: '11px',
+                    color: '#9CA3AF',
+                    fontFamily: 'monospace',
+                  }}>Feedback Portal</p>
+                </div>
+
+                {/* Feedback elements */}
+                <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                  {/* Clock icon */}
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: '48px',
+                    height: '48px',
+                    borderRadius: '50%',
+                    background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(96, 165, 250, 0.1))',
+                    border: '1px solid rgba(59, 130, 246, 0.2)',
+                    margin: '0 auto',
+                  }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '20px', height: '20px', color: '#3B82F6' }}>
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M12 6v6l4 2" />
+                    </svg>
+                  </div>
+
+                  {/* Message bubbles */}
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                    <div style={{
+                      padding: '8px 12px',
+                      borderRadius: '12px',
+                      background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(96, 165, 250, 0.1))',
+                      border: '1px solid rgba(59, 130, 246, 0.2)',
+                      alignSelf: 'flex-start',
+                      maxWidth: '80%',
+                    }}>
+                      <div style={{
+                        height: '8px',
+                        width: '64px',
+                        borderRadius: '9999px',
+                        background: 'linear-gradient(90deg, #3B82F6 0%, #60A5FA 100%)',
+                      }}></div>
+                    </div>
+                    <div style={{
+                      padding: '8px 12px',
+                      borderRadius: '12px',
+                      backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                      alignSelf: 'flex-end',
+                      maxWidth: '80%',
+                    }}>
+                      <div style={{
+                        height: '8px',
+                        width: '48px',
+                        borderRadius: '9999px',
+                        backgroundColor: 'rgba(0, 0, 0, 0.2)',
+                      }}></div>
+                    </div>
+                  </div>
+
+                  {/* Status indicator */}
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '8px',
+                    padding: '8px 12px',
+                    borderRadius: '8px',
+                    background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(20, 184, 166, 0.1))',
+                    border: '1px solid rgba(16, 185, 129, 0.2)',
+                  }}>
+                    <div style={{
+                      width: '8px',
+                      height: '8px',
+                      borderRadius: '50%',
+                      backgroundColor: '#10B981',
+                    }}></div>
+                    <span style={{
+                      fontSize: '11px',
+                      color: '#10B981',
+                      fontFamily: 'monospace',
+                    }}>Response within 24h</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div style={{ padding: 'clamp(20px, 3vw, 24px)' }}>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                marginBottom: '16px',
+              }}>
+                <span style={{
+                  fontSize: 'clamp(16px, 2vw, 18px)',
+                  fontWeight: 600,
+                  letterSpacing: '-0.02em',
+                  color: '#3B82F6',
+                  fontFamily: 'monospace',
+                }}>05</span>
+              </div>
+              <h3 style={{
+                fontSize: 'clamp(20px, 2.5vw, 24px)',
+                fontWeight: 600,
+                letterSpacing: '-0.02em',
+                color: '#111827',
+                marginBottom: '12px',
+                textAlign: 'center',
+              }}>Timely Feedback</h3>
+              <p style={{
+                color: '#6B7280',
+                lineHeight: 1.6,
+                fontSize: 'clamp(14px, 1.8vw, 16px)',
+                textAlign: 'center',
+              }}>
+                Prompt responses to our queries and deliverables to maintain project momentum.
+              </p>
+            </div>
+          </div>
+
+          {/* Card 06 - Resource Availability */}
+          <div style={{
+            position: 'relative',
+            borderRadius: '24px',
+            border: '1px solid rgba(0, 0, 0, 0.05)',
+            backgroundColor: '#fff',
+            overflow: 'hidden',
+            transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+            boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-8px)';
+            e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            e.currentTarget.style.backgroundColor = 'rgba(249, 250, 251, 0.5)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+            e.currentTarget.style.backgroundColor = '#fff';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.05)';
+          }}
+          >
+            {/* Preview canvas */}
+            <div style={{
+              position: 'relative',
+              overflow: 'hidden',
+              backgroundColor: '#F9FAFB',
+              height: 'clamp(240px, 30vw, 320px)',
+              border: '1px solid rgba(0, 0, 0, 0.05)',
+              borderRadius: '16px',
+              margin: 'clamp(16px, 2vw, 24px)',
+            }}>
+              {/* Main resource interface */}
+              <div style={{
+                position: 'relative',
+                zIndex: 10,
+                backgroundColor: '#fff',
+                width: '88%',
+                height: '76%',
+                border: '1px solid rgba(0, 0, 0, 0.1)',
+                borderRadius: '12px',
+                margin: '24px auto 0',
+                boxShadow: '0 32px 80px rgba(0,0,0,0.15)',
+              }}>
+                {/* Top bar */}
+                <div style={{
+                  display: 'flex',
+                  borderBottom: '1px solid rgba(0, 0, 0, 0.05)',
+                  padding: '16px',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#EF4444' }}></div>
+                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#F59E0B' }}></div>
+                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#10B981' }}></div>
+                  </div>
+                  <p style={{
+                    fontSize: '11px',
+                    color: '#9CA3AF',
+                    fontFamily: 'monospace',
+                  }}>Resource Manager</p>
+                </div>
+
+                {/* Resource elements */}
+                <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  {/* Folder/key icon */}
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: '48px',
+                    height: '48px',
+                    borderRadius: '50%',
+                    background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(20, 184, 166, 0.1))',
+                    border: '1px solid rgba(16, 185, 129, 0.2)',
+                    margin: '0 auto 8px',
+                  }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '20px', height: '20px', color: '#10B981' }}>
+                      <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" />
+                    </svg>
+                  </div>
+
+                  {/* Resource list */}
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      padding: '8px 12px',
+                      borderRadius: '8px',
+                      background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(20, 184, 166, 0.05))',
+                      border: '1px solid rgba(16, 185, 129, 0.1)',
+                    }}>
+                      <div style={{
+                        width: '8px',
+                        height: '8px',
+                        borderRadius: '50%',
+                        backgroundColor: '#10B981',
+                      }}></div>
+                      <div style={{
+                        height: '8px',
+                        width: '80px',
+                        borderRadius: '9999px',
+                        background: 'linear-gradient(90deg, #10B981 0%, #14B8A6 100%)',
+                      }}></div>
+                    </div>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      padding: '8px 12px',
+                      borderRadius: '8px',
+                      background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(20, 184, 166, 0.05))',
+                      border: '1px solid rgba(16, 185, 129, 0.1)',
+                    }}>
+                      <div style={{
+                        width: '8px',
+                        height: '8px',
+                        borderRadius: '50%',
+                        backgroundColor: '#10B981',
+                      }}></div>
+                      <div style={{
+                        height: '8px',
+                        width: '64px',
+                        borderRadius: '9999px',
+                        background: 'linear-gradient(90deg, #10B981 0%, #14B8A6 100%)',
+                      }}></div>
+                    </div>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      padding: '8px 12px',
+                      borderRadius: '8px',
+                      backgroundColor: 'rgba(0, 0, 0, 0.03)',
+                    }}>
+                      <div style={{
+                        width: '8px',
+                        height: '8px',
+                        borderRadius: '50%',
+                        backgroundColor: 'rgba(0, 0, 0, 0.2)',
+                      }}></div>
+                      <div style={{
+                        height: '8px',
+                        width: '56px',
+                        borderRadius: '9999px',
+                        backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                      }}></div>
+                    </div>
+                  </div>
+
+                  {/* Status indicator */}
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '8px',
+                    padding: '8px 12px',
+                    borderRadius: '8px',
+                    background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(20, 184, 166, 0.1))',
+                    border: '1px solid rgba(16, 185, 129, 0.2)',
+                    marginTop: '8px',
+                  }}>
+                    <div style={{
+                      width: '8px',
+                      height: '8px',
+                      borderRadius: '50%',
+                      backgroundColor: '#10B981',
+                    }}></div>
+                    <span style={{
+                      fontSize: '11px',
+                      color: '#10B981',
+                      fontFamily: 'monospace',
+                    }}>Resources ready</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div style={{ padding: 'clamp(20px, 3vw, 24px)' }}>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                marginBottom: '16px',
+              }}>
+                <span style={{
+                  fontSize: 'clamp(16px, 2vw, 18px)',
+                  fontWeight: 600,
+                  letterSpacing: '-0.02em',
+                  color: '#10B981',
+                  fontFamily: 'monospace',
+                }}>06</span>
+              </div>
+              <h3 style={{
+                fontSize: 'clamp(20px, 2.5vw, 24px)',
+                fontWeight: 600,
+                letterSpacing: '-0.02em',
+                color: '#111827',
+                marginBottom: '12px',
+                textAlign: 'center',
+              }}>Resource Availability</h3>
+              <p style={{
+                color: '#6B7280',
+                lineHeight: 1.6,
+                fontSize: 'clamp(14px, 1.8vw, 16px)',
+                textAlign: 'center',
+              }}>
+                Provision of essential materials and tools required for project execution.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* KPIs Section */}
       <section style={{
-        padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)',
+        padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 32px)',
         maxWidth: '1280px',
         margin: '0 auto',
         backgroundColor: '#fff',
         textAlign: 'center',
       }}>
-        <h2 style={{
+        {/* Header */}
+        <div style={{
           textAlign: 'center',
-          fontSize: 'clamp(32px, 5vw, 48px)',
-          fontWeight: '700',
-          color: '#111827',
-          marginBottom: 'clamp(32px, 6vw, 48px)',
-          letterSpacing: '-0.02em',
+          maxWidth: '768px',
+          margin: '0 auto clamp(48px, 8vw, 64px)',
         }}>
-          Monthly Performance Snapshot
-        </h2>
+          <div style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '4px 12px',
+            borderRadius: '9999px',
+            backgroundColor: '#111827',
+            border: '1px solid rgba(255,255,255,0.05)',
+            fontSize: 'clamp(11px, 1.5vw, 14px)',
+            color: '#9CA3AF',
+            marginBottom: '24px',
+          }}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px' }}>
+              <path d="M3 3v18h18" />
+              <path d="M19 9l-5 5-4-4-3 3" />
+            </svg>
+            <span>Performance Metrics</span>
+          </div>
+          <h2 style={{
+            fontSize: 'clamp(32px, 5vw, 48px)',
+            fontWeight: 600,
+            letterSpacing: '-0.02em',
+            color: '#111827',
+            marginBottom: 'clamp(16px, 3vw, 24px)',
+            margin: '0 0 clamp(16px, 3vw, 24px)',
+          }}>
+            Monthly Performance Snapshot
+          </h2>
+          <p style={{
+            fontSize: 'clamp(16px, 2vw, 18px)',
+            color: '#6B7280',
+            lineHeight: 1.6,
+            margin: 0,
+          }}>
+            Track key metrics that matter. Monthly reports with actionable insights to help you make data-driven decisions.
+          </p>
+        </div>
+
+        {/* Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(200px, 25vw, 240px), 1fr))',
-          gap: 'clamp(16px, 3vw, 24px)',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(280px, 30vw, 360px), 1fr))',
+          gap: 'clamp(20px, 3vw, 24px)',
         }}>
-          {[
-            { metric: 'Leads per Week', desc: 'Track incoming inquiries' },
-            { metric: 'Bookings per Week', desc: 'Monitor appointment volume' },
-            { metric: 'Conversion Rate', desc: 'Measure booking efficiency' },
-            { metric: 'No-Show %', desc: 'Pre/post automation comparison' },
-            { metric: 'Revenue Attributed', desc: 'Track automation ROI' },
-          ].map((item, idx) => (
-            <div key={idx} style={{
-              backgroundColor: '#F9FAFB',
+          {/* Leads per Week */}
+          <div style={{
+            position: 'relative',
+            borderRadius: '24px',
+            backgroundColor: '#fff',
+            border: '1px solid rgba(0, 0, 0, 0.05)',
+            padding: 'clamp(24px, 4vw, 32px)',
+            overflow: 'hidden',
+            boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-8px)';
+            e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.05)';
+          }}
+          >
+            <div style={{
+              position: 'absolute',
+              inset: 0,
               borderRadius: '24px',
-              padding: 'clamp(20px, 3vw, 24px)',
-              textAlign: 'center',
-              border: '1px solid rgba(0, 0, 0, 0.05)',
-              boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
-            }}>
-              <h3 style={{ fontSize: 18, fontWeight: 600, marginBottom: 8, color: '#111827' }}>{item.metric}</h3>
-              <p style={{ fontSize: 14, color: '#4B5563', lineHeight: 1.5 }}>{item.desc}</p>
+              pointerEvents: 'none',
+              background: 'radial-gradient(1200px 400px at 85% -10%, rgba(99, 102, 241, 0.04), transparent)',
+              maskImage: 'radial-gradient(60% 60% at 80% 0%, white, transparent)',
+            }}></div>
+            <div style={{ position: 'relative' }}>
+              <div style={{
+                width: '48px',
+                height: '48px',
+                borderRadius: '16px',
+                backgroundColor: '#F9FAFB',
+                border: '1px solid rgba(0, 0, 0, 0.05)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '20px',
+              }}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '24px', height: '24px', color: '#667eea' }}>
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <h3 style={{
+                fontSize: 'clamp(20px, 2.5vw, 24px)',
+                fontWeight: 600,
+                letterSpacing: '-0.02em',
+                color: '#111827',
+                marginBottom: '12px',
+              }}>Leads per Week</h3>
+              <p style={{
+                fontSize: 'clamp(14px, 1.8vw, 16px)',
+                color: '#6B7280',
+                lineHeight: 1.6,
+                marginBottom: '24px',
+              }}>
+                Track incoming inquiries and lead generation performance.
+              </p>
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(2, 1fr)',
+                gap: '16px',
+              }}>
+                <div>
+                  <p style={{
+                    fontSize: '11px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    color: '#9CA3AF',
+                    marginBottom: '8px',
+                  }}>This Month</p>
+                  <p style={{
+                    fontSize: '18px',
+                    fontWeight: 600,
+                    color: '#111827',
+                  }}>+24%</p>
+                </div>
+                <div>
+                  <p style={{
+                    fontSize: '11px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    color: '#9CA3AF',
+                    marginBottom: '8px',
+                  }}>Avg. Weekly</p>
+                  <p style={{
+                    fontSize: '18px',
+                    fontWeight: 600,
+                    color: '#111827',
+                  }}>12</p>
+                </div>
+              </div>
             </div>
-          ))}
+          </div>
+
+          {/* Bookings per Week */}
+          <div style={{
+            position: 'relative',
+            borderRadius: '24px',
+            backgroundColor: '#fff',
+            border: '1px solid rgba(0, 0, 0, 0.05)',
+            padding: 'clamp(24px, 4vw, 32px)',
+            overflow: 'hidden',
+            boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-8px)';
+            e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.05)';
+          }}
+          >
+            <div style={{
+              position: 'absolute',
+              inset: 0,
+              borderRadius: '24px',
+              pointerEvents: 'none',
+              background: 'radial-gradient(60% 50% at 50% 100%, rgba(16, 185, 129, 0.08), transparent 60%)',
+            }}></div>
+            <div style={{ position: 'relative' }}>
+              <div style={{
+                width: '48px',
+                height: '48px',
+                borderRadius: '16px',
+                backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                border: '1px solid rgba(16, 185, 129, 0.2)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '20px',
+              }}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '24px', height: '24px', color: '#10B981' }}>
+                  <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                  <line x1="16" x2="16" y1="2" y2="6" />
+                  <line x1="8" x2="8" y1="2" y2="6" />
+                  <line x1="3" x2="21" y1="10" y2="10" />
+                </svg>
+              </div>
+              <h3 style={{
+                fontSize: 'clamp(20px, 2.5vw, 24px)',
+                fontWeight: 600,
+                letterSpacing: '-0.02em',
+                color: '#111827',
+                marginBottom: '12px',
+              }}>Bookings per Week</h3>
+              <p style={{
+                fontSize: 'clamp(14px, 1.8vw, 16px)',
+                color: '#6B7280',
+                lineHeight: 1.6,
+                marginBottom: '24px',
+              }}>
+                Monitor appointment volume and booking trends.
+              </p>
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(2, 1fr)',
+                gap: '16px',
+              }}>
+                <div>
+                  <p style={{
+                    fontSize: '11px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    color: '#9CA3AF',
+                    marginBottom: '8px',
+                  }}>This Month</p>
+                  <p style={{
+                    fontSize: '18px',
+                    fontWeight: 600,
+                    color: '#111827',
+                  }}>+18%</p>
+                </div>
+                <div>
+                  <p style={{
+                    fontSize: '11px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    color: '#9CA3AF',
+                    marginBottom: '8px',
+                  }}>Avg. Weekly</p>
+                  <p style={{
+                    fontSize: '18px',
+                    fontWeight: 600,
+                    color: '#111827',
+                  }}>8</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Conversion Rate */}
+          <div style={{
+            position: 'relative',
+            borderRadius: '24px',
+            backgroundColor: '#fff',
+            border: '1px solid rgba(0, 0, 0, 0.05)',
+            padding: 'clamp(24px, 4vw, 32px)',
+            overflow: 'hidden',
+            boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-8px)';
+            e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.05)';
+          }}
+          >
+            <div style={{
+              position: 'absolute',
+              inset: 0,
+              borderRadius: '24px',
+              pointerEvents: 'none',
+              background: 'linear-gradient(160deg, rgba(168, 85, 247, 0.08), transparent 40%)',
+            }}></div>
+            <div style={{ position: 'relative' }}>
+              <div style={{
+                width: '48px',
+                height: '48px',
+                borderRadius: '16px',
+                backgroundColor: 'rgba(168, 85, 247, 0.1)',
+                border: '1px solid rgba(168, 85, 247, 0.2)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '20px',
+              }}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '24px', height: '24px', color: '#A855F7' }}>
+                  <path d="M3 3v18h18" />
+                  <path d="M19 9l-5 5-4-4-3 3" />
+                </svg>
+              </div>
+              <h3 style={{
+                fontSize: 'clamp(20px, 2.5vw, 24px)',
+                fontWeight: 600,
+                letterSpacing: '-0.02em',
+                color: '#111827',
+                marginBottom: '12px',
+              }}>Conversion Rate</h3>
+              <p style={{
+                fontSize: 'clamp(14px, 1.8vw, 16px)',
+                color: '#6B7280',
+                lineHeight: 1.6,
+                marginBottom: '24px',
+              }}>
+                Measure booking efficiency from lead to appointment.
+              </p>
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(2, 1fr)',
+                gap: '16px',
+              }}>
+                <div>
+                  <p style={{
+                    fontSize: '11px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    color: '#9CA3AF',
+                    marginBottom: '8px',
+                  }}>Current</p>
+                  <p style={{
+                    fontSize: '18px',
+                    fontWeight: 600,
+                    color: '#111827',
+                  }}>67%</p>
+                </div>
+                <div>
+                  <p style={{
+                    fontSize: '11px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    color: '#9CA3AF',
+                    marginBottom: '8px',
+                  }}>Target</p>
+                  <p style={{
+                    fontSize: '18px',
+                    fontWeight: 600,
+                    color: '#111827',
+                  }}>70%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* No-Show % */}
+          <div style={{
+            position: 'relative',
+            borderRadius: '24px',
+            backgroundColor: '#fff',
+            border: '1px solid rgba(0, 0, 0, 0.05)',
+            padding: 'clamp(24px, 4vw, 32px)',
+            overflow: 'hidden',
+            boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-8px)';
+            e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.05)';
+          }}
+          >
+            <div style={{
+              position: 'absolute',
+              inset: 0,
+              borderRadius: '24px',
+              pointerEvents: 'none',
+              background: 'radial-gradient(60% 50% at 50% 100%, rgba(239, 68, 68, 0.08), transparent 60%)',
+            }}></div>
+            <div style={{ position: 'relative' }}>
+              <div style={{
+                width: '48px',
+                height: '48px',
+                borderRadius: '16px',
+                backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                border: '1px solid rgba(239, 68, 68, 0.2)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '20px',
+              }}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '24px', height: '24px', color: '#EF4444' }}>
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 6v6l4 2" />
+                  <path d="M12 8v4" />
+                </svg>
+              </div>
+              <h3 style={{
+                fontSize: 'clamp(20px, 2.5vw, 24px)',
+                fontWeight: 600,
+                letterSpacing: '-0.02em',
+                color: '#111827',
+                marginBottom: '12px',
+              }}>No-Show %</h3>
+              <p style={{
+                fontSize: 'clamp(14px, 1.8vw, 16px)',
+                color: '#6B7280',
+                lineHeight: 1.6,
+                marginBottom: '24px',
+              }}>
+                Pre/post automation comparison to track improvement.
+              </p>
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(2, 1fr)',
+                gap: '16px',
+              }}>
+                <div>
+                  <p style={{
+                    fontSize: '11px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    color: '#9CA3AF',
+                    marginBottom: '8px',
+                  }}>Before</p>
+                  <p style={{
+                    fontSize: '18px',
+                    fontWeight: 600,
+                    color: '#111827',
+                  }}>22%</p>
+                </div>
+                <div>
+                  <p style={{
+                    fontSize: '11px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    color: '#9CA3AF',
+                    marginBottom: '8px',
+                  }}>After</p>
+                  <p style={{
+                    fontSize: '18px',
+                    fontWeight: 600,
+                    color: '#10B981',
+                  }}>8%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Revenue Attributed */}
+          <div style={{
+            position: 'relative',
+            borderRadius: '24px',
+            backgroundColor: '#fff',
+            border: '1px solid rgba(0, 0, 0, 0.05)',
+            padding: 'clamp(24px, 4vw, 32px)',
+            overflow: 'hidden',
+            boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-8px)';
+            e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.05)';
+          }}
+          >
+            <div style={{
+              position: 'absolute',
+              inset: 0,
+              borderRadius: '24px',
+              pointerEvents: 'none',
+              background: 'radial-gradient(1200px 400px at 15% -10%, rgba(34, 197, 94, 0.08), transparent)',
+              maskImage: 'radial-gradient(60% 60% at 20% 0%, white, transparent)',
+            }}></div>
+            <div style={{ position: 'relative' }}>
+              <div style={{
+                width: '48px',
+                height: '48px',
+                borderRadius: '16px',
+                backgroundColor: 'rgba(34, 197, 94, 0.1)',
+                border: '1px solid rgba(34, 197, 94, 0.2)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '20px',
+              }}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '24px', height: '24px', color: '#22C55E' }}>
+                  <line x1="12" x2="12" y1="2" y2="22" />
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                </svg>
+              </div>
+              <h3 style={{
+                fontSize: 'clamp(20px, 2.5vw, 24px)',
+                fontWeight: 600,
+                letterSpacing: '-0.02em',
+                color: '#111827',
+                marginBottom: '12px',
+              }}>Revenue Attributed</h3>
+              <p style={{
+                fontSize: 'clamp(14px, 1.8vw, 16px)',
+                color: '#6B7280',
+                lineHeight: 1.6,
+                marginBottom: '24px',
+              }}>
+                Track automation ROI and revenue impact.
+              </p>
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(2, 1fr)',
+                gap: '16px',
+              }}>
+                <div>
+                  <p style={{
+                    fontSize: '11px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    color: '#9CA3AF',
+                    marginBottom: '8px',
+                  }}>This Month</p>
+                  <p style={{
+                    fontSize: '18px',
+                    fontWeight: 600,
+                    color: '#111827',
+                  }}>$12.5K</p>
+                </div>
+                <div>
+                  <p style={{
+                    fontSize: '11px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    color: '#9CA3AF',
+                    marginBottom: '8px',
+                  }}>ROI</p>
+                  <p style={{
+                    fontSize: '18px',
+                    fontWeight: 600,
+                    color: '#22C55E',
+                  }}>12.5x</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Customer Satisfaction */}
+          <div style={{
+            position: 'relative',
+            borderRadius: '24px',
+            backgroundColor: '#fff',
+            border: '1px solid rgba(0, 0, 0, 0.05)',
+            padding: 'clamp(24px, 4vw, 32px)',
+            overflow: 'hidden',
+            boxShadow: '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)',
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-8px)';
+            e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.06)';
+            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.05)';
+          }}
+          >
+            <div style={{
+              position: 'absolute',
+              inset: 0,
+              borderRadius: '24px',
+              pointerEvents: 'none',
+              background: 'radial-gradient(60% 50% at 50% 100%, rgba(251, 191, 36, 0.08), transparent 60%)',
+            }}></div>
+            <div style={{ position: 'relative' }}>
+              <div style={{
+                width: '48px',
+                height: '48px',
+                borderRadius: '16px',
+                backgroundColor: 'rgba(251, 191, 36, 0.1)',
+                border: '1px solid rgba(251, 191, 36, 0.2)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '20px',
+              }}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '24px', height: '24px', color: '#FBBF24' }}>
+                  <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                </svg>
+              </div>
+              <h3 style={{
+                fontSize: 'clamp(20px, 2.5vw, 24px)',
+                fontWeight: 600,
+                letterSpacing: '-0.02em',
+                color: '#111827',
+                marginBottom: '12px',
+              }}>Customer Satisfaction</h3>
+              <p style={{
+                fontSize: 'clamp(14px, 1.8vw, 16px)',
+                color: '#6B7280',
+                lineHeight: 1.6,
+                marginBottom: '24px',
+              }}>
+                Monitor reviews, ratings, and customer feedback scores.
+              </p>
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(2, 1fr)',
+                gap: '16px',
+              }}>
+                <div>
+                  <p style={{
+                    fontSize: '11px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    color: '#9CA3AF',
+                    marginBottom: '8px',
+                  }}>Avg. Rating</p>
+                  <p style={{
+                    fontSize: '18px',
+                    fontWeight: 600,
+                    color: '#111827',
+                  }}>4.8/5</p>
+                </div>
+                <div>
+                  <p style={{
+                    fontSize: '11px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    color: '#9CA3AF',
+                    marginBottom: '8px',
+                  }}>Reviews</p>
+                  <p style={{
+                    fontSize: '18px',
+                    fontWeight: 600,
+                    color: '#111827',
+                  }}>+32</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

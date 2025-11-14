@@ -78,12 +78,13 @@ export default function Contact() {
         <label htmlFor="question" style={{ fontWeight: 600, fontSize: 'clamp(14px, 1.8vw, 16px)', textAlign: 'left' }}>Your Question / Message</label>
         <textarea name="question" id="question" rows="4" required value={formData.question} onChange={handleChange} style={{ padding: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 2vw, 16px)', borderRadius: 'clamp(6px, 1vw, 8px)', border: '1px solid #ccc' }} />
 
+        <div style={{ textAlign: 'center', marginTop: 'clamp(16px, 2.5vw, 20px)' }}>
         <button type="submit" style={{
           backgroundColor: '#111827',
           color: 'white',
           fontWeight: '600',
           padding: 'clamp(10px, 1.5vw, 12px) clamp(24px, 4vw, 32px)',
-          borderRadius: 'clamp(10px, 1.5vw, 12px)',
+          borderRadius: '12px',
           border: 'none',
           cursor: 'pointer',
           fontSize: 'clamp(14px, 2vw, 16px)',
@@ -101,6 +102,7 @@ export default function Contact() {
         >
           Submit
         </button>
+        </div>
       </form>
 
       {/* Optional: Calendly embed or Link to Book Consultation */}

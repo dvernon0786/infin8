@@ -18,13 +18,14 @@ export default function E2Eligibility() {
   return (
     <div style={{ fontFamily: "'Inter', sans-serif", color: '#111827', paddingTop: 'clamp(64px, 10vw, 80px)' }}>
       <Navbar />
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)' }}>
+      <div style={{ maxWidth: 1280, margin: '0 auto', padding: 'clamp(64px, 10vw, 128px) clamp(16px, 4vw, 16px)', textAlign: 'center' }}>
       <h1 style={{
         fontSize: 'clamp(32px, 5vw, 48px)',
         fontWeight: '700',
         marginBottom: 'clamp(16px, 3vw, 24px)',
         color: '#111827',
         letterSpacing: '-0.02em',
+        textAlign: 'center',
       }}>
         Am I Eligible for an E-2 Visa?
       </h1>
@@ -33,13 +34,14 @@ export default function E2Eligibility() {
         color: '#4B5563',
         marginBottom: 'clamp(32px, 6vw, 48px)',
         lineHeight: 1.6,
+        textAlign: 'center',
       }}>
         To qualify for an E-2 visa, you must meet these core requirements. Use the dropdown below to check if your country qualifies.
       </p>
 
       {/* Treaty Country Checker */}
-      <div style={{ marginBottom: 'clamp(24px, 4vw, 40px)' }}>
-        <label htmlFor="country-select" style={{ fontWeight: 600, fontSize: 'clamp(14px, 2vw, 16px)' }}>Select Your Country</label>
+      <div style={{ marginBottom: 'clamp(24px, 4vw, 40px)', maxWidth: '500px', margin: '0 auto clamp(24px, 4vw, 40px)' }}>
+        <label htmlFor="country-select" style={{ fontWeight: 600, fontSize: 'clamp(14px, 2vw, 16px)', textAlign: 'left', display: 'block', marginBottom: 'clamp(6px, 1vw, 8px)' }}>Select Your Country</label>
         <select
           id="country-select"
           value={country}
@@ -83,8 +85,8 @@ export default function E2Eligibility() {
 
       {/* Eligibility Checklist Download */}
       {isEligible && (
-        <>
-          <p style={{ fontSize: 'clamp(14px, 2vw, 16px)', color: '#444', marginBottom: 'clamp(10px, 1.5vw, 12px)' }}>
+        <div style={{ textAlign: 'center', marginBottom: 'clamp(24px, 4vw, 32px)' }}>
+          <p style={{ fontSize: 'clamp(14px, 2vw, 16px)', color: '#4B5563', marginBottom: 'clamp(10px, 1.5vw, 12px)', textAlign: 'center' }}>
             Download our free Eligibility Checklist to make sure you have all the documents you need.
           </p>
           <button 
@@ -97,7 +99,7 @@ export default function E2Eligibility() {
               fontWeight: '600',
               padding: 'clamp(10px, 1.5vw, 12px) clamp(24px, 4vw, 32px)',
               fontSize: 'clamp(14px, 2vw, 16px)',
-              borderRadius: 'clamp(10px, 1.5vw, 12px)',
+              borderRadius: '12px',
               border: 'none',
               cursor: 'pointer',
               marginBottom: 'clamp(24px, 4vw, 32px)',
@@ -115,7 +117,7 @@ export default function E2Eligibility() {
           >
             Download Eligibility Checklist
           </button>
-        </>
+        </div>
       )}
 
       {/* CTAs */}
