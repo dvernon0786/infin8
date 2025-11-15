@@ -254,7 +254,15 @@ The Infin8 project has been transformed from an E-2 visa services platform to a 
 
 ### Recent Completed Work
 
-**Removed Vercel Speed Insights - Incompatible with Next.js 12 (Latest)**
+**WhatsApp Open Graph Image Fix (Latest)**
+- Updated Open Graph image dimensions to square format (1200x1200) for better WhatsApp compatibility
+- Added og:image:type meta tag to specify PNG format
+- WhatsApp prefers square images (600x600 or 1200x1200) over rectangular formats
+- Updated og:image:height from 630 to 1200 to match square format
+- Note: Logo image should ideally be square (600x600 or 1200x1200) for optimal WhatsApp display
+- WhatsApp caches aggressively - use query parameters (?v=2) to force refresh when testing
+
+**Removed Vercel Speed Insights - Incompatible with Next.js 12**
 - Removed `@vercel/speed-insights` package and component from `_app.js`
 - Package requires Next.js 13+ (imports `next/navigation` which doesn't exist in Next.js 12)
 - Build was failing with "Module not found: Can't resolve 'next/navigation.js'"

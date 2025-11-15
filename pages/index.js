@@ -35,7 +35,8 @@ export default function Home() {
         <meta property="og:description" content="Your Business on Autopilot — $1,000/month. Everything you need to run and grow your small business — website, booking, payments, CRM, chatbot, content, and monthly optimization." />
         <meta property="og:image" content="https://infin8automation.it.com/images/logo.png" />
         <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image:height" content="1200" />
+        <meta property="og:image:type" content="image/png" />
         <meta property="og:image:alt" content="Infin8 Automation Logo" />
         <meta property="og:site_name" content="Infin8 Automation" />
         
