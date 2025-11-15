@@ -27,6 +27,25 @@ export default function Home() {
       <Head>
         <title>Infin8 Automation — Full Marketing & Operations — $1,000/month</title>
         <meta name="description" content="$1,000/month gets you a full marketing & automation team: website, booking & payments, CRM, SMS reminders, chatbot, content pipeline, analytics. 6‑month minimum." />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://infin8automation.it.com/" />
+        <meta property="og:title" content="Infin8 Automation — Full Marketing & Operations — $1,000/month" />
+        <meta property="og:description" content="Your Business on Autopilot — $1,000/month. Everything you need to run and grow your small business — website, booking, payments, CRM, chatbot, content, and monthly optimization." />
+        <meta property="og:image" content="https://infin8automation.it.com/images/logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Infin8 Automation Logo" />
+        <meta property="og:site_name" content="Infin8 Automation" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://infin8automation.it.com/" />
+        <meta name="twitter:title" content="Infin8 Automation — Full Marketing & Operations — $1,000/month" />
+        <meta name="twitter:description" content="Your Business on Autopilot — $1,000/month. Everything you need to run and grow your small business — website, booking, payments, CRM, chatbot, content, and monthly optimization." />
+        <meta name="twitter:image" content="https://infin8automation.it.com/images/logo.png" />
+        <meta name="twitter:image:alt" content="Infin8 Automation Logo" />
       </Head>
       <div style={{ fontFamily: "'Inter', sans-serif", color: '#1A1A1A' }}>
         <Navbar />
