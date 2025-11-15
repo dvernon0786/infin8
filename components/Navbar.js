@@ -74,6 +74,26 @@ export default function Navbar() {
           onMouseEnter={(e) => e.currentTarget.style.color = '#111827'}
           onMouseLeave={(e) => e.currentTarget.style.color = '#374151'}
           >Resources</a></Link>
+          <Link href="/entrepreneurs"><a style={{
+            fontSize: 'clamp(13px, 1.8vw, 14px)',
+            fontWeight: '500',
+            color: '#374151',
+            textDecoration: 'none',
+            transition: 'color 0.2s',
+          }}
+          onMouseEnter={(e) => e.currentTarget.style.color = '#111827'}
+          onMouseLeave={(e) => e.currentTarget.style.color = '#374151'}
+          >Entrepreneurs</a></Link>
+          <Link href="/contact"><a style={{
+            fontSize: 'clamp(13px, 1.8vw, 14px)',
+            fontWeight: '500',
+            color: '#374151',
+            textDecoration: 'none',
+            transition: 'color 0.2s',
+          }}
+          onMouseEnter={(e) => e.currentTarget.style.color = '#111827'}
+          onMouseLeave={(e) => e.currentTarget.style.color = '#374151'}
+          >Contact</a></Link>
           <Link href="/faq"><a style={{
             fontSize: 'clamp(13px, 1.8vw, 14px)',
             fontWeight: '500',
@@ -85,70 +105,11 @@ export default function Navbar() {
           onMouseLeave={(e) => e.currentTarget.style.color = '#374151'}
           >FAQ</a></Link>
         </div>
-        
-        {/* CTA */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 'clamp(8px, 1.5vw, 12px)' }}>
-          <button style={{
-            display: 'none',
-            fontSize: 'clamp(13px, 1.8vw, 14px)',
-            fontWeight: '500',
-            color: '#374151',
-            background: 'none',
-            border: 'none',
-            cursor: 'pointer',
-            transition: 'color 0.2s',
-          }}
-          className="sign-in-btn"
-          onMouseEnter={(e) => e.currentTarget.style.color = '#111827'}
-          onMouseLeave={(e) => e.currentTarget.style.color = '#374151'}
-          >
-            Sign In
-          </button>
-          <button style={{
-            cursor: 'pointer',
-            display: 'inline-flex',
-            flexDirection: 'column',
-            alignItems: 'baseline',
-            justifyContent: 'center',
-            overflow: 'hidden',
-            outline: 'none',
-            textDecoration: 'none',
-            whiteSpace: 'nowrap',
-            userSelect: 'none',
-            transition: 'all 0.15s',
-            fontSize: 'clamp(14px, 2vw, 16px)',
-            textAlign: 'center',
-            color: '#fff',
-            background: 'linear-gradient(to bottom, #404040, #171717)',
-            border: 'none',
-            borderRadius: '12px',
-            padding: 'clamp(10px, 1.5vw, 12px) clamp(24px, 4vw, 32px)',
-            fontWeight: '500',
-            boxShadow: '0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12)',
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.opacity = '0.85';
-            e.currentTarget.style.transform = 'translateY(-2px)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.opacity = '1';
-            e.currentTarget.style.transform = 'translateY(0)';
-          }}
-          onClick={() => {
-            // Scroll to quiz or open quiz modal here
-          }}
-          >
-            Get Started
-          </button>
-        </div>
       </div>
       <style jsx>{`
         @media (min-width: 768px) {
           .desktop-menu {
             display: flex !important;
-          }
-          .sign-in-btn {
-            display: inline-flex !important;
           }
         }
       `}</style>

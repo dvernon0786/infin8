@@ -9,7 +9,7 @@ const franchises = [
     description: 'Popular sandwich franchise',
     investmentRange: '$150K - $300K',
     image: '/images/franchise-subway.jpg',
-    link: '#',
+    link: '/contact',
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const franchises = [
     description: 'Fast food Mexican franchise',
     investmentRange: '$200K - $500K',
     image: '/images/franchise-tacobell.jpg',
-    link: '#',
+    link: '/contact',
   },
   // ...more franchise listings
 ];
@@ -29,7 +29,7 @@ const businessesForSale = [
     location: 'Miami, FL',
     price: '$120K',
     image: '/images/business-deli.jpg',
-    link: '#',
+    link: '/contact',
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ const businessesForSale = [
     location: 'New York, NY',
     price: '$250K',
     image: '/images/business-cafe.jpg',
-    link: '#',
+    link: '/contact',
   },
   // ...more businesses for sale
 ];

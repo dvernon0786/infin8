@@ -140,6 +140,10 @@ export default function Partners() {
           e.currentTarget.style.backgroundColor = '#111827';
           e.currentTarget.style.transform = 'translateY(0)';
         }}
+        onClick={(e) => {
+          e.preventDefault();
+          window.location.href = '/contact';
+        }}
         >
           Submit Application
         </button>

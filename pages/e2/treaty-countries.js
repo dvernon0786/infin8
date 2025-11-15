@@ -198,7 +198,11 @@ export default function TreatyCountries() {
               &times;
             </button>
             <h2 style={{ fontSize: 'clamp(20px, 3vw, 24px)', fontWeight: 700, marginBottom: 'clamp(12px, 2vw, 16px)' }}>Contact Us</h2>
-            <form action="/api/contact" method="POST">
+            <form action="/api/contact" method="POST" onSubmit={(e) => {
+              e.preventDefault();
+              // Handle form submission here if needed
+              window.location.href = '/contact';
+            }}>
               <label htmlFor="name" style={{ display: 'block', marginBottom: 'clamp(4px, 0.5vw, 4px)', fontSize: 'clamp(14px, 1.8vw, 16px)' }}>Full Name</label>
               <input type="text" id="name" name="name" required style={{ width: '100%', marginBottom: 'clamp(12px, 2vw, 16px)', padding: 'clamp(6px, 1vw, 8px)', fontSize: 'clamp(14px, 2vw, 16px)', borderRadius: 'clamp(6px, 1vw, 8px)', border: '1px solid #ccc' }}/>
 

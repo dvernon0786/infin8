@@ -163,7 +163,11 @@ export default function CountryE2() {
 
       <section style={{ marginBottom: 'clamp(40px, 8vw, 80px)' }}>
         <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 28px)', fontWeight: 700, marginBottom: 'clamp(10px, 1.5vw, 12px)', letterSpacing: '-0.02em' }}>Book Your Free Consultation</h2>
-        <form action="/api/contact" method="POST" style={{ maxWidth: 400, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 'clamp(12px, 2vw, 16px)' }}>
+        <form action="/api/contact" method="POST" onSubmit={(e) => {
+          e.preventDefault();
+          // Handle form submission here if needed
+          window.location.href = '/contact';
+        }} style={{ maxWidth: 400, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 'clamp(12px, 2vw, 16px)' }}>
           <input type="text" name="name" placeholder="Full Name" required style={{ padding: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 2vw, 16px)', borderRadius: 'clamp(6px, 1vw, 8px)', border: '1px solid #ccc' }} />
           <input type="email" name="email" placeholder="Email Address" required style={{ padding: 'clamp(10px, 1.5vw, 12px)', fontSize: 'clamp(14px, 2vw, 16px)', borderRadius: 'clamp(6px, 1vw, 8px)', border: '1px solid #ccc' }} />
           <input type="hidden" name="country" value={country.name} />

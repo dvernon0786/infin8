@@ -41,7 +41,7 @@ export default function About() {
       </section>
 
       <div style={{ textAlign: 'center', marginTop: 'clamp(32px, 6vw, 48px)' }}>
-        <a href="/e2" style={{
+        <a href="/contact" style={{
           backgroundColor: '#111827',
           color: '#fff',
           padding: 'clamp(10px, 1.5vw, 12px) clamp(24px, 4vw, 32px)',

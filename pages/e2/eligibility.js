@@ -91,7 +91,7 @@ export default function E2Eligibility() {
           </p>
           <button 
             onClick={() => {
-              // Trigger gated PDF modal with email capture
+              window.location.href = '/contact';
             }}
             style={{
               backgroundColor: '#111827',

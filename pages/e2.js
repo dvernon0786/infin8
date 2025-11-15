@@ -110,7 +110,7 @@ export default function E2Hub() {
 
         {/* Call to Action */}
         <div style={{ textAlign: 'center', marginBottom: 'clamp(32px, 6vw, 64px)' }}>
-          <Link href="/e2/eligibility"><a style={{
+          <Link href="/contact"><a style={{
             display: 'inline-block',
             backgroundColor: '#111827',
             color: '#fff',
@@ -132,7 +132,7 @@ export default function E2Hub() {
             e.currentTarget.style.transform = 'translateY(0)';
           }}
           >
-            Check Your Eligibility
+            Get Started
           </a></Link>
         </div>
 

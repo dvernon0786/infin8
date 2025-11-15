@@ -41,7 +41,7 @@ export default function BusinessSetup() {
             investment: '$150K - $500K',
             approvalTime: '5 - 7 months',
             bestFor: 'First-time owners, risk-averse',
-            ctaLink: '/marketplace#franchises',
+            ctaLink: '/contact',
           },
           {
             title: 'Buy an Existing Business',
@@ -49,7 +49,7 @@ export default function BusinessSetup() {
             investment: '$100K - $1M+',
             approvalTime: '4 - 8 months',
             bestFor: 'Entrepreneurs seeking quicker cash flow',
-            ctaLink: '/marketplace#existing-business',
+            ctaLink: '/contact',
           },
           {
             title: 'Start from Scratch',
@@ -57,7 +57,7 @@ export default function BusinessSetup() {
             investment: '$50K - $200K',
             approvalTime: '6 - 8 months',
             bestFor: 'Visionaries, tech startups, service businesses',
-            ctaLink: '/resources#startup-plans',
+            ctaLink: '/contact',
           }
         ].map(({ title, description, investment, approvalTime, bestFor, ctaLink }) => (
           <div key={title} style={{
@@ -353,7 +353,7 @@ export default function BusinessSetup() {
 
       {/* CTA Section */}
       <div style={{ textAlign: 'center', marginTop: 'clamp(32px, 6vw, 48px)' }}>
-        <a href="/e2/business-setup/roadmap" style={{
+        <a href="/contact" style={{
           display: 'inline-block',
           backgroundColor: '#111827',
           color: '#fff',
