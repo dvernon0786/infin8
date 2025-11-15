@@ -349,7 +349,7 @@ export default function Home() {
                     width: '14em',
                     height: '3em',
                     borderRadius: '30em',
-                    fontSize: '15px',
+                    fontSize: 'clamp(14px, 2vw, 15px)',
                     fontFamily: 'inherit',
                     border: 'none',
                     overflow: 'hidden',
@@ -549,7 +549,7 @@ export default function Home() {
                 />
               </div>
               <span style={{
-                fontSize: '16px',
+                fontSize: 'clamp(14px, 2vw, 16px)',
                 color: '#374151',
               }}>Founder of Infin8 Automation</span>
             </div>
@@ -1301,7 +1301,7 @@ export default function Home() {
                   borderRadius: '9999px',
                   background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1))',
                   border: '1px solid rgba(0, 0, 0, 0.05)',
-                  fontSize: '14px',
+                  fontSize: 'clamp(13px, 1.8vw, 14px)',
                   color: '#111827',
                   fontWeight: 500,
                 }}>
@@ -1614,8 +1614,8 @@ export default function Home() {
                   }}
                 >
                   <div>
-                    <p style={{ fontSize: '18px', fontWeight: 600, color: '#fff', marginBottom: '4px' }}>Simple Monthly</p>
-                    <p style={{ fontSize: '12px', color: 'rgba(212, 212, 212, 0.8)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                    <p style={{ fontSize: 'clamp(16px, 2vw, 18px)', fontWeight: 600, color: '#fff', marginBottom: '4px' }}>Simple Monthly</p>
+                    <p style={{ fontSize: 'clamp(11px, 1.5vw, 12px)', color: 'rgba(212, 212, 212, 0.8)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                       Predictable monthly billing
                     </p>
                   </div>
@@ -1667,8 +1667,8 @@ export default function Home() {
                   }}
                 >
                   <div>
-                    <p style={{ fontSize: '18px', fontWeight: 600, color: '#fff', marginBottom: '4px' }}>Annual Growth Plan</p>
-                    <p style={{ fontSize: '12px', color: 'rgba(212, 212, 212, 0.8)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                    <p style={{ fontSize: 'clamp(16px, 2vw, 18px)', fontWeight: 600, color: '#fff', marginBottom: '4px' }}>Annual Growth Plan</p>
+                    <p style={{ fontSize: 'clamp(11px, 1.5vw, 12px)', color: 'rgba(212, 212, 212, 0.8)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                       Maximum savings & value
                     </p>
                   </div>
@@ -1720,8 +1720,8 @@ export default function Home() {
                   }}
                 >
                   <div>
-                    <p style={{ fontSize: '18px', fontWeight: 600, color: '#fff', marginBottom: '4px' }}>No-Contract Flex</p>
-                    <p style={{ fontSize: '12px', color: 'rgba(212, 212, 212, 0.8)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                    <p style={{ fontSize: 'clamp(16px, 2vw, 18px)', fontWeight: 600, color: '#fff', marginBottom: '4px' }}>No-Contract Flex</p>
+                    <p style={{ fontSize: 'clamp(11px, 1.5vw, 12px)', color: 'rgba(212, 212, 212, 0.8)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                       Full flexibility, no lock-ins
                     </p>
                   </div>
@@ -1891,7 +1891,7 @@ export default function Home() {
                       display: 'flex',
                       alignItems: 'flex-start',
                       gap: '12px',
-                      fontSize: '14px',
+                      fontSize: 'clamp(13px, 1.8vw, 14px)',
                       color: 'rgba(212, 212, 212, 0.9)',
                     }}>
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" style={{ marginTop: '2px', flexShrink: 0 }}>
@@ -1910,7 +1910,7 @@ export default function Home() {
                       display: 'flex',
                       alignItems: 'flex-start',
                       gap: '12px',
-                      fontSize: '14px',
+                      fontSize: 'clamp(13px, 1.8vw, 14px)',
                       color: 'rgba(212, 212, 212, 0.9)',
                     }}>
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" style={{ marginTop: '2px', flexShrink: 0 }}>
@@ -1928,7 +1928,7 @@ export default function Home() {
                       display: 'flex',
                       alignItems: 'flex-start',
                       gap: '12px',
-                      fontSize: '14px',
+                      fontSize: 'clamp(13px, 1.8vw, 14px)',
                       color: 'rgba(212, 212, 212, 0.9)',
                     }}>
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" style={{ marginTop: '2px', flexShrink: 0 }}>
@@ -1966,7 +1966,7 @@ export default function Home() {
                     backgroundColor: '#fff',
                     color: '#0A0A0A',
                     padding: '12px 24px',
-                    fontSize: '14px',
+                    fontSize: 'clamp(13px, 1.8vw, 14px)',
                     fontWeight: 600,
                     textDecoration: 'none',
                     transition: 'all 0.2s',
@@ -2136,7 +2136,7 @@ export default function Home() {
                       <rect width="20" height="14" x="2" y="5" rx="2" />
                       <line x1="2" x2="22" y1="10" y2="10" />
                     </svg>
-                    <span style={{ fontSize: '14px', color: '#4B5563' }}>Payment processed</span>
+                    <span style={{ fontSize: 'clamp(13px, 1.8vw, 14px)', color: '#4B5563' }}>Payment processed</span>
                   </div>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', color: '#10B981' }}>
                     <path d="M20 6 9 17l-5-5" />
@@ -2156,7 +2156,7 @@ export default function Home() {
                       <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                       <circle cx="12" cy="10" r="3" />
                     </svg>
-                    <span style={{ fontSize: '14px', color: '#4B5563' }}>Access credentials</span>
+                    <span style={{ fontSize: 'clamp(13px, 1.8vw, 14px)', color: '#4B5563' }}>Access credentials</span>
                   </div>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', color: '#10B981' }}>
                     <path d="M20 6 9 17l-5-5" />
@@ -2253,21 +2253,21 @@ export default function Home() {
                     marginBottom: '8px',
                   }}>Audit</p>
                   <p style={{
-                    fontSize: '18px',
+                    fontSize: 'clamp(16px, 2vw, 18px)',
                     fontWeight: 600,
                     color: '#111827',
                   }}>Complete</p>
                 </div>
                 <div>
                   <p style={{
-                    fontSize: '11px',
+                    fontSize: 'clamp(10px, 1.5vw, 11px)',
                     textTransform: 'uppercase',
                     letterSpacing: '0.05em',
                     color: '#9CA3AF',
                     marginBottom: '8px',
                   }}>Sitemap</p>
                   <p style={{
-                    fontSize: '18px',
+                    fontSize: 'clamp(16px, 2vw, 18px)',
                     fontWeight: 600,
                     color: '#111827',
                   }}>Live</p>
@@ -2297,7 +2297,7 @@ export default function Home() {
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
                   <span style={{
-                    fontSize: '14px',
+                    fontSize: 'clamp(13px, 1.8vw, 14px)',
                     fontWeight: 500,
                     color: '#111827',
                   }}>Homepage & booking live</span>
@@ -2385,8 +2385,8 @@ export default function Home() {
                   justifyContent: 'space-between',
                   padding: '8px 0',
                 }}>
-                  <span style={{ fontSize: '14px', color: '#6B7280' }}>CRM Integration</span>
-                  <span style={{ fontSize: '14px', fontWeight: 600, color: '#111827' }}>Active</span>
+                  <span style={{ fontSize: 'clamp(13px, 1.8vw, 14px)', color: '#6B7280' }}>CRM Integration</span>
+                  <span style={{ fontSize: 'clamp(13px, 1.8vw, 14px)', fontWeight: 600, color: '#111827' }}>Active</span>
                 </div>
                 <div style={{
                   height: '4px',
@@ -2407,8 +2407,8 @@ export default function Home() {
                   justifyContent: 'space-between',
                   padding: '8px 0',
                 }}>
-                  <span style={{ fontSize: '14px', color: '#6B7280' }}>Chatbot</span>
-                  <span style={{ fontSize: '14px', fontWeight: 600, color: '#111827' }}>Configured</span>
+                  <span style={{ fontSize: 'clamp(13px, 1.8vw, 14px)', color: '#6B7280' }}>Chatbot</span>
+                  <span style={{ fontSize: 'clamp(13px, 1.8vw, 14px)', fontWeight: 600, color: '#111827' }}>Configured</span>
                 </div>
                 <div style={{
                   height: '4px',
@@ -2436,7 +2436,7 @@ export default function Home() {
                   color: '#111827',
                   padding: '14px',
                   border: '1px solid rgba(0, 0, 0, 0.05)',
-                  fontSize: '14px',
+                  fontSize: 'clamp(13px, 1.8vw, 14px)',
                   fontWeight: 500,
                   transition: 'all 0.2s',
                 }}>
@@ -2551,7 +2551,7 @@ export default function Home() {
                     marginBottom: '4px',
                   }}>Posts</p>
                   <p style={{
-                    fontSize: '18px',
+                    fontSize: 'clamp(16px, 2vw, 18px)',
                     fontWeight: 600,
                     color: '#111827',
                   }}>14</p>
@@ -2571,7 +2571,7 @@ export default function Home() {
                     marginBottom: '4px',
                   }}>SMS</p>
                   <p style={{
-                    fontSize: '18px',
+                    fontSize: 'clamp(16px, 2vw, 18px)',
                     fontWeight: 600,
                     color: '#111827',
                   }}>Live</p>
@@ -2602,7 +2602,7 @@ export default function Home() {
                       backgroundColor: '#10B981',
                     }}></div>
                     <p style={{
-                      fontSize: '18px',
+                      fontSize: 'clamp(16px, 2vw, 18px)',
                       fontWeight: 600,
                       color: '#10B981',
                     }}>Active</p>
@@ -2698,7 +2698,7 @@ export default function Home() {
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', color: '#9CA3AF' }}>
                     <path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" />
                   </svg>
-                  <span style={{ fontSize: '14px', color: '#4B5563' }}>Dashboard configured</span>
+                  <span style={{ fontSize: 'clamp(13px, 1.8vw, 14px)', color: '#4B5563' }}>Dashboard configured</span>
                 </div>
                 <div style={{
                   display: 'flex',
@@ -2713,7 +2713,7 @@ export default function Home() {
                     <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
                     <rect x="2" y="4" width="20" height="16" rx="2" />
                   </svg>
-                  <span style={{ fontSize: '14px', color: '#4B5563' }}>Monthly snapshot delivered</span>
+                  <span style={{ fontSize: 'clamp(13px, 1.8vw, 14px)', color: '#4B5563' }}>Monthly snapshot delivered</span>
                 </div>
                 <div style={{
                   display: 'flex',
@@ -2728,7 +2728,7 @@ export default function Home() {
                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
                     <polyline points="22 4 12 14.01 9 11.01" />
                   </svg>
-                  <span style={{ fontSize: '14px', color: '#4B5563' }}>System handoff complete</span>
+                  <span style={{ fontSize: 'clamp(13px, 1.8vw, 14px)', color: '#4B5563' }}>System handoff complete</span>
                 </div>
               </div>
             </div>
@@ -2817,7 +2817,7 @@ export default function Home() {
                       <path d="M3 3v18h18" />
                       <path d="M19 9l-5 5-4-4-3 3" />
                     </svg>
-                    <span style={{ fontSize: '14px', color: '#4B5563' }}>Monthly reports</span>
+                    <span style={{ fontSize: 'clamp(13px, 1.8vw, 14px)', color: '#4B5563' }}>Monthly reports</span>
                   </div>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', color: '#10B981' }}>
                     <path d="M20 6 9 17l-5-5" />
@@ -2840,7 +2840,7 @@ export default function Home() {
                       <path d="M16 17H8" />
                       <path d="M10 9H8" />
                     </svg>
-                    <span style={{ fontSize: '14px', color: '#4B5563' }}>Content updates</span>
+                    <span style={{ fontSize: 'clamp(13px, 1.8vw, 14px)', color: '#4B5563' }}>Content updates</span>
                   </div>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', color: '#10B981' }}>
                     <path d="M20 6 9 17l-5-5" />
@@ -2859,7 +2859,7 @@ export default function Home() {
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', color: '#9CA3AF' }}>
                       <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
                     </svg>
-                    <span style={{ fontSize: '14px', color: '#4B5563' }}>Priority support</span>
+                    <span style={{ fontSize: 'clamp(13px, 1.8vw, 14px)', color: '#4B5563' }}>Priority support</span>
                   </div>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', color: '#10B981' }}>
                     <path d="M20 6 9 17l-5-5" />
@@ -4579,7 +4579,7 @@ export default function Home() {
                     marginBottom: '8px',
                   }}>This Month</p>
                   <p style={{
-                    fontSize: '18px',
+                    fontSize: 'clamp(16px, 2vw, 18px)',
                     fontWeight: 600,
                     color: '#111827',
                   }}>+24%</p>
@@ -4593,7 +4593,7 @@ export default function Home() {
                     marginBottom: '8px',
                   }}>Avg. Weekly</p>
                   <p style={{
-                    fontSize: '18px',
+                    fontSize: 'clamp(16px, 2vw, 18px)',
                     fontWeight: 600,
                     color: '#111827',
                   }}>12</p>
@@ -4679,7 +4679,7 @@ export default function Home() {
                     marginBottom: '8px',
                   }}>This Month</p>
                   <p style={{
-                    fontSize: '18px',
+                    fontSize: 'clamp(16px, 2vw, 18px)',
                     fontWeight: 600,
                     color: '#111827',
                   }}>+18%</p>
@@ -4693,7 +4693,7 @@ export default function Home() {
                     marginBottom: '8px',
                   }}>Avg. Weekly</p>
                   <p style={{
-                    fontSize: '18px',
+                    fontSize: 'clamp(16px, 2vw, 18px)',
                     fontWeight: 600,
                     color: '#111827',
                   }}>8</p>
@@ -4777,7 +4777,7 @@ export default function Home() {
                     marginBottom: '8px',
                   }}>Current</p>
                   <p style={{
-                    fontSize: '18px',
+                    fontSize: 'clamp(16px, 2vw, 18px)',
                     fontWeight: 600,
                     color: '#111827',
                   }}>67%</p>
@@ -4791,7 +4791,7 @@ export default function Home() {
                     marginBottom: '8px',
                   }}>Target</p>
                   <p style={{
-                    fontSize: '18px',
+                    fontSize: 'clamp(16px, 2vw, 18px)',
                     fontWeight: 600,
                     color: '#111827',
                   }}>70%</p>
@@ -4876,7 +4876,7 @@ export default function Home() {
                     marginBottom: '8px',
                   }}>Before</p>
                   <p style={{
-                    fontSize: '18px',
+                    fontSize: 'clamp(16px, 2vw, 18px)',
                     fontWeight: 600,
                     color: '#111827',
                   }}>22%</p>
@@ -4890,7 +4890,7 @@ export default function Home() {
                     marginBottom: '8px',
                   }}>After</p>
                   <p style={{
-                    fontSize: '18px',
+                    fontSize: 'clamp(16px, 2vw, 18px)',
                     fontWeight: 600,
                     color: '#10B981',
                   }}>8%</p>
@@ -4975,7 +4975,7 @@ export default function Home() {
                     marginBottom: '8px',
                   }}>This Month</p>
                   <p style={{
-                    fontSize: '18px',
+                    fontSize: 'clamp(16px, 2vw, 18px)',
                     fontWeight: 600,
                     color: '#111827',
                   }}>$12.5K</p>
@@ -4989,7 +4989,7 @@ export default function Home() {
                     marginBottom: '8px',
                   }}>ROI</p>
                   <p style={{
-                    fontSize: '18px',
+                    fontSize: 'clamp(16px, 2vw, 18px)',
                     fontWeight: 600,
                     color: '#22C55E',
                   }}>12.5x</p>
@@ -5072,7 +5072,7 @@ export default function Home() {
                     marginBottom: '8px',
                   }}>Avg. Rating</p>
                   <p style={{
-                    fontSize: '18px',
+                    fontSize: 'clamp(16px, 2vw, 18px)',
                     fontWeight: 600,
                     color: '#111827',
                   }}>4.8/5</p>
@@ -5086,7 +5086,7 @@ export default function Home() {
                     marginBottom: '8px',
                   }}>Reviews</p>
                   <p style={{
-                    fontSize: '18px',
+                    fontSize: 'clamp(16px, 2vw, 18px)',
                     fontWeight: 600,
                     color: '#111827',
                   }}>+32</p>

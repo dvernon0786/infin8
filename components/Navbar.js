@@ -25,15 +25,23 @@ export default function Navbar() {
       }}>
         {/* Logo */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 'clamp(8px, 1.5vw, 12px)' }}>
-          <Link href="/"><a style={{
-            fontWeight: '600',
-            fontSize: 'clamp(18px, 2.5vw, 20px)',
-            letterSpacing: '-0.02em',
-            color: '#111827',
-            textDecoration: 'none',
-          }}>
-            Infin8
-          </a></Link>
+          <Link href="/">
+            <a style={{
+              display: 'flex',
+              alignItems: 'center',
+              textDecoration: 'none',
+            }}>
+              <img 
+                src="/images/logo.png" 
+                alt="Infin8" 
+                style={{
+                  height: 'clamp(32px, 5vw, 40px)',
+                  width: 'auto',
+                  objectFit: 'contain',
+                }}
+              />
+            </a>
+          </Link>
         </div>
         
         {/* Desktop Menu */}
