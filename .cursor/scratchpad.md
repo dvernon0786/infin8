@@ -254,7 +254,14 @@ The Infin8 project has been transformed from an E-2 visa services platform to a 
 
 ### Recent Completed Work
 
-**Open Graph Meta Tags for Social Sharing (Latest)**
+**Removed Vercel Speed Insights - Incompatible with Next.js 12 (Latest)**
+- Removed `@vercel/speed-insights` package and component from `_app.js`
+- Package requires Next.js 13+ (imports `next/navigation` which doesn't exist in Next.js 12)
+- Build was failing with "Module not found: Can't resolve 'next/navigation.js'"
+- Speed Insights can be re-added when project upgrades to Next.js 13+
+- Build should now succeed on Vercel
+
+**Open Graph Meta Tags for Social Sharing**
 - Added Open Graph meta tags to `pages/index.js` for social media sharing
 - Includes og:title, og:description, og:image, og:url, og:type, and og:site_name
 - Added Twitter Card meta tags (summary_large_image) for Twitter sharing
