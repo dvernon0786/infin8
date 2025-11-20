@@ -84,6 +84,16 @@ export default function Navbar() {
           onMouseEnter={(e) => e.currentTarget.style.color = '#111827'}
           onMouseLeave={(e) => e.currentTarget.style.color = '#374151'}
           >Resources</a></Link>
+          <Link href="/blog"><a style={{
+            fontSize: 'clamp(13px, 1.8vw, 14px)',
+            fontWeight: '500',
+            color: '#374151',
+            textDecoration: 'none',
+            transition: 'color 0.2s',
+          }}
+          onMouseEnter={(e) => e.currentTarget.style.color = '#111827'}
+          onMouseLeave={(e) => e.currentTarget.style.color = '#374151'}
+          >Blog</a></Link>
           <Link href="/entrepreneurs"><a style={{
             fontSize: 'clamp(13px, 1.8vw, 14px)',
             fontWeight: '500',
@@ -234,6 +244,24 @@ export default function Navbar() {
             onMouseLeave={(e) => e.currentTarget.style.color = '#374151'}
           >
             Resources
+          </a>
+        </Link>
+        <Link href="/blog">
+          <a
+            onClick={() => setMobileMenuOpen(false)}
+            style={{
+              fontSize: 'clamp(16px, 2vw, 18px)',
+              fontWeight: '500',
+              color: '#374151',
+              textDecoration: 'none',
+              padding: 'clamp(12px, 2vw, 16px) 0',
+              borderBottom: '1px solid rgba(229, 231, 235, 0.6)',
+              transition: 'color 0.2s',
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.color = '#111827'}
+            onMouseLeave={(e) => e.currentTarget.style.color = '#374151'}
+          >
+            Blog
           </a>
         </Link>
         <Link href="/entrepreneurs">

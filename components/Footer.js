@@ -60,28 +60,6 @@ export default function Footer() {
                 e.currentTarget.style.color = '#4B5563';
               }}
               >🔗</a>
-              <a href="https://youtube.com" target="_blank" rel="noreferrer" style={{
-                width: 'clamp(36px, 5vw, 40px)',
-                height: 'clamp(36px, 5vw, 40px)',
-                backgroundColor: '#F3F4F6',
-                borderRadius: 'clamp(6px, 1vw, 8px)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#4B5563',
-                fontSize: 'clamp(18px, 2.5vw, 20px)',
-                textDecoration: 'none',
-                transition: 'all 0.2s',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#E5E7EB';
-                e.currentTarget.style.color = '#111827';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#F3F4F6';
-                e.currentTarget.style.color = '#4B5563';
-              }}
-              >▶️</a>
               <a href="https://twitter.com" target="_blank" rel="noreferrer" style={{
                 width: 'clamp(36px, 5vw, 40px)',
                 height: 'clamp(36px, 5vw, 40px)',
@@ -184,7 +162,7 @@ export default function Footer() {
                 >Tools & Guides</a></Link>
               </li>
               <li style={{ marginBottom: 'clamp(10px, 1.5vw, 12px)' }}>
-                <a href="/blog" style={{
+                <Link href="/blog"><a style={{
                   color: '#4B5563',
                   fontSize: 'clamp(13px, 1.8vw, 14px)',
                   textDecoration: 'none',
@@ -192,7 +170,7 @@ export default function Footer() {
                 }}
                 onMouseEnter={(e) => e.currentTarget.style.color = '#111827'}
                 onMouseLeave={(e) => e.currentTarget.style.color = '#4B5563'}
-                >Blog</a>
+                >Blog</a></Link>
               </li>
               <li style={{ marginBottom: 'clamp(10px, 1.5vw, 12px)' }}>
                 <Link href="/marketplace"><a style={{
@@ -284,6 +262,39 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = '#4B5563'}
                 >Terms of Service</a></Link>
               </li>
+              <li style={{ marginBottom: 'clamp(10px, 1.5vw, 12px)' }}>
+                <Link href="/disclaimer"><a style={{
+                  color: '#4B5563',
+                  fontSize: 'clamp(13px, 1.8vw, 14px)',
+                  textDecoration: 'none',
+                  transition: 'color 0.2s',
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.color = '#111827'}
+                onMouseLeave={(e) => e.currentTarget.style.color = '#4B5563'}
+                >Disclaimer</a></Link>
+              </li>
+              <li style={{ marginBottom: 'clamp(10px, 1.5vw, 12px)' }}>
+                <Link href="/cookies"><a style={{
+                  color: '#4B5563',
+                  fontSize: 'clamp(13px, 1.8vw, 14px)',
+                  textDecoration: 'none',
+                  transition: 'color 0.2s',
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.color = '#111827'}
+                onMouseLeave={(e) => e.currentTarget.style.color = '#4B5563'}
+                >Cookie Notice</a></Link>
+              </li>
+              <li style={{ marginBottom: 'clamp(10px, 1.5vw, 12px)' }}>
+                <Link href="/unsubscribe"><a style={{
+                  color: '#4B5563',
+                  fontSize: 'clamp(13px, 1.8vw, 14px)',
+                  textDecoration: 'none',
+                  transition: 'color 0.2s',
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.color = '#111827'}
+                onMouseLeave={(e) => e.currentTarget.style.color = '#4B5563'}
+                >Email Opt-Out</a></Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -300,14 +311,24 @@ export default function Footer() {
             gap: 'clamp(10px, 1.5vw, 12px)',
             maxWidth: '400px',
           }}>
-            <label htmlFor="email" style={{
-              color: '#6B7280',
+            <h3 style={{
+              color: '#111827',
+              fontSize: 'clamp(16px, 2.2vw, 18px)',
+              fontWeight: '600',
+              marginBottom: 'clamp(8px, 1.5vw, 12px)',
+            }}>Stay Informed on E-2 Business Operations</h3>
+            <p style={{
+              color: '#4B5563',
               fontSize: 'clamp(13px, 1.8vw, 14px)',
-              fontWeight: '500',
-            }}>Get E-2 updates</label>
+              lineHeight: 1.6,
+              marginBottom: 'clamp(16px, 3vw, 20px)',
+            }}>
+              Receive occasional updates on E-2 business operations, automation strategies, and platform improvements. No spam.
+            </p>
             <form action="/api/subscribe" method="POST" style={{
               display: 'flex',
               gap: 'clamp(6px, 1vw, 8px)',
+              marginBottom: 'clamp(12px, 2vw, 16px)',
             }}>
               <input
                 type="email"
@@ -344,6 +365,14 @@ export default function Footer() {
                 Subscribe
               </button>
             </form>
+            <p style={{
+              color: '#6B7280',
+              fontSize: 'clamp(11px, 1.5vw, 12px)',
+              lineHeight: 1.5,
+              fontStyle: 'italic',
+            }}>
+              By subscribing, you agree to receive informational emails. These emails are not legal advice and do not create an attorney–client relationship.
+            </p>
           </div>
         </div>
         
@@ -362,7 +391,14 @@ export default function Footer() {
             color: '#6B7280',
             margin: 0,
           }}>
-            © 2025 Infin8. All rights reserved.
+            © 2025 Infin8 Automation. All rights reserved.
+          </p>
+          <p style={{
+            fontSize: 'clamp(13px, 1.8vw, 14px)',
+            color: '#6B7280',
+            margin: 'clamp(4px, 1vw, 8px) 0 0',
+          }}>
+            Contact: <a href="mailto:info@infin8automation.com" style={{ color: '#00AA44', textDecoration: 'none' }}>info@infin8automation.com</a>
           </p>
         </div>
       </div>

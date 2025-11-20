@@ -28,11 +28,6 @@ export default function E2Hub() {
             backgroundClip: 'text',
             fontWeight: '700'
           }}>Eligibility</a></Link>
-          <Link href="/e2/requirements"><a style={{ color: '#4B5563' }}>Requirements</a></Link>
-          <Link href="/e2/marginality"><a style={{ color: '#4B5563' }}>Marginality</a></Link>
-          <Link href="/e2/spouse-work"><a style={{ color: '#4B5563' }}>Spouse & Family</a></Link>
-          <Link href="/e2/buy-vs-build"><a style={{ color: '#4B5563' }}>Buy vs. Build</a></Link>
-          <Link href="/e2/franchise"><a style={{ color: '#4B5563' }}>Franchise</a></Link>
           <Link href="/e2/treaty-countries"><a style={{ color: '#4B5563' }}>Treaty Countries</a></Link>
         </nav>
       </aside>

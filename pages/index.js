@@ -6,33 +6,19 @@ import Footer from '../components/Footer';
 export default function Home() {
   const [buttonHovered, setButtonHovered] = useState(false);
   const [primaryButtonHovered, setPrimaryButtonHovered] = useState(false);
-  const [heroVariant, setHeroVariant] = useState('A'); // A/B testing
   const [selectedPlan, setSelectedPlan] = useState('simple'); // Pricing plan selection
-
-  const heroContent = {
-    A: {
-      headline: "Your Business on Autopilot — $1,000/month",
-      subheadline: "Everything you need to run and grow your small business — website, booking, payments, CRM, chatbot, content, and monthly optimization — all for $1,000/month. First month covers setup. 6‑month minimum."
-    },
-    B: {
-      headline: "A Full Marketing Team — For Less Than One Employee",
-      subheadline: "$1,000/month gives you the full stack: website + automation + content + support — built and managed for you. Pay monthly; first month covers setup. 6‑month minimum."
-    }
-  };
-
-  const currentHero = heroContent[heroVariant];
 
   return (
     <>
       <Head>
-        <title>Infin8 Automation — Full Marketing & Operations — $1,000/month</title>
-        <meta name="description" content="$1,000/month gets you a full marketing & automation team: website, booking & payments, CRM, SMS reminders, chatbot, content pipeline, analytics. 6‑month minimum." />
+        <title>Infin8 Automation — AI-Powered E-2 Visa Business Automation — $1,000/month</title>
+        <meta name="description" content="Run your E-2 business on autopilot from $1,000/month. A complete operating system to launch, manage, and grow your E-2 enterprise — automated, consistent, and aligned with your attorney's strategy." />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://infin8automation.it.com/" />
-        <meta property="og:title" content="Infin8 Automation — Full Marketing & Operations — $1,000/month" />
-        <meta property="og:description" content="Your Business on Autopilot — $1,000/month. Everything you need to run and grow your small business — website, booking, payments, CRM, chatbot, content, and monthly optimization." />
+        <meta property="og:title" content="Infin8 Automation — AI-Powered E-2 Visa Business Automation — $1,000/month" />
+        <meta property="og:description" content="Run your E-2 business on autopilot from $1,000/month. A complete operating system to launch, manage, and grow your E-2 enterprise — automated, consistent, and aligned with your attorney's strategy." />
         <meta property="og:image" content="https://infin8automation.it.com/images/logo.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="1200" />
@@ -43,8 +29,8 @@ export default function Home() {
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://infin8automation.it.com/" />
-        <meta name="twitter:title" content="Infin8 Automation — Full Marketing & Operations — $1,000/month" />
-        <meta name="twitter:description" content="Your Business on Autopilot — $1,000/month. Everything you need to run and grow your small business — website, booking, payments, CRM, chatbot, content, and monthly optimization." />
+        <meta name="twitter:title" content="Infin8 Automation — AI-Powered E-2 Visa Business Automation — $1,000/month" />
+        <meta name="twitter:description" content="Run your E-2 business on autopilot from $1,000/month. A complete operating system to launch, manage, and grow your E-2 enterprise — automated, consistent, and aligned with your attorney's strategy." />
         <meta name="twitter:image" content="https://infin8automation.it.com/images/logo.png" />
         <meta name="twitter:image:alt" content="Infin8 Automation Logo" />
       </Head>
@@ -240,7 +226,7 @@ export default function Home() {
                   <path d="M22 4h-4"/>
                   <circle cx="4" cy="20" r="2"/>
                 </svg>
-                Business Automation
+                E-2 Business Automation
               </span>
 
               {/* Brand + Title */}
@@ -253,7 +239,7 @@ export default function Home() {
                   lineHeight: 1.2,
                   maxWidth: '900px',
                 }}>
-                  {currentHero.headline}
+                  AI-Powered E-2 Visa Business Automation
                 </h1>
               </div>
 
@@ -266,7 +252,7 @@ export default function Home() {
                 lineHeight: 1.6,
                 fontWeight: 400,
               }}>
-                {currentHero.subheadline}
+                Run your E-2 business on autopilot from <strong>$1,000/month</strong>. A complete operating system to launch, manage, and grow your E-2 enterprise — automated, consistent, and aligned with your attorney's strategy.
               </p>
 
               {/* CTAs */}
@@ -311,7 +297,7 @@ export default function Home() {
                     zIndex: 1,
                     transform: primaryButtonHovered ? 'translateX(4px)' : 'translateX(0)',
                     transition: 'transform 0.3s',
-                  }}>Get Started — $1K/Month</span>
+                  }}>Get Started</span>
                   <svg 
                     width="20" 
                     height="20" 
@@ -388,7 +374,7 @@ export default function Home() {
                   onMouseEnter={() => setButtonHovered(true)}
                   onMouseLeave={() => setButtonHovered(false)}
                 >
-                  <span style={{ position: 'relative', zIndex: 1 }}>Schedule a 15‑minute Call</span>
+                  <span style={{ position: 'relative', zIndex: 1 }}>Book a Consultation</span>
                   <div style={{
                     position: 'absolute',
                     top: 0,
@@ -401,6 +387,73 @@ export default function Home() {
                     zIndex: -1,
                   }}></div>
                 </a>
+              </div>
+
+              {/* Supporting Points */}
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 'clamp(8px, 1.5vw, 12px)',
+                marginTop: 'clamp(24px, 4vw, 32px)',
+                maxWidth: '600px',
+                alignItems: 'center',
+              }}>
+                <div style={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  gap: 'clamp(12px, 2vw, 16px)',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    fontSize: 'clamp(13px, 1.8vw, 14px)',
+                    color: '#4B5563',
+                  }}>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#00AA44', flexShrink: 0 }}>
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Built for E-2 Visa business requirements</span>
+                  </div>
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    fontSize: 'clamp(13px, 1.8vw, 14px)',
+                    color: '#4B5563',
+                  }}>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#00AA44', flexShrink: 0 }}>
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Booking, payments, CRM, and automations in one place</span>
+                  </div>
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    fontSize: 'clamp(13px, 1.8vw, 14px)',
+                    color: '#4B5563',
+                  }}>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#00AA44', flexShrink: 0 }}>
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Clear reporting your attorney can use</span>
+                  </div>
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    fontSize: 'clamp(13px, 1.8vw, 14px)',
+                    color: '#4B5563',
+                  }}>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#00AA44', flexShrink: 0 }}>
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Business operations, not legal advice</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -577,7 +630,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
+      {/* What This Is Section */}
       <section style={{
         display: 'flex',
         backgroundColor: '#ffffff',
@@ -597,29 +650,6 @@ export default function Home() {
             textAlign: 'center',
             marginBottom: 'clamp(32px, 6vw, 64px)',
           }}>
-            <span style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: 'clamp(6px, 1vw, 8px)',
-              padding: 'clamp(4px, 1vw, 6px) clamp(10px, 2vw, 12px)',
-              borderRadius: '9999px',
-              backgroundColor: '#fff',
-              boxShadow: '0 1px 2px rgba(0,0,0,0.05)',
-              border: '1px solid rgba(0,0,0,0.05)',
-              fontSize: 'clamp(11px, 1.5vw, 12px)',
-              fontWeight: 500,
-              color: '#374151',
-              textTransform: 'uppercase',
-              letterSpacing: '0.05em',
-            }}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#1F2937', width: 'clamp(12px, 2vw, 14px)', height: 'clamp(12px, 2vw, 14px)' }}>
-                <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path>
-                <path d="M20 2v4"></path>
-                <path d="M22 4h-4"></path>
-                <circle cx="4" cy="20" r="2"></circle>
-              </svg>
-              Core Features
-            </span>
             <h2 style={{
               fontSize: 'clamp(32px, 5vw, 48px)',
               fontWeight: 600,
@@ -627,16 +657,26 @@ export default function Home() {
               marginTop: 'clamp(16px, 3vw, 24px)',
               color: '#111827',
             }}>
-              Why Choose Us
+              E-2 Business Automation — Not Legal Advice
             </h2>
             <p style={{
               fontSize: 'clamp(16px, 2vw, 20px)',
               color: '#4B5563',
-              maxWidth: '672px',
-              margin: 'clamp(8px, 1.5vw, 12px) auto 0',
+              maxWidth: '800px',
+              margin: 'clamp(16px, 3vw, 24px) auto 0',
               lineHeight: 1.6,
             }}>
-              Everything you need to automate your business, all in one place.
+              This platform helps E-2 entrepreneurs operate a real business with automated systems, clean documentation, and reliable processes. Attorneys handle the legal strategy — this system handles your operations.
+            </p>
+            <p style={{
+              fontSize: 'clamp(14px, 1.8vw, 16px)',
+              color: '#6B7280',
+              maxWidth: '800px',
+              margin: 'clamp(16px, 3vw, 24px) auto 0',
+              lineHeight: 1.6,
+              fontStyle: 'italic',
+            }}>
+              All immigration guidance must come from a licensed attorney.
             </p>
           </div>
 
@@ -712,7 +752,7 @@ export default function Home() {
                 marginBottom: 'clamp(6px, 1vw, 8px)',
                 textAlign: 'center',
               }}>
-                SMS & Email Reminders
+                Real Operating Business
               </h3>
               <p style={{
                 color: '#4B5563',
@@ -720,7 +760,7 @@ export default function Home() {
                 fontSize: 'clamp(14px, 1.8vw, 16px)',
                 textAlign: 'center',
               }}>
-                Automated confirmations, pre-visit reminders, and no-show prevention that cut missed appointments by up to 50%.
+                Presenting a real operating business (not just projections) with documented operations and transactions.
               </p>
             </div>
 
@@ -841,7 +881,7 @@ export default function Home() {
                 marginBottom: 'clamp(6px, 1vw, 8px)',
                 textAlign: 'center',
               }}>
-                Monthly Analytics
+                Organized Operations
               </h3>
               <p style={{
                 color: '#4B5563',
@@ -849,7 +889,7 @@ export default function Home() {
                 fontSize: 'clamp(14px, 1.8vw, 16px)',
                 textAlign: 'center',
               }}>
-                Performance snapshot with prioritized action list and insights to help you make data-driven decisions.
+                Organizing bookings, payments, communication, and workflows in one centralized system.
               </p>
             </div>
 
@@ -909,7 +949,7 @@ export default function Home() {
                 marginBottom: 'clamp(6px, 1vw, 8px)',
                 textAlign: 'center',
               }}>
-                AI Chatbot
+                Automated Tasks
               </h3>
               <p style={{
                 color: '#4B5563',
@@ -917,7 +957,64 @@ export default function Home() {
                 fontSize: 'clamp(14px, 1.8vw, 16px)',
                 textAlign: 'center',
               }}>
-                24/7 triage, booking assistance, and lead capture on your website—never miss an opportunity.
+                Automating tasks so you can focus on growth instead of managing day-to-day operations.
+              </p>
+            </div>
+
+            {/* Card 4 - Attorney-Ready Data */}
+            <div style={{
+              position: 'relative',
+              backgroundColor: '#fff',
+              border: '1px solid rgba(0,0,0,0.05)',
+              borderRadius: '24px',
+              padding: 'clamp(24px, 4vw, 32px)',
+              boxShadow: '0 6px 24px rgba(0,0,0,0.08)',
+            }}>
+              <div style={{
+                marginBottom: 'clamp(24px, 4vw, 32px)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+                <div style={{
+                  position: 'relative',
+                  width: 'clamp(80px, 15vw, 112px)',
+                  height: 'clamp(80px, 15vw, 112px)',
+                  borderRadius: '50%',
+                  backgroundColor: '#fff',
+                  border: '1px solid rgba(0,0,0,0.05)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  boxShadow: 'inset 0 2px 0 rgba(255,255,255,0.9), 0 10px 24px rgba(0,0,0,0.06)',
+                  animation: 'pulse-soft 3s ease-in-out infinite 1.5s',
+                }}>
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#1F2937' }}>
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <h3 style={{
+                fontSize: 'clamp(18px, 2.5vw, 20px)',
+                fontWeight: 500,
+                letterSpacing: '-0.01em',
+                color: '#111827',
+                marginBottom: 'clamp(6px, 1vw, 8px)',
+                textAlign: 'center',
+              }}>
+                Attorney-Ready Data
+              </h3>
+              <p style={{
+                color: '#4B5563',
+                lineHeight: 1.6,
+                fontSize: 'clamp(14px, 1.8vw, 16px)',
+                textAlign: 'center',
+              }}>
+                Providing clean business activity data for attorney review and visa documentation.
               </p>
             </div>
           </div>
@@ -1636,7 +1733,7 @@ export default function Home() {
                   <div>
                     <p style={{ fontSize: 'clamp(16px, 2vw, 18px)', fontWeight: 600, color: '#fff', marginBottom: '4px' }}>Simple Monthly</p>
                     <p style={{ fontSize: 'clamp(11px, 1.5vw, 12px)', color: 'rgba(212, 212, 212, 0.8)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                      Predictable monthly billing
+                      From $1,000/month • 6-month minimum
                     </p>
                   </div>
                   <div style={{
@@ -1687,9 +1784,9 @@ export default function Home() {
                   }}
                 >
                   <div>
-                    <p style={{ fontSize: 'clamp(16px, 2vw, 18px)', fontWeight: 600, color: '#fff', marginBottom: '4px' }}>Annual Growth Plan</p>
+                    <p style={{ fontSize: 'clamp(16px, 2vw, 18px)', fontWeight: 600, color: '#fff', marginBottom: '4px' }}>Annual Growth</p>
                     <p style={{ fontSize: 'clamp(11px, 1.5vw, 12px)', color: 'rgba(212, 212, 212, 0.8)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                      Maximum savings & value
+                      Long-term operational stability
                     </p>
                   </div>
                   <div style={{
@@ -1740,9 +1837,9 @@ export default function Home() {
                   }}
                 >
                   <div>
-                    <p style={{ fontSize: 'clamp(16px, 2vw, 18px)', fontWeight: 600, color: '#fff', marginBottom: '4px' }}>No-Contract Flex</p>
+                    <p style={{ fontSize: 'clamp(16px, 2vw, 18px)', fontWeight: 600, color: '#fff', marginBottom: '4px' }}>No Contract Flex</p>
                     <p style={{ fontSize: 'clamp(11px, 1.5vw, 12px)', color: 'rgba(212, 212, 212, 0.8)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                      Full flexibility, no lock-ins
+                      Targeted automation & cleanup
                     </p>
                   </div>
                   <div style={{
@@ -1816,8 +1913,8 @@ export default function Home() {
                   textAlign: 'center',
                 }}>
                   {selectedPlan === 'simple' && 'Simple Monthly'}
-                  {selectedPlan === 'annual' && 'Annual Growth Plan'}
-                  {selectedPlan === 'flex' && 'No-Contract Flex Plan'}
+                  {selectedPlan === 'annual' && 'Annual Growth'}
+                  {selectedPlan === 'flex' && 'No Contract Flex'}
                 </h3>
               </div>
 
@@ -1882,9 +1979,9 @@ export default function Home() {
                 textAlign: 'center',
                 marginBottom: '24px',
               }}>
-                {selectedPlan === 'simple' && 'GREAT FOR PREDICTABLE MONTHLY BILLING WITH SETUP SPREAD OUT.'}
-                {selectedPlan === 'annual' && 'PERFECT FOR BUSINESSES READY TO SCALE FAST WITH MAXIMUM SAVINGS.'}
-                {selectedPlan === 'flex' && 'IDEAL FOR BUSINESSES THAT WANT FULL FLEXIBILITY WITH NO LOCK-INS.'}
+                {selectedPlan === 'simple' && 'A complete, managed E-2 business operations system with a simple monthly structure.'}
+                {selectedPlan === 'annual' && 'For E-2 founders wanting long-term operational stability and documented growth.'}
+                {selectedPlan === 'flex' && 'For businesses that already have systems but need targeted automation or cleanup.'}
               </p>
 
               {/* Features */}
@@ -1903,9 +2000,11 @@ export default function Home() {
                   gap: '12px',
                 }}>
                   {selectedPlan === 'simple' && [
-                    'Setup included in the first month',
-                    '6-month minimum',
-                    'Month-to-month after 6 months',
+                    'Branded website + funnel pages',
+                    'Booking, payments, and CRM setup',
+                    'Customer messaging templates',
+                    'Essential automations (confirmations, reminders, follow-ups)',
+                    'Monthly summary report for attorney/business tracking',
                   ].map((feature, idx) => (
                     <li key={idx} style={{
                       display: 'flex',
@@ -1921,10 +2020,12 @@ export default function Home() {
                     </li>
                   ))}
                   {selectedPlan === 'annual' && [
-                    '$6,000 setup completely waived',
-                    '12-month commitment',
-                    'Save $6,000 instantly',
-                    'Priority support + quarterly optimization reviews',
+                    'Everything in Simple Monthly, plus:',
+                    'Enhanced reporting',
+                    'Funnel and workflow optimization',
+                    'Advanced automation (upsells, renewals, retention)',
+                    'Quarterly growth reviews',
+                    'Priority support',
                   ].map((feature, idx) => (
                     <li key={idx} style={{
                       display: 'flex',
@@ -1940,9 +2041,10 @@ export default function Home() {
                     </li>
                   ))}
                   {selectedPlan === 'flex' && [
-                    'No commitments',
-                    'Pay setup upfront',
-                    'Cancel anytime',
+                    'On-demand automation',
+                    'Integration with existing tools',
+                    'Workflow cleanup and optimization',
+                    'Optional migrations',
                   ].map((feature, idx) => (
                     <li key={idx} style={{
                       display: 'flex',
@@ -1958,6 +2060,31 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
+
+                {/* Best For */}
+                <div style={{
+                  marginTop: '24px',
+                  paddingTop: '16px',
+                  borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+                }}>
+                  <p style={{
+                    fontSize: 'clamp(13px, 1.8vw, 14px)',
+                    color: 'rgba(212, 212, 212, 0.9)',
+                    fontWeight: 600,
+                    marginBottom: '8px',
+                  }}>
+                    Best for:
+                  </p>
+                  <p style={{
+                    fontSize: 'clamp(13px, 1.8vw, 14px)',
+                    color: 'rgba(212, 212, 212, 0.8)',
+                    lineHeight: 1.5,
+                  }}>
+                    {selectedPlan === 'simple' && 'founders needing operational legitimacy quickly.'}
+                    {selectedPlan === 'annual' && 'scaling the business throughout the visa period.'}
+                    {selectedPlan === 'flex' && 'established operators wanting system refinement.'}
+                  </p>
+                </div>
 
                 <div style={{
                   marginTop: '24px',
@@ -5195,4 +5322,5 @@ export default function Home() {
     </>
   );
 }
+
 
