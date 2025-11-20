@@ -204,7 +204,24 @@ The Infin8 project has been transformed from an E-2 visa services platform to a 
    - Image set to `/images/logo.png` with proper dimensions metadata
    - Ready for testing with Facebook Sharing Debugger and Twitter Card Validator
 
-25. ✅ **Mobile and Tablet Navbar Implementation**
+25. ✅ **Resend Email Service Integration**
+   - Installed `resend` npm package (v6.5.2)
+   - Created `.env.example` file with Resend configuration variables
+   - Created `lib/resend.js` utility module with email sending functions:
+     - `sendEmail()` - Generic email sending function
+     - `sendContactConfirmation()` - Contact form confirmation emails
+     - `sendNewsletterConfirmation()` - Newsletter welcome emails
+     - `sendLeadConfirmation()` - Lead form confirmation emails
+     - `sendAdminNotification()` - Admin notifications for all submissions
+   - Updated `pages/api/contact.js` to send confirmation and admin notification emails
+   - Updated `pages/api/subscribe.js` to send welcome email and admin notification
+   - Updated `pages/api/lead-form.js` to send confirmation and admin notification emails
+   - Updated README.md with Resend setup instructions and environment variable documentation
+   - Admin emails configured: scott@infin8automation.com, engagehubonline@gmail.com
+   - Using default Resend email (onboarding@resend.dev) until domain is verified
+   - API key already configured in Vercel environment variables
+
+26. ✅ **Mobile and Tablet Navbar Implementation**
    - Added hamburger menu button for mobile and tablet devices
    - Implemented mobile menu dropdown with all navigation links
    - Menu toggles open/close with smooth animations
@@ -692,5 +709,6 @@ The Infin8 project has been transformed from an E-2 visa services platform to a 
 4. **Interactive Features**: Implement quiz and modal functionality (if needed)
 5. **Testing**: Test homepage on all devices and browsers
 6. **Performance**: Optimize animations and images for better performance
+7. **Resend Domain Verification**: Verify domain in Resend dashboard and update RESEND_FROM_EMAIL
 
 

@@ -1,18 +1,60 @@
-export default function handler(req, res) {
+import { sendContactConfirmation, sendAdminNotification } from '../../lib/resend';
+
+export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const data = req.body;
-    // Integrate with HubSpot API or save lead data here
-    // Placeholder: console.log(data);
+    try {
+      const data = req.body;
+      
+      // Validate required fields
+      if (!data.email || !data.name) {
+        return res.status(400).json({ 
+          message: 'Name and email are required', 
+          success: false 
+        });
+      }
 
-    // In production, you would:
-    // 1. Validate the data
-    // 2. Save to database or send to HubSpot/CRM
-    // 3. Send confirmation email
-    // 4. Handle errors appropriately
+      // Send confirmation email to user
+      const confirmationResult = await sendContactConfirmation(
+        data.email,
+        data.name
+      );
 
-    console.log('Contact form submission:', data);
+      // Send admin notification (non-blocking - don't fail if this fails)
+      const adminData = {
+        name: data.name,
+        email: data.email,
+        phone: data.phone || 'N/A',
+        country: data.country || 'N/A',
+        message: data.question || data.message || 'N/A',
+      };
+      
+      const adminResult = await sendAdminNotification('contact', adminData);
 
-    res.status(200).json({ message: 'Lead received', success: true });
+      // Log results for debugging
+      console.log('Contact form submission:', data);
+      console.log('Confirmation email sent:', confirmationResult.success);
+      console.log('Admin notification sent:', adminResult.success);
+
+      // Return success even if emails fail (to not break user experience)
+      // But log errors for debugging
+      if (!confirmationResult.success) {
+        console.error('Failed to send confirmation email:', confirmationResult.error);
+      }
+      if (!adminResult.success) {
+        console.error('Failed to send admin notification:', adminResult.error);
+      }
+
+      res.status(200).json({ 
+        message: 'Message received successfully', 
+        success: true 
+      });
+    } catch (error) {
+      console.error('Error processing contact form:', error);
+      res.status(500).json({ 
+        message: 'Internal server error', 
+        success: false 
+      });
+    }
   } else {
     res.status(405).json({ message: 'Method not allowed' });
   }
